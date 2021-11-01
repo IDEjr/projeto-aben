@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../components/styles/Header.module.css";
-import Navbar from "../components/Navbar.js";
-import Title from "../components/Title.js";
+import Navbar from "./Navbar.js";
+import Title from "./Title.js";
 
 
 const Home = () =>{
