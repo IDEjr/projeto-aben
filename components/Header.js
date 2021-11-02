@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../components/styles/Header.module.css";
+import styles from "./styles/Header.module.css";
 import Navbar from "./Navbar.js";
 import Title from "./Title.js";
 
