@@ -5,6 +5,7 @@
   --borderThickness: 2px;
   --contrastColor: #F9F9F9;
   padding: var(--paddingY) var(--paddingX) var(--paddingY) var(--paddingX);
+  margin: auto;
   border-radius: 4px;
   border-style: none;
   display: flex;
