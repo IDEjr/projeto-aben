@@ -1,10 +1,9 @@
-import News from '../components/News/index.js'
+import Header from "../components/Header.js";
 
 export default function Home() {
   return (
-    <div>
-      Hello World!
-      
+    <div> 
+     <Header/>
     </div>
   )
 }
