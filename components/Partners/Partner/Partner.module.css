@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+.partner {
+  display: flex;
+  align-items: flex-end;
+  height: 80px;
+  width: 192px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: contain;
+  border-radius: 2px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+  width: 100%;
+  height: 19px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  font-size: 8px;
+  font-family: Roboto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
