@@ -1,0 +1,68 @@
+.banner{
+    background-color: #117FF2;
+    position: absolute;
+    width: 1447px;
+    height: 425px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 596px;
+    height: 218px;
+    left: 736px;
+    top: 104px;
+}
+
+.textHeader{
+    position: static;
+    width: 596px;
+    height: 20px;
+    left: 0px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    color: #FFFF;
+}
+
+.text{
+    position: static;
+    width: 511px;
+    height: 86px;
+    left: 0px;
+    top: 57px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    /* or 178% */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 21px;
+
+    position: static;
+    left: 0%;
+    right: 76.34%;
+    top: 82.57%;
+    bottom: 0%;
+}
