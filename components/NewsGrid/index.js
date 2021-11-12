@@ -10,8 +10,8 @@ const NewsGrid = () => {
     return(
         <div className={style.gridContainer}>
             <div className={style.gridHeader}>
-                <h1 className={style.text}>Notícias</h1>
-                <ButtonBase style={{margin: "50px"}}color="light" children="Mais \u2794" onClick={() => console.log("apertou no botaoo aee")} />
+                <h1 className={style.text} style={{}}>Notícias</h1>
+                <ButtonBase style={{marginRight: "25px", marginLeft: "100px", alignSelf:"flex-end"}} color="light" children="Mais \u2794" onClick={() => console.log("apertou no botaoo aee")} />
             </div>
             <div className={style.grid}>
                 {listOfNews}

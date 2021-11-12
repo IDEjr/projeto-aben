@@ -3,19 +3,23 @@
 .gridContainer{
     width: 1236px;
     height: 740px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .gridHeader{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 1204px;
 }
 
 .grid{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-between;
+    justify-content: center;
     gap: 30px 30px;
 }
 
@@ -25,9 +29,6 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 20px;
-    padding: 1rem 1rem 1rem 0rem;
-}
-
-.btn{
-    margin: auto;
+    align-self: center;
+    padding: 0rem 1rem 0rem 2rem;
 }
