@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./MembershipBanner.module.css"; 
-import Button, { ButtonBase } from "../ButtonBase/index"
+import Button, { ButtonBase } from "../ButtonBase/index";
+import Image from "next/image";
+import nurseImg from "../../public/images/nurse.svg"
 
 const MembershipBanner = () => {
     return(
@@ -11,9 +13,13 @@ const MembershipBanner = () => {
                 risus convallis pulvinar sed consequat scelerisque nibh. Quis etiam felis egestas sapien nec rhoncus, ut 
                 pellentesque.</p>
                 <div>
-                    <ButtonBase color="secondary" children="Associe-se \u2794"/>
+                    <ButtonBase color="secondary" children="Associe-se \u2794" onClick={() => console.log("associe-se vc também :)")}/>
                 </div>
             </div>
+            <div className={style.photo}>
+                <Image src={nurseImg} />
+            </div>
+
         </div>
     );
 };
