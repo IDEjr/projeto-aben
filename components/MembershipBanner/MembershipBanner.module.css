@@ -1,8 +1,15 @@
 .banner{
-    background-color: #117FF2;
+    background-image: linear-gradient(to right, #117ef2, #0e4da4);
     position: absolute;
     width: 1447px;
     height: 425px;
+}
+
+.photo{
+    position: absolute;
+    width: 1158px;
+    height: 425px;
+    left: 122px;
 }
 
 .info{
@@ -15,7 +22,7 @@
     width: 596px;
     height: 218px;
     left: 736px;
-    top: 104px;
+    top: 75px;
 }
 
 .textHeader{
@@ -50,6 +57,8 @@
     display: flex;
     align-items: center;
 
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     color: #FFFFFF;
 }
 
