@@ -8,10 +8,12 @@ const NewsGrid = () => {
     const listOfNews = news.slice(0, 6).map(item => <News imageLink={item.imageUrl} newsTitle={item.title} newsHeadline={item.headline} />)
 
     return(
-        <div className={style.gridContainer}>
+        <div style={{width: "auto"}}>
             <div className={style.gridHeader}>
-                <h1 className={style.text} style={{}}>Notícias</h1>
-                <ButtonBase style={{marginRight: "25px", marginLeft: "100px", alignSelf:"flex-end"}} color="light" children="Mais \u2794" onClick={() => console.log("apertou no botaoo aee")} />
+                <h1 className={style.text}>Notícias</h1>
+                <ButtonBase style={{marginRight: "25px", marginLeft: "100px", alignSelf:"flex-end"}} color="light" onClick={() => console.log("apertou no botaoo aee")}>
+                     Mais {'\u2794'}
+                </ButtonBase>
             </div>
             <div className={style.grid}>
                 {listOfNews}
