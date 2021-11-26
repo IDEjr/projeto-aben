@@ -13,7 +13,9 @@ const MembershipBanner = () => {
                 risus convallis pulvinar sed consequat scelerisque nibh. Quis etiam felis egestas sapien nec rhoncus, ut 
                 pellentesque.</p>
                 <div>
-                    <ButtonBase color="secondary" children="Associe-se \u2794" onClick={() => console.log("associe-se vc também :)")}/>
+                    <ButtonBase color="secondary" onClick={() => console.log("associe-se vc também :)")}>
+                        Associe-se {'\u2794'}
+                    </ButtonBase>
                 </div>
             </div>
             <div className={style.photo}>
