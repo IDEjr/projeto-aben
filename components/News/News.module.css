@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .news{
-    position: absolute;
+    position: relative;
     width: 365px;
     height: 316px;
     background: #FFFFFF;
@@ -25,7 +27,7 @@
     height: 20px;
     left: 14px;
     top: 155px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -40,7 +42,7 @@
     height: 40px;
     left: 14px;
     bottom: 50px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

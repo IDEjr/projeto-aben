@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+.gridHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 30px;
+}
+
+.text{
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 20px;
+    align-self: center;
+    padding: 0rem 1rem 0rem 2rem;
+}
