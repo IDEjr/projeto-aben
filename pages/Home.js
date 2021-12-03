@@ -1,9 +1,10 @@
-import Header from "../components/Header.js";
+import Header from "../components/Header/Header.js";
 
 export default function Home() {
   return (
     <div> 
      <Header/>
+     <h1>Home</h1>
     </div>
   )
 }
