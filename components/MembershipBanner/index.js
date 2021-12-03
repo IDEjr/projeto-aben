@@ -7,7 +7,7 @@ import nurseImg from "../../public/images/nurse.svg"
 const MembershipBanner = () => {
     return(
         <div className={style.banner}>
-            <div>
+            <div className={style.photoDiv}>
                 <Image className={style.photo} src={nurseImg} />
             </div>
             <div className={style.info}>
