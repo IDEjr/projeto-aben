@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./styles/Header.module.css";
-import Navbar from "./Navbar.js";
+import styles from "./Header.module.css";
+import Navbar from "./Navbar";
 import Title from "./Title.js";
 
 

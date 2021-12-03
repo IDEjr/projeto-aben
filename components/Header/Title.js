@@ -1,11 +1,11 @@
-import logoAben from "../public/images/logoAben.jpg";
-import Image from "next/image"
-import style from "./styles/Title.module.css";
+import logoAben from "/public/images/logoAben.jpg";
+import Image from "next/image";
+import styles from "./Title.module.css";
 const Title = () =>{
 
     return(
-        <div className={style.title}>
-            <div className={style.img}>
+        <div className={styles.title}>
+            <div className={styles.img}>
                 <Image src={logoAben}/>
             </div>
             <div>
