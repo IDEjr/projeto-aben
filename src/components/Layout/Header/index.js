@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Title from "./Title.js";
 
 
-const Home = () =>{
+const Header = () =>{
 return(
     <div className ={styles.Header}>
         <Title/>
@@ -13,4 +13,4 @@ return(
 );
 
 }
-export default Home;
+export default Header;

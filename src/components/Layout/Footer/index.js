@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import logo from '../../public/images/logo-footer.png'
-import facebook from '../../public/images/icons/facebook.svg'
-import instagram from '../../public/images/icons/instagram.svg'
-import phone from '../../public/images/icons/phone.svg'
-import mail from '../../public/images/icons/mail.svg'
+import logo from '../../../../public/images/logo-footer.png'
+import facebook from '../../../../public/images/icons/facebook.svg'
+import instagram from '../../../../public/images/icons/instagram.svg'
+import phone from '../../../../public/images/icons/phone.svg'
+import mail from '../../../../public/images/icons/mail.svg'
 import classes from './Footer.module.css'
 
 export default function Footer() {

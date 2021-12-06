@@ -1,8 +1,8 @@
-import Header from "../components/Header/Header.js";
+import React from 'react';
+
 const Eventos = () => {
   return (
     <div>
-      <Header />
       <h1>Eventos</h1>
     </div>
   );
