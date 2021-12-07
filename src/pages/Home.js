@@ -1,9 +1,16 @@
+import { Container, Typography } from '@mui/material';
+import PageTitle from 'components/PageTitle';
 import React from 'react';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div> 
-     <h1>Home</h1>
-    </div>
-  )
-}
+    <>
+      <PageTitle title="Home" />
+      <Container sx={{ mt: 2 }}>
+        <Typography>Conteúdo</Typography>
+      </Container>
+    </>
+  );
+};
+
+export default Home;

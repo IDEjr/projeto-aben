@@ -1,8 +1,15 @@
+import { Container, Typography } from '@mui/material';
+import PageTitle from 'components/PageTitle';
+import React from 'react';
+
 const Sobre = () => {
   return (
-    <div>
-      <h1>Sobre</h1>
-    </div>
+    <>
+      <PageTitle title="Sobre" />
+      <Container sx={{ mt: 2 }}>
+        <Typography>Conteúdo</Typography>
+      </Container>
+    </>
   );
 };
 

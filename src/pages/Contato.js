@@ -1,10 +1,15 @@
+import { Container, Typography } from '@mui/material';
+import PageTitle from 'components/PageTitle';
 import React from 'react';
 
 const Contato = () => {
   return (
-    <div>
-      <h1>Contato</h1>
-    </div>
+    <>
+      <PageTitle title="Contato" />
+      <Container sx={{ mt: 2 }}>
+        <Typography>Conteúdo</Typography>
+      </Container>
+    </>
   );
 };
 
