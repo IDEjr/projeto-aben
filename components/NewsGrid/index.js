@@ -14,7 +14,7 @@ const NewsGrid = ({amountOfNewsToBeRender}) => {
         <div>
             <div className={style.gridHeader}>
                 <h1 className={style.text}>Notícias</h1>
-                <ButtonBase style={{marginRight: "1fr", marginLeft: "auto", alignSelf:"flex-end"}} color="light" onClick={() => console.log("apertou no botaoo aee")}>
+                <ButtonBase style={{marginRight: "2rem", marginLeft: "auto", alignSelf:"flex-end"}} color="light" onClick={() => console.log("apertou no botaoo aee")}>
                      Mais {'\u2794'}
                 </ButtonBase>
             </div>
