@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .news{
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    max-width: 365px;
+    margin-bottom: 1rem;
+    min-width: 365px;
+    max-width: 370px;
     height: 316px;
     background: #FFFFFF;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -46,3 +50,9 @@
     color: rgba(0, 0, 0, 0.6);
     width: 95%;
 }
+
+@media (max-width: 500px){
+    .news{
+        min-width: 330px;
+    }
+}  
