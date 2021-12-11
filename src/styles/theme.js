@@ -7,6 +7,19 @@ const darkBlue = '#373C3F';
 
 // Create a theme instance.
 const theme = responsiveFontSizes(createTheme({
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        '*': {
+          'scrollbar-width': 'thin',
+        },
+        '*::-webkit-scrollbar': {
+          width: '4px',
+          height: '4px',
+        }
+      }
+    }
+  },
   palette: {
     mode: 'light',
     background: {
@@ -43,20 +56,6 @@ const theme = responsiveFontSizes(createTheme({
     warning: {
       contrastText: '#ffffff',
       main: '#ff9800'
-    },
-    orange: {
-      main: "#FF9C0E",
-      light: "#fff0db",
-      contrastText: '#ffffff',
-    },
-    purple: {
-      main: "#7400B8",
-      contrastText: '#ffffff',
-    },
-    yellow: {
-      main: "#FFDB01",
-      contrastText: '#ffffff',
-      light: 'FFF7C9'
     },
     grey: {
       contrastText: '#ffffff',
