@@ -1,9 +1,11 @@
 import { Button, Container, TextField, Typography, Grid } from "@mui/material";
-import * as emailjs from 'emailjs-com';
-/* import MapView from "components/MapView"; */
+import * as emailjs from "emailjs-com";
+
 import PageTitle from "components/PageTitle";
 import React, { useState } from "react";
-import { Box } from "@mui/system";
+import { Box, Modal } from "@mui/system";
+import MapView from "components/MapView";
+import BasicModal from "components/Modal";
 
 const Contato = () => {
   const [name, setName] = useState("");
@@ -11,6 +13,10 @@ const Contato = () => {
   const [company, setCompany] = useState("");
   const [number, setNumber] = useState("");
   const [obs, setObs] = useState("");
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const nameHandler = (event) => {
     setName(event.target.value);
@@ -24,33 +30,28 @@ const Contato = () => {
   const obsHandler = (event) => {
     setObs(event.target.value);
   };
-  /* const submitHandler = (event) => {
-    event.preventDefault();
-    const userData = {
-      userName: name,
-      userEmail: email,
-      userCompany: company,
-      userPhone: number,
-      userObs: obs,
-    };
-    console.log(userData);
-  
-  }; */
 
   const sendEmail = (event) => {
     event.preventDefault();
 
-    emailjs.sendForm('service_qj6d5mm', 'template_zu1x13y', event.target, 'user_hKbajQwH7EuguFyuPXHEc') // colocar aqui as credenciais emailjs do pessoal da aben
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-    setNumber('');
+    emailjs
+      .sendForm(
+        "service_qj6d5mm",
+        "template_zu1x13y",
+        event.target,
+        "user_hKbajQwH7EuguFyuPXHEc"
+      ) // colocar aqui as credenciais emailjs do pessoal da aben
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setNumber("");
     event.target.reset();
-
   };
-
 
   const formatPhoneNumber = (event) => {
     const phoneNumber = event.target.value.toString();
@@ -70,38 +71,74 @@ const Contato = () => {
     }
   };
 
+  const ModalHandler = () => {
+    handleClose();
+  
+  };
   return (
     <>
       <PageTitle title="Contato" />
       <Container sx={{ mt: 2 }}>
-        <Box>
-          <Typography >
-            <b>Endereço:</b> Av. Venâncio Aires, 1191/142 - Bom Fim
-          </Typography>
-          <Typography>
-            <b>CEP:</b> 90.040-193 - Porto Alegre
-          </Typography>
-          <Typography>
-            <b>E-mail:</b> aben-rs@abennacional.org.br
-          </Typography>
-          <Typography>
-            <b>Telefone:</b>(51) 3332-8622
-          </Typography>
-        </Box>
-        {/* <Box display="flex" width="100%">
-          <MapView />
-        </Box> */}
-        <Box justifyContent={"center"} marginBottom={'15px'}>
-          <Typography>Entre em contato conosco:</Typography>
+        <Grid
+          container
+          display="flex"
+          flexDirection="column"
+          spacing={2}
+          sx={{
+            my: 4,
+          }}
+        >
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>Endereço:</b> Av. Venâncio Aires, 1191/142 - Bom Fim
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>CEP:</b> 90.040-193 - Porto Alegre
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>E-mail:</b> aben-rs@abennacional.org.br
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>Telefone:</b>(51) 3332-8622
+            </Typography>
+          </Grid>
+        </Grid>
+        Box
+        {open && <BasicModal opened={open} onConfirm={ModalHandler} />}
+        <Grid
+          container
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ my: 8 }}
+        >
+          <Grid item xs={12} md={8}>
+            <Box fullWidth backgroundColor="primary.main" borderRadius={1}>
+              <MapView />
+            </Box>
+          </Grid>
+        </Grid>
+       
+         
+      
+
+        <Box justifyContent={"center"} marginBottom={"15px"}>
+          <Typography fontSize="1.5rem">Entre em contato conosco:</Typography>
           <form onSubmit={sendEmail}>
-            <Grid container
+            <Grid
+              container
               sx={{
-                my:2
+                my: 2,
               }}
-              spacing={2}>
-              <Grid item
-                xs={12}
-                md={6}>
+              spacing={2}
+            >
+              <Grid item xs={12} md={6}>
                 <TextField
                   fullWidth
                   name="name"
@@ -111,21 +148,17 @@ const Contato = () => {
                   onChange={nameHandler}
                 />
               </Grid>
-              <Grid item
-                xs={12}
-                md={6}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   fullWidth
-                  name='company'
+                  name="company"
                   required
                   label="Empresa"
                   defaultValue=""
                   onChange={companyHandler}
                 />
               </Grid>
-              <Grid item
-                xs={12}
-                md={6}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   fullWidth
                   name="phoneNumber"
@@ -136,24 +169,21 @@ const Contato = () => {
                   onChange={formatPhoneNumber}
                 />
               </Grid>
-              <Grid item
-                xs={12}
-                md={6}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   fullWidth
-                  name='email'
+                  name="email"
                   required
                   label="E-mail"
                   defaultValue=""
                   onChange={emailHandler}
                 />
               </Grid>
-              <Grid item
-                xs={12}>
+              <Grid item xs={12}>
                 <TextField
                   fullWidth
                   minRows="4"
-                  name='message'
+                  name="message"
                   required
                   label="Observação"
                   defaultValue=""
@@ -163,7 +193,14 @@ const Contato = () => {
               </Grid>
             </Grid>
             <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-              <Button variant="contained" size='large' type="submit">Enviar</Button>
+              <Button
+                variant="contained"
+                size="large"
+                type="submit"
+                onClick={handleOpen}
+              >
+                Enviar
+              </Button>
             </Box>
           </form>
         </Box>
