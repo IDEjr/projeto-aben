@@ -96,7 +96,7 @@ const Contato = () => {
           <form onSubmit={sendEmail}>
             <Grid container
               sx={{
-                my: 2
+                my:2
               }}
               spacing={2}>
               <Grid item
@@ -162,21 +162,6 @@ const Contato = () => {
                 />
               </Grid>
             </Grid>
-
-            <Grid container
-              display="flex"
-              flexDirection="row"
-              justifyContent="center">
-              <Grid item
-                xs={12}
-                md={6}>
-                <Box fullWidth height="200px" backgroundColor="primary.main" borderRadius={1}>
-                  mapa
-                </Box>
-              </Grid>
-            </Grid>
-
-
             <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
               <Button variant="contained" size='large' type="submit">Enviar</Button>
             </Box>
