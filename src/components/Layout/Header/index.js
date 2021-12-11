@@ -1,16 +1,14 @@
+import { Container } from "@mui/material";
 import React from "react";
-import styles from "./Header.module.css";
 import Navbar from "./Navbar";
 import Title from "./Title.js";
 
-
-const Header = () =>{
-return(
-    <div className ={styles.Header}>
-        <Title/>
-        <Navbar/>
-    </div>
-);
-
-}
+const Header = () => {
+  return (
+    <Container sx={{ mt: 2 }}>
+      <Title />
+      <Navbar />
+    </Container>
+  );
+};
 export default Header;
