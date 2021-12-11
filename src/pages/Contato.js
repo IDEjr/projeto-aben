@@ -1,6 +1,6 @@
 import { Button, Container, TextField, Typography, Grid } from "@mui/material";
 import * as emailjs from 'emailjs-com';
-import MapView from "components/MapView";
+/* import MapView from "components/MapView"; */
 import PageTitle from "components/PageTitle";
 import React, { useState } from "react";
 import { Box } from "@mui/system";
@@ -37,20 +37,20 @@ const Contato = () => {
   
   }; */
 
-  const sendEmail = (event) =>{
+  const sendEmail = (event) => {
     event.preventDefault();
 
     emailjs.sendForm('service_qj6d5mm', 'template_zu1x13y', event.target, 'user_hKbajQwH7EuguFyuPXHEc') // colocar aqui as credenciais emailjs do pessoal da aben
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
-      setNumber('');
-      event.target.reset();
-      
+    setNumber('');
+    event.target.reset();
+
   };
-  
+
 
   const formatPhoneNumber = (event) => {
     const phoneNumber = event.target.value.toString();
@@ -88,82 +88,97 @@ const Contato = () => {
             <b>Telefone:</b>(51) 3332-8622
           </Typography>
         </Box>
-        <Box display="flex" width="100%">
+        {/* <Box display="flex" width="100%">
           <MapView />
-        </Box>
+        </Box> */}
         <Box justifyContent={"center"} marginBottom={'15px'}>
           <Typography>Entre em contato conosco:</Typography>
           <form onSubmit={sendEmail}>
-            <TextField
+            <Grid container
               sx={{
-                alignSelf: "center",
+                my: 2
               }}
-              fullWidth
-              name="name"
-              margin="normal"
-              required
-              id="outlined-required"
-              label="Nome"
-              defaultValue=""
-              onChange={nameHandler}
-            />
-            <TextField
-              sx={{
-                alignSelf: "center",
-              }}
-              fullWidth
-              name='email'
-              margin="normal"
-              required
-              id="outlined-required"
-              label="E-mail"
-              defaultValue=""
-              onChange={emailHandler}
-            />
-            <TextField
-              sx={{
-                alignSelf: "center",
-              }}
-              fullWidth
-              name='company'
-              margin="normal"
-              required
-              id="outlined-required"
-              label="Empresa"
-              defaultValue=""
-              onChange={companyHandler}
-            />
+              spacing={2}>
+              <Grid item
+                xs={12}
+                md={6}>
+                <TextField
+                  fullWidth
+                  name="name"
+                  required
+                  label="Nome"
+                  defaultValue=""
+                  onChange={nameHandler}
+                />
+              </Grid>
+              <Grid item
+                xs={12}
+                md={6}>
+                <TextField
+                  fullWidth
+                  name='company'
+                  required
+                  label="Empresa"
+                  defaultValue=""
+                  onChange={companyHandler}
+                />
+              </Grid>
+              <Grid item
+                xs={12}
+                md={6}>
+                <TextField
+                  fullWidth
+                  name="phoneNumber"
+                  value={number}
+                  required
+                  label="Telefone"
+                  defaultValue=""
+                  onChange={formatPhoneNumber}
+                />
+              </Grid>
+              <Grid item
+                xs={12}
+                md={6}>
+                <TextField
+                  fullWidth
+                  name='email'
+                  required
+                  label="E-mail"
+                  defaultValue=""
+                  onChange={emailHandler}
+                />
+              </Grid>
+              <Grid item
+                xs={12}>
+                <TextField
+                  fullWidth
+                  minRows="4"
+                  name='message'
+                  required
+                  label="Observação"
+                  defaultValue=""
+                  multiline
+                  onChange={obsHandler}
+                />
+              </Grid>
+            </Grid>
 
-            <TextField
-              sx={{
-                alignSelf: "center",
-              }}
-              fullWidth
-              name="phoneNumber"
-              value={number}
-              margin="normal"
-              required
-              id="outlined-required"
-              label="Telefone"
-              defaultValue=""
-              onChange={formatPhoneNumber}
-            />
-            <TextField
-              sx={{
-                alignSelf: "center",
-              }}
-              fullWidth
-              name='message'
-              margin="normal"
-              required
-              id="outlined-required"
-              label="Observação"
-              defaultValue=""
-              multiline
-              onChange={obsHandler}
-            />
+            <Grid container
+              display="flex"
+              flexDirection="row"
+              justifyContent="center">
+              <Grid item
+                xs={12}
+                md={6}>
+                <Box fullWidth height="200px" backgroundColor="primary.main" borderRadius={1}>
+                  mapa
+                </Box>
+              </Grid>
+            </Grid>
+
+
             <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-              <Button variant="contained" size='large'type="submit">Enviar</Button>
+              <Button variant="contained" size='large' type="submit">Enviar</Button>
             </Box>
           </form>
         </Box>
