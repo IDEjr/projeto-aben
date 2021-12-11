@@ -3,9 +3,10 @@ import * as emailjs from "emailjs-com";
 
 import PageTitle from "components/PageTitle";
 import React, { useState } from "react";
-import { Box, Modal } from "@mui/system";
+import { Box} from "@mui/system";
 import MapView from "components/MapView";
 import BasicModal from "components/Modal";
+import { Card } from "@mui/material";
 
 const Contato = () => {
   const [name, setName] = useState("");
@@ -73,137 +74,138 @@ const Contato = () => {
 
   const ModalHandler = () => {
     handleClose();
-  
   };
   return (
     <>
       <PageTitle title="Contato" />
-      <Container sx={{ mt: 2 }}>
-        <Grid
-          container
-          display="flex"
-          flexDirection="column"
-          spacing={2}
-          sx={{
-            my: 4,
-          }}
-        >
-          <Grid item>
-            <Typography fontSize="1.5rem">
-              <b>Endereço:</b> Av. Venâncio Aires, 1191/142 - Bom Fim
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography fontSize="1.5rem">
-              <b>CEP:</b> 90.040-193 - Porto Alegre
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography fontSize="1.5rem">
-              <b>E-mail:</b> aben-rs@abennacional.org.br
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography fontSize="1.5rem">
-              <b>Telefone:</b>(51) 3332-8622
-            </Typography>
-          </Grid>
-        </Grid>
-        Box
-        {open && <BasicModal opened={open} onConfirm={ModalHandler} />}
-        <Grid
-          container
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          sx={{ my: 8 }}
-        >
-          <Grid item xs={12} md={8}>
-            <Box fullWidth backgroundColor="primary.main" borderRadius={1}>
-              <MapView />
-            </Box>
-          </Grid>
-        </Grid>
-       
-         
-      
 
-        <Box justifyContent={"center"} marginBottom={"15px"}>
-          <Typography fontSize="1.5rem">Entre em contato conosco:</Typography>
-          <form onSubmit={sendEmail}>
-            <Grid
-              container
-              sx={{
-                my: 2,
-              }}
-              spacing={2}
-            >
-              <Grid item xs={12} md={6}>
-                <TextField
-                  fullWidth
-                  name="name"
-                  required
-                  label="Nome"
-                  defaultValue=""
-                  onChange={nameHandler}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  fullWidth
-                  name="company"
-                  required
-                  label="Empresa"
-                  defaultValue=""
-                  onChange={companyHandler}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  fullWidth
-                  name="phoneNumber"
-                  value={number}
-                  required
-                  label="Telefone"
-                  defaultValue=""
-                  onChange={formatPhoneNumber}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  fullWidth
-                  name="email"
-                  required
-                  label="E-mail"
-                  defaultValue=""
-                  onChange={emailHandler}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  fullWidth
-                  minRows="4"
-                  name="message"
-                  required
-                  label="Observação"
-                  defaultValue=""
-                  multiline
-                  onChange={obsHandler}
-                />
-              </Grid>
+      <Container>
+        <Card sx={{
+          p:3
+        }}>
+          <Grid
+            container
+            display="flex"
+            flexDirection="column"
+            spacing={2}
+            sx={{
+              my: 4,
+            }}
+          >
+            <Grid item>
+              <Typography fontSize="1.5rem">
+                <b>Endereço:</b> Av. Venâncio Aires, 1191/142 - Bom Fim
+              </Typography>
             </Grid>
-            <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-              <Button
-                variant="contained"
-                size="large"
-                type="submit"
-                onClick={handleOpen}
+            <Grid item>
+              <Typography fontSize="1.5rem">
+                <b>CEP:</b> 90.040-193 - Porto Alegre
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography fontSize="1.5rem">
+                <b>E-mail:</b> aben-rs@abennacional.org.br
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography fontSize="1.5rem">
+                <b>Telefone:</b>(51) 3332-8622
+              </Typography>
+            </Grid>
+          </Grid>
+
+          {open && <BasicModal opened={open} onConfirm={ModalHandler} />}
+          <Grid
+            container
+            display="flex"
+            flexDirection="row"
+            justifyContent="center"
+            sx={{ my: 8 }}
+          >
+            <Grid item xs={12} md={8}>
+              <Box fullWidth backgroundColor="primary.main" borderRadius={1}>
+                <MapView />
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Box justifyContent={"center"} marginBottom={"15px"}>
+            <Typography fontSize="1.5rem">Entre em contato conosco:</Typography>
+            <form onSubmit={sendEmail}>
+              <Grid
+                container
+                sx={{
+                  my: 2,
+                }}
+                spacing={2}
               >
-                Enviar
-              </Button>
-            </Box>
-          </form>
-        </Box>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    fullWidth
+                    name="name"
+                    required
+                    label="Nome"
+                    defaultValue=""
+                    onChange={nameHandler}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    fullWidth
+                    name="company"
+                    required
+                    label="Empresa"
+                    defaultValue=""
+                    onChange={companyHandler}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    fullWidth
+                    name="phoneNumber"
+                    value={number}
+                    required
+                    label="Telefone"
+                    defaultValue=""
+                    onChange={formatPhoneNumber}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    fullWidth
+                    name="email"
+                    required
+                    label="E-mail"
+                    defaultValue=""
+                    onChange={emailHandler}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    minRows="4"
+                    name="message"
+                    required
+                    label="Observação"
+                    defaultValue=""
+                    multiline
+                    onChange={obsHandler}
+                  />
+                </Grid>
+              </Grid>
+              <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  type="submit"
+                  onClick={handleOpen}
+                >
+                  Enviar
+                </Button>
+              </Box>
+            </form>
+          </Box>
+        </Card>
       </Container>
     </>
   );
