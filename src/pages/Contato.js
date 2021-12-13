@@ -77,9 +77,10 @@ const Contato = () => {
   };
   return (
     <>
+      
       <PageTitle title="Contato" />
-
       <Container>
+      
         <Card sx={{
           p:3
         }}>
