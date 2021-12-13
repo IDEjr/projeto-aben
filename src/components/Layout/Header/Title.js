@@ -1,17 +1,23 @@
 import logoAben from "/public/images/logoAben.jpg";
 import Image from "next/image";
 import styles from "./Title.module.css";
-const Title = () =>{
+import { Box, Typography } from "@mui/material";
+const Title = () => {
+  return (
+    <Box sx={{
+        display:'flex',
+        justifyContent:'space-between',
+        alignItems:'center'
 
-    return(
-        <div className={styles.title}>
-            <div className={styles.img}>
-                <Image src={logoAben}/>
-            </div>
-            <div>
-                <h1>Associação Brasileira de Enfermagem - ABEn-RS</h1>
-            </div>
-        </div>
-    );
-}
+    }}>
+      <div className={styles.img}>
+        <Image src={logoAben} />
+      </div>
+      <Typography
+      fontSize={'2.5rem'}
+      >
+          Associação Brasileira de Enfermagem - ABEn-RS</Typography>
+    </Box>
+  );
+};
 export default Title;
