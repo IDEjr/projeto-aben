@@ -1,10 +1,12 @@
+import React from "react";
+import NewsGrid from "../components/NewsGrid/index";
+
 const Noticias = () => {
-    return (
-      <div>
-        <h1>Noticias</h1>
-      </div>
-    );
-  };
-  
+  return (
+    <div>
+      <NewsGrid />
+    </div>
+  );
+};
+
 export default Noticias;
-  
