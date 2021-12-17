@@ -1,6 +1,8 @@
 import React from 'react';
-import { Avatar, Box, Card, CardContent, CardHeader, Container, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Card, CardActionArea, CardActions, CardContent, CardHeader, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image'
+import { Email, Phone } from '@mui/icons-material';
+import { useRouter } from 'next/router';
 
 const CustomTitle = ({
   children
@@ -14,34 +16,76 @@ const CustomTitle = ({
 const CustomCard = ({
   diretoria,
   ...rest
-}) => (
-  <Card
-    sx={{
-      minHeight: "250px",
-      height: 1,
-      padding: 1,
-      borderRadius: 2
-    }}
-    {...rest}>
-    <CardHeader
-      title={diretoria.title}
-      subheader={diretoria.first_name}
-      avatar={
-        <Avatar>
-          <Image
-            src={diretoria.photo}
-            alt={diretoria.title + " - Avatar"}
-            layout="fill" />
-        </Avatar>
-      }
-    />
-    <CardContent>
-      <Typography>
-        {diretoria.bio}
-      </Typography>
-    </CardContent>
-  </Card>
-)
+}) => {
+  const router = useRouter();
+
+  return (
+    <Card
+      sx={{
+        minHeight: "250px",
+        height: 1,
+        padding: 1,
+        borderRadius: 2
+      }}
+      {...rest}>
+      <CardActionArea
+        onClick={() => diretoria?.slug ? router.push(`${router.pathname}/${diretoria.slug}`) : null}>
+        <CardHeader
+          title={diretoria.title}
+          subheader={diretoria.first_name}
+          avatar={
+            <Avatar>
+              <Image
+                src={diretoria.photo}
+                alt={diretoria.title + " - Avatar"}
+                layout="fill" />
+            </Avatar>
+          }
+          sx={{
+            height: "100px"
+          }}
+        />
+        <CardContent sx={{ height: "180px" }}>
+          <Typography>
+            {diretoria.bio}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Box display="flex" flexDirection="column-reverse" p={1}>
+          {
+            diretoria.phone &&
+            <>
+              <Box display="flex" flexDirection="row" pt={2}>
+                <Phone />
+                <Typography
+                  sx={{
+                    ml: 1.5
+                  }}>
+                  {diretoria.phone || ""}
+                </Typography>
+              </Box>
+            </>
+          }
+          {
+            diretoria.email &&
+            <>
+              <Box display="flex" flexDirection="row" pt={2}>
+                <Email />
+                <Typography
+                  sx={{
+                    ml: 1.5
+                  }}>
+                  {diretoria.email || ""}
+                </Typography>
+              </Box>
+            </>
+          }
+        </Box>
+      </CardActions>
+    </Card>
+  )
+}
 
 const DiretoriasGridView = ({
   diretoria

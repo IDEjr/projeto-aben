@@ -22,7 +22,7 @@ const Diretorias = () => {
         }}>
         <DiretoriasGridView diretoria={diretoriasAtual} />
       </Container>
-      <DiretoriasArchiveSwiper archive={diretoriasArchive} />
+      {/* <DiretoriasArchiveSwiper archive={diretoriasArchive} /> */}
     </>
   )
 }

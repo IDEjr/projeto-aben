@@ -9,6 +9,9 @@ const diretoriasAtual = {
       "photo": "/images/diretorias/diretoriaAvatar01.png",
       "bio": "vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in",
       "url": "https://aben-rs.org.br/diretoria-aben-rs/",
+      phone: "(99) 99999-9999",
+      email: "email@email.com",
+      slug: "presidencia-21",
     },
     {
       "id": 2,
@@ -17,6 +20,7 @@ const diretoriasAtual = {
       "photo": "/images/diretorias/diretoriaAvatar02.png",
       "bio": "est lacinia nisi venenatis tristique fusce congue diam id ornare",
       "url": "https://aben-rs.org.br/diretoria-aben-rs/",
+      email: "email@email.com",
     },
     {
       "id": 3,
@@ -25,6 +29,7 @@ const diretoriasAtual = {
       "photo": "/images/diretorias/diretoriaAvatar03.png",
       "bio": "ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
       "url": "https://aben-rs.org.br/diretoria-aben-rs/",
+      phone: "(99) 99999-9999",
     },
     {
       "id": 4,
@@ -41,6 +46,8 @@ const diretoriasAtual = {
       "photo": "/images/diretorias/diretoriaAvatar05.png",
       "bio": "penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis",
       "url": "https://aben-rs.org.br/diretoria-aben-rs/",
+      phone: "(99) 99999-9999",
+      email: "email@email.com",
     },
     {
       "id": 6,
@@ -65,6 +72,7 @@ const diretoriasAtual = {
       "photo": "/images/diretorias/diretoriaAvatar08.png",
       "bio": "tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum",
       "url": "https://aben-rs.org.br/diretoria-aben-rs/",
+      phone: "(99) 99999-9999",
     }
   ],
 };
