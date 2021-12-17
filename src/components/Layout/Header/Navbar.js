@@ -6,71 +6,42 @@ import { Button, Box } from "@mui/material";
 const Navbar = () => {
   return (
     <Box
-      sx={{
-        justifyContent: "space-between",
-        flexDirection: "row",
-      }}
+      display="flex"
+      flexDirection="row"
+      justifyContent="space-between"
     >
-      <Link href="/Home">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
+      <Link href="/Home" passHref>
+        <Button fullWidth>
           Home
         </Button>
       </Link>
-      <Link href="/Sobre">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
+      <Link href="/Sobre" passHref>
+        <Button fullWidth>
           Sobre
         </Button>
       </Link>
-      <Link href="/Noticias">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
+      <Link href="/Noticias" passHref>
+        <Button fullWidth>
           Notícias
         </Button>
       </Link>
-      <Link href="/Eventos">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
+      <Link href="/Eventos" passHref>
+        <Button fullWidth>
           Eventos
         </Button>
       </Link>
-      <Link href="/Historia">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          História
+      <Link href="/Publicacoes" passHref>
+        <Button fullWidth>
+          Publicações
         </Button>
       </Link>
-      <Link href="/Associese">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
+      <Link href="/Associese" passHref>
+        <Button fullWidth>
           Associe-se
         </Button>
       </Link>
-      <Link href="/Contato">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
+      <Link href="/Contato" passHref>
+        <Button fullWidth>
           Contato
         </Button>
       </Link>
