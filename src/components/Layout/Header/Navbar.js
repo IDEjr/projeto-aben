@@ -1,18 +1,80 @@
 import React from "react";
-import styles from "./Navbar.module.css";
-import Link from 'next/link';
 
-const Navbar = () =>{
-    return(
-        <div className ={styles.navbar}>
-           <Link href ="/Home"><button className = {styles.button}>Home</button></Link>
-           <Link href ="/Sobre"><button className = {styles.button}>Sobre</button></Link>
-           <Link href ="/Noticias"><button className = {styles.button}>Notícias</button></Link>
-           <Link href ="/Eventos"><button className = {styles.button}>Eventos</button></Link>
-           <Link href ="/Publicacoes"><button className = {styles.button}>Publicações</button></Link>
-           <Link href ="/Associese"><button className = {styles.button}>Associe-se</button></Link>
-           <Link href ="/Contato"><button className = {styles.button}>Contato</button></Link>
-        </div>
-    );
-}
+import Link from "next/link";
+import { Button, Box } from "@mui/material";
+
+const Navbar = () => {
+  return (
+    <Box
+      sx={{
+        justifyContent: "space-between",
+        flexDirection: "row",
+      }}
+    >
+      <Link href="/Home">
+        <Button
+          sx={{
+            minWidth: "14.28%",
+          }}
+        >
+          Home
+        </Button>
+      </Link>
+      <Link href="/Sobre">
+        <Button
+          sx={{
+            minWidth: "14.28%",
+          }}
+        >
+          Sobre
+        </Button>
+      </Link>
+      <Link href="/Noticias">
+        <Button
+          sx={{
+            minWidth: "14.28%",
+          }}
+        >
+          Notícias
+        </Button>
+      </Link>
+      <Link href="/Eventos">
+        <Button
+          sx={{
+            minWidth: "14.28%",
+          }}
+        >
+          Eventos
+        </Button>
+      </Link>
+      <Link href="/Publicacoes">
+        <Button
+          sx={{
+            minWidth: "14.28%",
+          }}
+        >
+          Publicações
+        </Button>
+      </Link>
+      <Link href="/Associese">
+        <Button
+          sx={{
+            minWidth: "14.28%",
+          }}
+        >
+          Associe-se
+        </Button>
+      </Link>
+      <Link href="/Contato">
+        <Button
+          sx={{
+            minWidth: "14.28%",
+          }}
+        >
+          Contato
+        </Button>
+      </Link>
+    </Box>
+  );
+};
 export default Navbar;
