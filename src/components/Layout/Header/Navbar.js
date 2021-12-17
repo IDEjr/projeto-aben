@@ -47,13 +47,13 @@ const Navbar = () => {
           Eventos
         </Button>
       </Link>
-      <Link href="/Publicacoes">
+      <Link href="/Historia">
         <Button
           sx={{
             minWidth: "14.28%",
           }}
         >
-          Publicações
+          História
         </Button>
       </Link>
       <Link href="/Associese">
