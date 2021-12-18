@@ -44,6 +44,10 @@ const theme = responsiveFontSizes(createTheme({
       contrastText: '#ffffff',
       main: '#ff9800'
     },
+    white: {
+      contrastText: '#ffffff',
+      main: '#ffffff'
+    },
     orange: {
       main: "#FF9C0E",
       light: "#fff0db",
@@ -69,6 +73,7 @@ const theme = responsiveFontSizes(createTheme({
     },
     text: {
       primary: '#172b4d',
+      main: '#172b4d',
       secondary: '#6b778c'
     },
   },
