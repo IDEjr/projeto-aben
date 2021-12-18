@@ -1,4 +1,4 @@
-import presidentesABEN from "/public/images/presidentesABEN.svg";
+import presidentesABEN from "/public/images/presidentesABEn.svg";
 import React from "react";
 import { Container, Grid, Typography, Box } from "@mui/material";
 import PageTitle from "components/PageTitle";

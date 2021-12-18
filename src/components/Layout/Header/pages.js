@@ -14,7 +14,11 @@ const pages = [
       {
         title: "Diretorias",
         to: "/diretorias",
-      }
+      },
+      {
+        title: "História",
+        to: "/Historia",
+      },
     ]
   },
   {
