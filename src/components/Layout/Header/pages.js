@@ -13,7 +13,7 @@ const pages = [
       },
       {
         title: "Diretorias",
-        to: "/Diretorias",
+        to: "/diretorias",
       }
     ]
   },
