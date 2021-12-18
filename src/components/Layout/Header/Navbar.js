@@ -1,80 +1,98 @@
-import React from "react";
-
+import React, { useState } from "react";
 import Link from "next/link";
-import { Button, Box } from "@mui/material";
+import { Button, Box, Typography, Menu, MenuItem } from "@mui/material";
+import { useRouter } from "next/router";
+import pages from "./pages";
+
+const NavBarItem = ({
+  item,
+}) => {
+  const router = useRouter();
+  const ative = router.pathname === item.to;
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = e => {
+    setAnchorEl(e.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  if (!item.children) {
+    return (
+      <Link href={item.to} passHref>
+        <Button
+          fullWidth
+          color={
+            ative ?
+              "primary"
+              :
+              "text"
+          }>
+          {item.title}
+        </Button>
+      </Link>
+    )
+  }
+  return (
+    <>
+      <Button
+        onClick={handleClick}
+        fullWidth
+        color={
+          ative ?
+            "primary"
+            :
+            "text"
+        }>
+        {item.title}
+      </Button>
+      {
+        item.children &&
+        <Menu
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'basic-button',
+          }}
+        >
+          {
+            item.children.map(c => (
+              <Link key={c.to} href={c.to} passHref>
+                <MenuItem
+                  sx={{
+                    justifyContent: "flex-start",
+                    py: 2,
+                    pr: 6
+                  }}
+                  onClick={handleClose}>
+                  {c.title}
+                </MenuItem>
+              </Link>
+            ))
+          }
+        </Menu>
+      }
+    </>
+
+  )
+}
 
 const Navbar = () => {
   return (
     <Box
-      sx={{
-        justifyContent: "space-between",
-        flexDirection: "row",
-      }}
+      display="flex"
+      flexDirection="row"
+      justifyContent="space-between"
+      py={1}
     >
-      <Link href="/Home">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          Home
-        </Button>
-      </Link>
-      <Link href="/Sobre">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          Sobre
-        </Button>
-      </Link>
-      <Link href="/Noticias">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          Notícias
-        </Button>
-      </Link>
-      <Link href="/Eventos">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          Eventos
-        </Button>
-      </Link>
-      <Link href="/Historia">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          História
-        </Button>
-      </Link>
-      <Link href="/Associese">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          Associe-se
-        </Button>
-      </Link>
-      <Link href="/Contato">
-        <Button
-          sx={{
-            minWidth: "14.28%",
-          }}
-        >
-          Contato
-        </Button>
-      </Link>
+      {
+        pages.map(p =>
+          <NavBarItem key={p.title} item={p} />)
+      }
     </Box>
   );
 };
+
 export default Navbar;
