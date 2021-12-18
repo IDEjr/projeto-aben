@@ -11,7 +11,7 @@ const Historia = () => {
       <Container>
         <Grid
           container
-          spacing={2}
+          spacing={0}
           sx={{
             my: 4,
             justifyContent: "center",
@@ -28,7 +28,6 @@ const Historia = () => {
           <Grid
             item
             xs={12}
-            md={10}
             sx={{
               textAlign: "justify",
               lineHeight: 2.5,
