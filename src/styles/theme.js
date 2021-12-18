@@ -57,6 +57,24 @@ const theme = responsiveFontSizes(createTheme({
       contrastText: '#ffffff',
       main: '#ff9800'
     },
+    white: {
+      contrastText: '#ffffff',
+      main: '#ffffff'
+    },
+    orange: {
+      main: "#FF9C0E",
+      light: "#fff0db",
+      contrastText: '#ffffff',
+    },
+    purple: {
+      main: "#7400B8",
+      contrastText: '#ffffff',
+    },
+    yellow: {
+      main: "#FFDB01",
+      contrastText: '#ffffff',
+      light: 'FFF7C9'
+    },
     grey: {
       contrastText: '#ffffff',
       main: "#A2A4B9",
@@ -68,6 +86,7 @@ const theme = responsiveFontSizes(createTheme({
     },
     text: {
       primary: '#172b4d',
+      main: '#172b4d',
       secondary: '#6b778c'
     },
   },
