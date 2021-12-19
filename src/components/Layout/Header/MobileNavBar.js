@@ -65,54 +65,49 @@ const MobileNavBar = () => {
             <Image src={logoAben} alt="ABEN LOGO" />
           </Box>
         </Box>
-        <Divider/>
+        <Divider />
         {
           pages.map(p => (
-
-            <>
+            <ListItem key={p.title}>
               {
-                <ListItem>
-                  {
-                    p.children ?
-                      <Box >
-                        <Typography
-                          sx={{
-                            pl: 2
-                          }}>
-                          {p.title}
-                        </Typography>
-                        {p.children.map(c => (
-                          <Link key={c.to} href={c.to} passHref>
-                            <MenuItem
-                              sx={{
-                                justifyContent: "flex-start",
-                                my: 1,
-                                py: 1,
-                                pr: 6,
-                                ml: 2,
-                              }}
-                              onClick={() => setOpen(false)}>
-                              {c.title}
-                            </MenuItem>
-                          </Link>
-                        ))}
-                      </Box>
-                      :
-                      <Link key={p.to} href={p.to} passHref>
+                p.children ?
+                  <Box >
+                    <Typography
+                      sx={{
+                        pl: 2
+                      }}>
+                      {p.title}
+                    </Typography>
+                    {p.children.map(c => (
+                      <Link key={c.to} href={c.to} passHref>
                         <MenuItem
                           sx={{
                             justifyContent: "flex-start",
+                            my: 1,
                             py: 1,
-                            pr: 6
+                            pr: 6,
+                            ml: 2,
                           }}
                           onClick={() => setOpen(false)}>
-                          {p.title}
+                          {c.title}
                         </MenuItem>
                       </Link>
-                  }
-                </ListItem>
+                    ))}
+                  </Box>
+                  :
+                  <Link key={p.to} href={p.to} passHref>
+                    <MenuItem
+                      sx={{
+                        justifyContent: "flex-start",
+                        py: 1,
+                        pr: 6
+                      }}
+                      onClick={() => setOpen(false)}>
+                      {p.title}
+                    </MenuItem>
+                  </Link>
               }
-            </>
+            </ListItem>
           ))
         }
       </Drawer>

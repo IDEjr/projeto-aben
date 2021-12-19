@@ -151,6 +151,11 @@ const theme = responsiveFontSizes(createTheme({
     },
     overline: {
       fontWeight: 600
+    },
+    footer: {
+      fontFamily: 'Montserrat',
+      fontSize: '0.95rem',
+      color: "#ffffff"
     }
   },
   shadows: shadows
