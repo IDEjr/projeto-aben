@@ -1,0 +1,54 @@
+.banner{
+    background-image: linear-gradient(to right, #117ef2, #0e4da4);
+    width: 100%;
+    max-height: 415px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoDiv{
+    align-self: flex-end;
+}
+
+.photo{
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+.textHeader{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: #FFFF;
+}
+
+.text{
+    max-width: 511px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 800px){
+    .banner{
+        max-height: 100%;
+        flex-direction: column;
+    }
+    .photoDiv{
+        display: none;
+    }
+    .text{
+        padding-bottom: 1rem;
+    }
+}

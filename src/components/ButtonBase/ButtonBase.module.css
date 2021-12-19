@@ -1,0 +1,81 @@
+/* Button */
+.button {
+  --paddingX: 21px;
+  --paddingY: 14px;
+  --borderThickness: 2px;
+  --contrastColor: #F9F9F9;
+  padding: var(--paddingY) var(--paddingX) var(--paddingY) var(--paddingX);
+  margin: auto;
+  border-radius: 4px;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--contained {
+  background-color: var(--mainCollor);
+  --textColor: var(--contrast);
+}
+
+.button--outlined {
+  background-color: transparent;
+  border: var(--borderThickness) solid var(--mainCollor);
+  --textColor: var(--mainCollor);
+  /* Isso aqui serve pro tamanho do botão continuar o mesmo com a borda da variante outlined */
+  padding: calc(var(--paddingY) - var(--borderThickness) / 2) calc(var(--paddingX) - var(--borderThickness) / 2) calc(var(--paddingY) - var(--borderThickness) / 2) calc(var(--paddingX) - var(--borderThickness) / 2);
+}
+
+.button--primary {
+  --mainCollor: #117FF2;
+  --contrast: #F9F9F9;
+}
+
+.button--primary:hover {
+  --mainCollor: #3890ee;
+}
+
+.button--secondary {
+  --mainCollor: #F6D80B;
+  --contrast: #2C2C2C;
+}
+
+.button--secondary:hover {
+  --mainCollor: #eed639;
+}
+
+.button--dark {
+  --mainCollor: #323232;
+  --contrast: #F9F9F9;
+}
+
+.button--dark:hover {
+  --mainCollor: #575757;
+}
+
+.button--light {
+  --mainCollor: #F9F9F9;
+  --contrast: #323232;
+}
+
+.button--light:hover {
+  --mainCollor: #dbdbdb;
+}
+
+/* Text */
+.text {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--textColor);
+}
+
+/* Others */
+.button:hover {
+  cursor: pointer;
+}
+
+.buttonFullWidth {
+  width: 100%;
+}
