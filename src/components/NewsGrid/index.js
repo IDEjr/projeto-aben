@@ -2,7 +2,7 @@ import React from "react";
 import style from "./NewsGrid.module.css";
 import News from "../News/index";
 import { ButtonBase } from "../ButtonBase/index";
-import news from "../../data/data";
+import news from "./data";
 
 const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
   const defaultNumberOfNewsToRender = 6;

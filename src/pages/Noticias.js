@@ -1,12 +1,13 @@
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import PageTitle from "components/PageTitle";
+import NewsGrid from "components/NewsGrid";
 
 const Noticias = () => {
   return (
     <>
       <PageTitle title="Notícias" />
       <Container sx={{ mt: 2 }}>
-        <Typography>Conteúdo</Typography>
+        <NewsGrid />
       </Container>
     </>
   );

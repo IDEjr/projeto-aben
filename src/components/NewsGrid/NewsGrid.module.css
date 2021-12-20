@@ -1,43 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
 
-.gridContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 2rem;
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
 }
 
-.gridHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.gridHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.text{
-    font-family: 'Archivo';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 20px;
-    align-self: center;
-    padding-right: 1rem;
-    padding-left: 1rem;
+.text {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 20px;
+  align-self: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-.grid{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-
-@media (max-width: 400px){
-    .text{
-        font-size: 30px;
-        line-height: 1.3;
-    }
+@media (max-width: 400px) {
+  .text {
+    font-size: 30px;
+    line-height: 1.3;
+  }
 }
-
