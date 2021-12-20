@@ -1,77 +1,54 @@
 .banner{
     background-image: linear-gradient(to right, #117ef2, #0e4da4);
-    position: absolute;
-    width: 1447px;
-    height: 425px;
+    width: 100%;
+    max-height: 415px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoDiv{
+    align-self: flex-end;
 }
 
 .photo{
-    position: absolute;
-    width: 1158px;
-    height: 425px;
-    left: 122px;
+    width: 100%;
+    height: 100%;
 }
 
 .info{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-
-    position: absolute;
-    width: 596px;
-    height: 218px;
-    left: 736px;
-    top: 75px;
+    justify-content: flex-start;
+    padding: 2rem;
 }
 
 .textHeader{
-    position: static;
-    width: 596px;
-    height: 20px;
-    left: 0px;
-
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
-    line-height: 20px;
-
-    display: flex;
-    align-items: center;
     color: #FFFF;
 }
 
 .text{
-    position: static;
-    width: 511px;
-    height: 86px;
-    left: 0px;
-    top: 57px;
-
+    max-width: 511px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-    /* or 178% */
-
-    display: flex;
-    align-items: center;
-
-    padding-top: 1rem;
-    padding-bottom: 2rem;
     color: #FFFFFF;
 }
 
-.btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 21px;
-
-    position: static;
-    left: 0%;
-    right: 76.34%;
-    top: 82.57%;
-    bottom: 0%;
+@media (max-width: 800px){
+    .banner{
+        max-height: 100%;
+        flex-direction: column;
+    }
+    .photoDiv{
+        display: none;
+    }
+    .text{
+        padding-bottom: 1rem;
+    }
 }

@@ -1,11 +1,14 @@
-import React from "react";
-import NewsGrid from "../components/NewsGrid/index";
+import { Container, Typography } from "@mui/material";
+import PageTitle from "components/PageTitle";
 
 const Noticias = () => {
   return (
-    <div>
-      <NewsGrid />
-    </div>
+    <>
+      <PageTitle title="Notícias" />
+      <Container sx={{ mt: 2 }}>
+        <Typography>Conteúdo</Typography>
+      </Container>
+    </>
   );
 };
 

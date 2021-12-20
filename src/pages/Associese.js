@@ -1,10 +1,15 @@
+import { Container, Typography } from '@mui/material';
+import PageTitle from 'components/PageTitle';
 import React from 'react';
 
 const Associese = () => {
   return (
-    <div>
-      <h1>Associe-se</h1>
-    </div>
+    <>
+      <PageTitle title="Associe-se" />
+      <Container sx={{ mt: 2 }}>
+        <Typography>Conteúdo</Typography>
+      </Container>
+    </>
   );
 };
 

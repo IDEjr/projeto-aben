@@ -1,8 +1,15 @@
+import { Container, Typography } from '@mui/material';
+import PageTitle from 'components/PageTitle';
+import React from 'react';
+
 const Publicacoes = () => {
   return (
-    <div>
-      <h1>Publicações</h1>
-    </div>
+    <>
+      <PageTitle title="Publicações" />
+      <Container sx={{ mt: 2 }}>
+        <Typography>Conteúdo</Typography>
+      </Container>
+    </>
   );
 };
 

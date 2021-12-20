@@ -1,10 +1,15 @@
+import { Container, Typography } from '@mui/material';
+import PageTitle from 'components/PageTitle';
 import React from 'react';
 
 const Eventos = () => {
   return (
-    <div>
-      <h1>Eventos</h1>
-    </div>
+    <>
+      <PageTitle title="Eventos" />
+      <Container sx={{ mt: 2 }}>
+        <Typography>Conteúdo</Typography>
+      </Container>
+    </>
   );
 };
 
