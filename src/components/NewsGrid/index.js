@@ -17,6 +17,7 @@ const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
         imageLink={item.imageUrl}
         newsTitle={item.title}
         newsHeadline={item.headline}
+        newsContent={item.content}
         key={item.key}
       />
     ));
