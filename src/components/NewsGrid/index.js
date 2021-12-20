@@ -6,7 +6,6 @@ import news from "./data";
 
 const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
   const defaultNumberOfNewsToRender = 6;
-
   const numberOfNewsToRender = renderAllNews
     ? news.length
     : defaultNumberOfNewsToRender;
