@@ -2,22 +2,25 @@ import React from "react";
 import style from "./NewsGrid.module.css";
 import News from "../News/index";
 import { ButtonBase } from "../ButtonBase/index";
-import news from "./data";
 
-const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
+const NewsGrid = ({
+  renderAllNews = true,
+  hasGridHeader = false,
+  newsData,
+}) => {
   const defaultNumberOfNewsToRender = 6;
   const numberOfNewsToRender = renderAllNews
-    ? news.length
+    ? newsData.length
     : defaultNumberOfNewsToRender;
 
-  const newsToRender = news
+  const newsToRender = newsData
     .slice(0, numberOfNewsToRender)
     .map((item) => (
       <News
-        imageLink={item.imageUrl}
-        newsTitle={item.title}
-        newsHeadline={item.headline}
-        newsContent={item.content}
+        imageLink={item.imagem}
+        newsTitle={"Notícia"}
+        newsHeadline={item.manchete}
+        newsContent={item.texto}
         key={item.key}
       />
     ));

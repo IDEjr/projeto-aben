@@ -17,7 +17,7 @@ const News = ({ imageLink, newsTitle, newsHeadline, newsContent, key }) => {
     <>
       <Card variant="outlined" sx={{ maxWidth: 345, m: 1.3 }}>
         <CardActionArea onClick={() => setOpen(true)}>
-          <CardMedia component="img" height="140" image={imageLink} alt="" />
+          <CardMedia component="img" height="140" src={imageLink} alt="" />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {newsTitle}
