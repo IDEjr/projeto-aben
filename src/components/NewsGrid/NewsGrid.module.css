@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 
+.gridContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
 .gridHeader{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.grid{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px 30px;
 }
 
 .text{
@@ -21,5 +22,22 @@
     font-size: 36px;
     line-height: 20px;
     align-self: center;
-    padding: 0rem 1rem 0rem 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
+
+.grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 400px){
+    .text{
+        font-size: 30px;
+        line-height: 1.3;
+    }
+}
+
