@@ -1,8 +1,8 @@
 {
-    "noticia-id": "8",
+    "noticiaId": "8",
     "data": "21/12/2021",
     "autor": "Carl Johnson",
-    "imagem": "./public/images/noticias/noticia-1.png",
+    "imagem": "/images/noticias/noticia-1.png",
     "manchete":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     "texto":
