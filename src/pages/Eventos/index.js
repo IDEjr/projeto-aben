@@ -1,6 +1,6 @@
-import { Container, Typography } from '@mui/material';
-import PageTitle from 'components/PageTitle';
-import React from 'react';
+import { Container, Typography } from "@mui/material";
+import PageTitle from "components/PageTitle";
+import React from "react";
 
 const Eventos = () => {
   return (
