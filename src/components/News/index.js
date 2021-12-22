@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import NewsModal from "components/NewsModal";
 import React from "react";
 import { useState } from "react";
 import {
@@ -9,34 +8,34 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
+import { useRouter } from "next/router";
 
-const News = ({ imageLink, newsTitle, newsHeadline, newsContent, key }) => {
-  const [open, setOpen] = useState(false);
+const News = ({
+  imagemNoticia,
+  mancheteNoticia,
+  dataNoticia,
+  idNoticia,
+  key,
+}) => {
+  const router = useRouter();
+
+  const handleClick = () => router.push(`/Noticias/${idNoticia}`);
 
   return (
     <>
       <Card variant="outlined" sx={{ maxWidth: 345, m: 1.3 }}>
-        <CardActionArea onClick={() => setOpen(true)}>
-          <CardMedia component="img" height="140" image={imageLink} alt="" />
+        <CardActionArea onClick={handleClick}>
+          <CardMedia component="img" height="140" src={imagemNoticia} alt="" />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {newsTitle}
+            <Typography gutterBottom variant="body2" component="div">
+              {dataNoticia}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {newsHeadline}
+            <Typography gutterBottom variant="h6" component="div">
+              {mancheteNoticia}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-      {open && (
-        <NewsModal
-          opened={open}
-          newsImage={imageLink}
-          newsTitle={newsTitle}
-          newsContent={newsContent}
-          onConfirm={() => setOpen(false)}
-        />
-      )}
     </>
   );
 };
