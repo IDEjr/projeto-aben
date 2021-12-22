@@ -25,6 +25,7 @@ const NewsGrid = ({
         newsTitle={"Notícia"}
         newsHeadline={item.manchete}
         newsContent={item.texto}
+        newsId={item.noticiaId}
         key={item.key}
       />
     ));

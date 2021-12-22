@@ -9,14 +9,25 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
+import { useRouter } from "next/router";
 
-const News = ({ imageLink, newsTitle, newsHeadline, newsContent, key }) => {
+const News = ({
+  imageLink,
+  newsTitle,
+  newsHeadline,
+  newsContent,
+  newsId,
+  key,
+}) => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleClick = () => router.push(`/Noticias/${newsId}`);
 
   return (
     <>
       <Card variant="outlined" sx={{ maxWidth: 345, m: 1.3 }}>
-        <CardActionArea onClick={() => setOpen(true)}>
+        <CardActionArea onClick={handleClick}>
           <CardMedia component="img" height="140" src={imageLink} alt="" />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">

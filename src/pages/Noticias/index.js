@@ -1,9 +1,9 @@
 import { Container } from "@mui/material";
 import PageTitle from "components/PageTitle";
 import NewsGrid from "components/NewsGrid";
-import { handleJSONfiles } from "../../utils/postHandler";
+import { handleJSONfiles } from "../../../utils/postHandler";
 
-export async function getStaticProps() {
+export function getStaticProps() {
   const noticias = handleJSONfiles("./public/posts/noticias");
 
   return {
