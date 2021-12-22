@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./EventsGrid.module.css";
 import EventCard from "components/EventCard";
 import { Grid } from "@mui/material";
 
@@ -14,16 +13,9 @@ const EventsGrid = ({ events }) => {
     />
   ));
 
-  // return <div className={style.grid}></div>;
-
   return (
     <div>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="flex-start"
-      >
+      <Grid container direction="row" alignItems="flex-start" sx={{ pl: 5 }}>
         {eventsToRender}
       </Grid>
     </div>
