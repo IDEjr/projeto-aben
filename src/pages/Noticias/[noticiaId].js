@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import ReactMarkdown from "react-markdown";
 import {
   Card,
   CardContent,
@@ -48,7 +49,7 @@ const Noticia = (props) => {
               {noticia.manchete}
             </Typography>
             <Typography variant="body3" color="text.secondary">
-              {noticia.texto}
+              <ReactMarkdown>{noticia.texto}</ReactMarkdown>
             </Typography>
           </CardContent>
         </Card>
