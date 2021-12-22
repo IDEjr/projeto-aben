@@ -150,7 +150,7 @@ const theme = responsiveFontSizes(
         fontWeight: 600,
         fontSize: "1.125rem",
       },
-      body2: {
+      body3: {
         fontWeight: 400,
         fontSize: "1.2rem",
       },

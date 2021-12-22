@@ -1,5 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { Container } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Container,
+  Typography,
+} from "@mui/material";
 import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
 
 export function getStaticPaths() {
@@ -28,12 +34,18 @@ const Noticia = (props) => {
 
   return (
     <>
-      <Container sx={{ mt: 2 }}>
-        <div style={{ alignItems: "center" }}>
-          <img src={noticia.imagem} alt={""} />
-          <h2>{noticia.manchete}</h2>
-          <p>{noticia.texto}</p>
-        </div>
+      <Container>
+        <Card>
+          <CardMedia component="img" height="280" src={noticia.imagem} alt="" />
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="div">
+              {noticia.manchete}
+            </Typography>
+            <Typography variant="body3" color="text.secondary">
+              {noticia.texto}
+            </Typography>
+          </CardContent>
+        </Card>
       </Container>
     </>
   );
