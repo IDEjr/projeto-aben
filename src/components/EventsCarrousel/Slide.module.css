@@ -1,0 +1,27 @@
+.slide {
+  height: 425px;
+  border-radius: 8px;
+  color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+.title {
+  font-size: 52px;
+  margin: 0 0 18px 0;
+  line-height: 50px;
+}
+
+.slide__content {
+  font-size: 18px;
+  line-height: 28px;
+} 
+
+@media (min-width: 901px)
+{
+  .slide__content {
+    width: 600px;
+  }
+}
