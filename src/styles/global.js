@@ -23,7 +23,10 @@ const scrollBar = {
 
 
 const globalCss = {
-  ...scrollBar
+  ...scrollBar,
+  ":root": {
+    "--swiper-navigation-color": "rgba(255, 255, 255, 0.575)"
+  },
 }
 
 export default scrollBar;
