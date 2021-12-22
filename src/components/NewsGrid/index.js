@@ -21,11 +21,10 @@ const NewsGrid = ({
     .slice(0, numberOfNewsToRender)
     .map((item) => (
       <News
-        imageLink={item.imagem}
-        newsTitle={"Notícia"}
-        newsHeadline={item.manchete}
-        newsContent={item.texto}
-        newsId={item.noticiaId}
+        imagemNoticia={item.imagem}
+        mancheteNoticia={item.manchete}
+        dataNoticia={item.data}
+        idNoticia={item.noticiaId}
         key={item.key}
       />
     ));
