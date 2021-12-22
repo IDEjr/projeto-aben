@@ -38,6 +38,12 @@ const Noticia = (props) => {
         <Card>
           <CardMedia component="img" height="280" src={noticia.imagem} alt="" />
           <CardContent>
+            <Typography gutterBottom variant="body2" component="div">
+              {noticia.data}
+            </Typography>
+            <Typography gutterBottom variant="body2" component="div">
+              Por: {noticia.autor}
+            </Typography>
             <Typography gutterBottom variant="h4" component="div">
               {noticia.manchete}
             </Typography>
