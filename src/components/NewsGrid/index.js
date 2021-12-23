@@ -3,6 +3,7 @@ import style from "./NewsGrid.module.css";
 import News from "../News/index";
 import { ButtonBase } from "../ButtonBase/index";
 import news from "./data";
+import { Container } from "@mui/material";
 
 const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
   const defaultNumberOfNewsToRender = 6;
@@ -23,7 +24,7 @@ const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
     ));
 
   return (
-    <div>
+    <Container>
       {hasGridHeader && (
         <div className={style.gridHeader}>
           <h1 className={style.text}>Notícias</h1>
@@ -41,7 +42,7 @@ const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
         </div>
       )}
       <div className={style.grid}>{newsToRender}</div>
-    </div>
+    </Container>
   );
 };
 

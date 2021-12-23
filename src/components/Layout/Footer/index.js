@@ -38,7 +38,7 @@ export default function Footer() {
         }}>
         <Grid container>
           <Grid
-            xs={6}
+            xs={12}
             md={4}
             display="flex"
             justifyContent="center"
@@ -62,7 +62,7 @@ export default function Footer() {
               justifyContent: "space-between"
             }}
             item>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} sx={{my:1}}>
               <Grid
                 xs={12}
                 md={6}
