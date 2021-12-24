@@ -15,6 +15,7 @@ const Slide = ({
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "top",
+        
       }}
       className={
         style.slide

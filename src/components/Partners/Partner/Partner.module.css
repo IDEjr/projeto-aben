@@ -1,14 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 
-.partner {
-  display: flex;
-  align-items: flex-end;
-  height: 80px;
-  width: 192px;
-  background-color: rgba(0, 0, 0, 0.4);
-  background-size: contain;
-  border-radius: 2px;
-}
+
 
 .title {
   display: flex;
