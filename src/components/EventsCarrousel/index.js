@@ -1,6 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import newsList from "./mockdata";
 import Slide from "./Slide";
 import CustomCarrousel from "../CustomCarrousel";
 
@@ -11,6 +10,7 @@ import "swiper/css/navigation";
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import { Container } from "@mui/material";
+import newsList from "./mockdata";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);

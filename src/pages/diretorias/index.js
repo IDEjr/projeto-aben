@@ -10,7 +10,7 @@ import {
 import { DiretoriasArchiveSwiper, DiretoriasGridView } from 'components/Diretorias';
 import PageTitle from 'components/PageTitle';
 import React from 'react';
-import { diretoriasAtual, diretoriasArchive } from './mockData';
+import { diretoriasAtual, diretoriasArchive } from 'components/mockData/mockData';
 
 const Diretorias = () => {
   return (
