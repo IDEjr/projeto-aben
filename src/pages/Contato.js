@@ -3,7 +3,7 @@ import * as emailjs from "emailjs-com";
 
 import PageTitle from "components/PageTitle";
 import React, { useState } from "react";
-import { Box} from "@mui/system";
+import { Box } from "@mui/system";
 import MapView from "components/MapView";
 import BasicModal from "components/Modal";
 import { Card } from "@mui/material";
@@ -77,59 +77,59 @@ const Contato = () => {
   };
   return (
     <>
-      
       <PageTitle title="Contato" />
       <Container>
-      
-        <Card sx={{
-          p:3
-        }}>
-          <Grid
-            container
-            display="flex"
-            flexDirection="column"
-            spacing={2}
-            sx={{
-              my: 4,
-            }}
-          >
-            <Grid item>
-              <Typography fontSize="1.5rem">
-                <b>Endereço:</b> Av. Venâncio Aires, 1191/142 - Bom Fim
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography fontSize="1.5rem">
-                <b>CEP:</b> 90.040-193 - Porto Alegre
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography fontSize="1.5rem">
-                <b>E-mail:</b> aben-rs@abennacional.org.br
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography fontSize="1.5rem">
-                <b>Telefone:</b>(51) 3332-8622
-              </Typography>
-            </Grid>
+        <Grid
+          container
+          display="flex"
+          flexDirection="column"
+          spacing={2}
+          sx={{
+            my: 4,
+          }}
+        >
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>Endereço:</b> Av. Venâncio Aires, 1191/142 - Bom Fim
+            </Typography>
           </Grid>
-
-          {open && <BasicModal opened={open} onConfirm={ModalHandler} />}
-          <Grid
-            container
-            display="flex"
-            flexDirection="row"
-            justifyContent="center"
-            sx={{ my: 8 }}
-          >
-            <Grid item xs={12} md={8}>
-              <Box fullWidth backgroundColor="primary.main" borderRadius={1}>
-                <MapView />
-              </Box>
-            </Grid>
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>CEP:</b> 90.040-193 - Porto Alegre
+            </Typography>
           </Grid>
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>E-mail:</b> aben-rs@abennacional.org.br
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography fontSize="1.5rem">
+              <b>Telefone:</b>(51) 3332-8622
+            </Typography>
+          </Grid>
+        </Grid>
 
+        {open && <BasicModal opened={open} onConfirm={ModalHandler} />}
+        <Grid
+          container
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ my: 8 }}
+        >
+          <Grid item xs={12} md={8}>
+            <Box fullWidth backgroundColor="primary.main" borderRadius={1}>
+              <MapView />
+            </Box>
+          </Grid>
+        </Grid>
+        <Card
+          sx={{
+            p: 3,
+            mb: 2,
+          }}
+        >
           <Box justifyContent={"center"} marginBottom={"15px"}>
             <Typography fontSize="1.5rem">Entre em contato conosco:</Typography>
             <form onSubmit={sendEmail}>

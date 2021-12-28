@@ -19,7 +19,7 @@ const pages = [
         title: "História",
         to: "/Historia",
       },
-    ]
+    ],
   },
   {
     title: "Notícias",
@@ -30,10 +30,6 @@ const pages = [
     to: "/Eventos",
   },
   {
-    title: "Publicações",
-    to: "/Publicacoes",
-  },
-  {
     title: "Associe-se",
     to: "/Associese",
   },
@@ -41,6 +37,6 @@ const pages = [
     title: "Contato",
     to: "/Contato",
   },
-]
+];
 
 export default pages;
