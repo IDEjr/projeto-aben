@@ -1,13 +1,22 @@
 import { Container } from "@mui/material";
 import PageTitle from "components/PageTitle";
 import NewsGrid from "components/NewsGrid";
+import { handleJSONfiles } from "../../../utils/postHandler";
 
-const Noticias = () => {
+export function getStaticProps() {
+  const noticias = handleJSONfiles("./public/posts/noticias");
+
+  return {
+    props: { noticias },
+  };
+}
+
+const Noticias = (props) => {
   return (
     <>
       <PageTitle title="Notícias" />
       <Container sx={{ mt: 2 }}>
-        <NewsGrid />
+        <NewsGrid newsData={props.noticias} />
       </Container>
     </>
   );
