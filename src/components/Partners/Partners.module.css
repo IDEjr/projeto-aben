@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: none;
   height: 390px;
 }
 
@@ -16,21 +16,19 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+  min-width: 100%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 450px;
   height: 100%;
   justify-content: space-around;
   color: #202020;
 }
 
-.title {
-  font-family: Archivo;
-  font-size: 36px;
-}
+
 
 .description {
   font-family: Roboto;
