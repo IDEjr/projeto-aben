@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./NewsGrid.module.css";
 import News from "../News/index";
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Container, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
 const NewsGrid = ({
@@ -30,7 +30,7 @@ const NewsGrid = ({
     ));
 
   return (
-    <div>
+    <Container>
       {hasGridHeader && (
         <Stack
           direction="row"
@@ -46,7 +46,7 @@ const NewsGrid = ({
         </Stack>
       )}
       <div className={style.grid}>{newsToRender}</div>
-    </div>
+    </Container>
   );
 };
 

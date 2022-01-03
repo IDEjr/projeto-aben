@@ -1,16 +1,26 @@
+import { Typography } from '@mui/material';
+import { Box } from '@mui/system';
 import PropTypes from 'prop-types';
 import classes from './Partner.module.css'
 
 export default function Partner ({title, imageUrl}) {
   return (
-    <div
-      className={classes.partner}
-      style={{backgroundImage: `url(${imageUrl})`}}
+    <Box
+      
+      sx={{backgroundImage: `url(${imageUrl})`,
+      justifyItems:'center',
+      alignItems: 'center',
+      height: '80px',
+      width: '192px',
+      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+      backgroundSize: 'contain',
+      borderRadius: '2px'
+    }}
     >
-      <div className={classes.title}>
-        <div>{title}</div>
-      </div>
-    </div>
+      <Typography>
+        {title}
+      </Typography>
+    </Box>
   )
 }
 

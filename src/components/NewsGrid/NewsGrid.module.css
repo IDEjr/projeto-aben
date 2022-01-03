@@ -12,6 +12,7 @@
 .gridHeader {
   display: flex;
   flex-direction: row;
+  align-content: center;
   justify-content: space-between;
 }
 
@@ -29,6 +30,8 @@
 .grid {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  
   flex-wrap: wrap;
 }
 
