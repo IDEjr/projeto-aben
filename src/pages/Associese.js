@@ -97,29 +97,6 @@ const Associese = () => {
                     //ref={nameInputRef}
                   />
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <InputMask mask="(99) 99999-9999">
-                    {() => (
-                      <TextField
-                        fullWidth
-                        name="number"
-                        required
-                        label="Telefone"
-                        defaultValue=""
-                        //ref={numberInputRef}
-                      />
-                    )}
-                  </InputMask>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <TextField
-                    fullWidth
-                    name="email"
-                    required
-                    label="E-Mail"
-                    defaultValue=""
-                  />
-                </Grid>
                 <Grid item xs={12} md={4}>
                   <InputMask mask="99/99/9999">
                     {() => (
@@ -142,7 +119,7 @@ const Associese = () => {
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={4}> 
                   <TextField
                     fullWidth
                     name="sex"
@@ -151,7 +128,7 @@ const Associese = () => {
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item item xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                   <TextField
                     fullWidth
                     name="localBirth"
@@ -205,13 +182,137 @@ const Associese = () => {
                     {() => (
                       <TextField
                         fullWidth
-                        name="cpf"
+                        name="cpfCnpj"
                         required
-                        label="CPF"
+                        label="CPF/CNPJ"
                         defaultValue=""
                       />
                     )}
                   </InputMask>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    fullWidth
+                    name="addr"
+                    required
+                    label="Endereço"
+                    defaultValue=""
+                  />
+                </Grid>
+                <Grid item xs={12} md={2}>
+                  <TextField
+                    fullWidth
+                    name="addrNum"
+                    required
+                    label="Nº"
+                    defaultValue=""
+                  />
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <TextField
+                    fullWidth
+                    name="addrCompl"
+                    required
+                    label="Complemento"
+                    defaultValue=""
+                  />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                  <TextField
+                    fullWidth
+                    name="district"
+                    required
+                    label="Bairro"
+                    defaultValue=""
+                  />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                  <TextField
+                    fullWidth
+                    name="cep"
+                    required
+                    label="CEP"
+                    defaultValue=""
+                  />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                  <TextField
+                    fullWidth
+                    name="city"
+                    required
+                    label="Cidade"
+                    defaultValue=""
+                  />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                  <TextField
+                    fullWidth
+                    name="uf"
+                    required
+                    label="UF"
+                    defaultValue=""
+                  />
+                </Grid>
+                
+                <Grid item xs={12} md={4}>
+                  <InputMask mask="(99) 99999-9999">
+                    {() => (
+                      <TextField
+                        fullWidth
+                        name="housePhone"
+                        required
+                        label="Telefone Residencial"
+                        defaultValue=""
+                        //ref={numberInputRef}
+                      />
+                    )}
+                  </InputMask>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <InputMask mask="(99) 99999-9999">
+                    {() => (
+                      <TextField
+                        fullWidth
+                        name="commercialPhone"
+                        required
+                        label="Telefone Comercial"
+                        defaultValue=""
+                        //ref={numberInputRef}
+                      />
+                    )}
+                  </InputMask>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <InputMask mask="(99) 99999-9999">
+                    {() => (
+                      <TextField
+                        fullWidth
+                        name="personalPhone"
+                        required
+                        label="Celular"
+                        defaultValue=""
+                        //ref={numberInputRef}
+                      />
+                    )}
+                  </InputMask>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    fullWidth
+                    name="email"
+                    required
+                    label="E-mail"
+                    defaultValue=""
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    fullWidth
+                    name="workspace"
+                    required
+                    label="Local de Trabalho"
+                    defaultValue=""
+                  />
                 </Grid>
               </Grid>
               <Box flexDirection="row">
@@ -272,7 +373,7 @@ const Associese = () => {
                 }}
               >
                 <Typography variant="p">Enfermeiro</Typography>
-                <Typography>R$241.00</Typography>
+                <Typography>R$ 241,00</Typography>
               </Grid>
               <Grid
                 item
@@ -285,7 +386,7 @@ const Associese = () => {
                 <Typography variant="p">
                   Técnico e Auxiliar de Enfermagem
                 </Typography>
-                <Typography>R$79.00</Typography>
+                <Typography>R$ 79,00</Typography>
               </Grid>
               <Grid
                 item
@@ -296,7 +397,7 @@ const Associese = () => {
                 }}
               >
                 <Typography variant="p">Estudante de Pós Graduação </Typography>
-                <Typography>R$120.00</Typography>
+                <Typography>R$ 120,00</Typography>
               </Grid>
               <Grid
                 item
@@ -307,7 +408,7 @@ const Associese = () => {
                 }}
               >
                 <Typography variant="p">Estudante de Graduação</Typography>
-                <Typography>R$70.00</Typography>
+                <Typography>R$ 70,00</Typography>
               </Grid>
               <Grid
                 item
@@ -320,7 +421,7 @@ const Associese = () => {
                 <Typography variant="p">
                   Estudante Técnico de Enfermagem
                 </Typography>
-                <Typography>R$43.00</Typography>
+                <Typography>R$ 43,00</Typography>
               </Grid>
             </Grid>
             <Grid
@@ -349,7 +450,7 @@ const Associese = () => {
                 }}
               >
                 <Typography variant="p">Enfermeiro</Typography>
-                <Typography>R$293.00</Typography>
+                <Typography>R$ 293,00</Typography>
               </Grid>
               <Grid
                 item
@@ -360,7 +461,7 @@ const Associese = () => {
                 }}
               >
                 <Typography variant="p">Estudante</Typography>
-                <Typography>R$146.00</Typography>
+                <Typography>R$ 146,00</Typography>
               </Grid>
               <Grid
                 item
@@ -371,7 +472,7 @@ const Associese = () => {
                 }}
               >
                 <Typography variant="p">Escolas e Associações</Typography>
-                <Typography>R$366.00</Typography>
+                <Typography>R$ 366,00</Typography>
               </Grid>
             </Grid>
           </Grid>
