@@ -9,6 +9,11 @@
     "lint": "next lint",
     "src": "https://maps.googleapis.com/maps/api/js?key=key"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
     "@emotion/cache": "^11.6.0",
     "@emotion/react": "^11.7.0",

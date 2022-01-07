@@ -14,29 +14,26 @@ const News = ({
   imagemNoticia,
   mancheteNoticia,
   dataNoticia,
-  idNoticia,
-  key,
+  fileName,
 }) => {
   const router = useRouter();
 
-  const handleClick = () => router.push(`/Noticias/${idNoticia}`);
+  const handleClick = () => router.push(`/Noticias/${fileName}`);
 
   return (
-    <>
-      <Card variant="outlined" sx={{ maxWidth: 345, m: 1.3 }}>
-        <CardActionArea onClick={handleClick}>
-          <CardMedia component="img" height="140" src={imagemNoticia} alt="" />
-          <CardContent>
-            <Typography gutterBottom variant="body2" component="div">
-              {dataNoticia}
-            </Typography>
-            <Typography gutterBottom variant="h6" component="div">
-              {mancheteNoticia}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </>
+    <Card variant="outlined">
+      <CardActionArea onClick={handleClick}>
+        <CardMedia component="img" height="140" src={imagemNoticia} alt="" />
+        <CardContent>
+          <Typography gutterBottom variant="body2" component="div">
+            {dataNoticia}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            {mancheteNoticia}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 };
 
