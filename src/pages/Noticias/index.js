@@ -15,7 +15,7 @@ const Noticias = (props) => {
   return (
     <>
       <PageTitle title="Notícias" />
-      <Container sx={{ mt: 2 }}>
+      <Container sx={{ my: 6 }}>
         <NewsGrid newsData={props.noticias} />
       </Container>
     </>

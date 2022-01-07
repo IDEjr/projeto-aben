@@ -16,7 +16,7 @@ const Eventos = (props) => {
   return (
     <>
       <PageTitle title="Eventos" />
-      <Container sx={{ mt: 2 }}>
+      <Container sx={{ my: 6 }}>
         <EventsGrid events={props.eventos} />
       </Container>
     </>

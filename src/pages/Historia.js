@@ -8,7 +8,7 @@ const Historia = () => {
   return (
     <>
       <PageTitle title="Historia" />
-      <Container>
+      <Container sx={{ my: 6 }}>
         <Grid
           container
           spacing={0}
@@ -17,14 +17,12 @@ const Historia = () => {
             justifyContent: "center",
           }}
         >
-          <Grid item xs={12} md={10}>
-            <Box fullWidth borderRadius={1}>
-              <Image src={presidentesABEN} />
+            <Box fullWidth mb={2}>
+              <Image src={presidentesABEN} alt="seila" />
               <Typography sx={{ fontSize: "0.8rem" }}>
                 Presidentes ABEn-RS de 1952 - 2016
               </Typography>
             </Box>
-          </Grid>
           <Grid
             item
             xs={12}

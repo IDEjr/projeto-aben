@@ -116,7 +116,7 @@ const Contato = () => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ my: 8 }}
+          sx={{ my: 6 }}
         >
           <Grid item xs={12} md={8}>
             <Box fullWidth backgroundColor="primary.main" borderRadius={1}>
@@ -127,7 +127,7 @@ const Contato = () => {
         <Card
           sx={{
             p: 3,
-            mb: 2,
+            mb: 8,
           }}
         >
           <Box justifyContent={"center"} marginBottom={"15px"}>

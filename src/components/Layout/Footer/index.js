@@ -6,7 +6,7 @@ import phone from "../../../../public/images/icons/phone.svg";
 import mail from "../../../../public/images/icons/mail.svg";
 import { Avatar, Container, Grid, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
-import logoIDE from "../../../../public/images/logoIDE_preto.svg";
+import logoIDE from "../../../../public/images/logoide.png";
 const ContatosItem = ({ text, src }) => (
   <Box display="flex" flexDirection="row" alignItems="center">
     <Avatar
@@ -30,7 +30,7 @@ export default function Footer() {
       <Container
         sx={{
           py: 4,
-          minHeight: "340px",
+          minHeight: "280px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -114,18 +114,25 @@ export default function Footer() {
                 CEP 90040-193
               </Typography>
             </Box>
-            <Box my={2}>
-              <Box>
-                <Link target="_blank" underline="none" href={linkIDE}>
-                  <Image width={"50px"} height={"15px"} src={logoIDE} />
-                </Link>
-                <Typography variant="footer">  -   Site desenvolvido pela IDEjr - UFRGS
-                </Typography>
-              </Box>
-            </Box>
+
           </Grid>
         </Grid>
       </Container>
+      <Box my={2} display="flex" flexDirection="row" justifyContent="center">
+        <Box display="flex" flexDirection="row" alignItems="center">
+          <Link target="_blank" underline="none" href={linkIDE} sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            mr: 1
+          }}>
+            <Image width={"45px"} height={"20px"} src={logoIDE} alt="logo da IDEjr" />
+          </Link>
+          <Typography variant="footer">
+            - Site desenvolvido pela IDEjr - UFRGS
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 }

@@ -52,8 +52,8 @@ const Associese = () => {
   return (
     <>
       <PageTitle title="Associe-se" />
-      <Container sx={{ mt: 2 }}>
-        <Box my={3}>
+      <Container>
+        <Box my={6}>
           <Typography my={1} variant="h3">
             Novos Sócios
           </Typography>
@@ -62,7 +62,7 @@ const Associese = () => {
             e-mail aben-rs@abennacional.org.br.
           </Typography>
         </Box>
-        <Box my={3}>
+        <Box my={6}>
           <Typography my={1} variant="h3">
             Já sou sócio
           </Typography>
@@ -73,7 +73,7 @@ const Associese = () => {
             associado quite com anuidade.
           </Typography>
         </Box>
-        <Card sx={{ p: 3 }}>
+        <Card sx={{ p: 3, my: 6 }}>
           <Box>
             <Typography variant="h3">Ficha de Cadastro</Typography>
           </Box>
@@ -344,7 +344,7 @@ const Associese = () => {
             </form>
           </Box>
         </Card>
-        <Box my={8}>
+        <Box my={10}>
           <Typography variant="h3">Valores</Typography>
           <Grid container my={3}>
             <Grid

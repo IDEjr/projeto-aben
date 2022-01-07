@@ -18,7 +18,7 @@ const Diretorias = () => {
       <PageTitle title="Diretorias" />
       <Container
         sx={{
-          my: 4,
+          my: 6,
         }}>
         <DiretoriasGridView diretoria={diretoriasAtual} />
       </Container>
