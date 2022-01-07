@@ -1,47 +1,60 @@
 import React from "react";
 import style from "./NewsGrid.module.css";
 import News from "../News/index";
-import { ButtonBase } from "../ButtonBase/index";
-import news from "./data";
-import { Container } from "@mui/material";
+import { Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { useRouter } from "next/router";
+import { Box } from "@mui/system";
 
-const NewsGrid = ({ renderAllNews = true, hasGridHeader = false }) => {
+const NewsGrid = ({
+  limitItems,
+  hasGridHeader,
+  newsData = [],
+}) => {
+  const router = useRouter();
+  const handleClick = () => router.push("/Noticias");
+
   const defaultNumberOfNewsToRender = 6;
-  const numberOfNewsToRender = renderAllNews
-    ? news.length
-    : defaultNumberOfNewsToRender;
-
-  const newsToRender = news
-    .slice(0, numberOfNewsToRender)
-    .map((item) => (
-      <News
-        imageLink={item.imageUrl}
-        newsTitle={item.title}
-        newsHeadline={item.headline}
-        newsContent={item.content}
-        key={item.key}
-      />
-    ));
+  const numberOfNewsToRender = limitItems
+    ? defaultNumberOfNewsToRender
+    : newsData.length;
 
   return (
     <Container>
       {hasGridHeader && (
-        <div className={style.gridHeader}>
-          <h1 className={style.text}>Notícias</h1>
-          <ButtonBase
-            style={{
-              marginRight: "2rem",
-              marginLeft: "auto",
-              alignSelf: "flex-end",
-            }}
-            color="light"
-            onClick={() => console.log("apertou no botaoo aee")}
-          >
+        <Box
+          display="flex"
+          direction="row"
+          justifyContent="space-between"
+        >
+          <Typography variant="h4">
+            Notícias
+          </Typography>
+          <Button variant="outline" onClick={handleClick}>
             Mais {"\u2794"}
-          </ButtonBase>
-        </div>
+          </Button>
+        </Box>
       )}
-      <div className={style.grid}>{newsToRender}</div>
+
+      <Grid container spacing={2}>
+        {
+          newsData
+            .slice(0, numberOfNewsToRender)
+            .map((item) => (
+              <Grid item key={item.fileName}
+                xs={12}
+                md={4}>
+                <News
+                  imagemNoticia={item.imagem}
+                  mancheteNoticia={item.manchete}
+                  dataNoticia={item.data}
+                  fileName={item.fileName}
+                />
+              </Grid>
+            ))
+        }
+
+      </Grid>
+
     </Container>
   );
 };

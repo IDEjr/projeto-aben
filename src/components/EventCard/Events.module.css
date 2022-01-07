@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.news {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-bottom: 1rem;
+  min-width: 365px;
+  max-width: 370px;
+  height: 316px;
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),
+    0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsImage {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  width: 100%;
+  height: 194px;
+  filter: brightness(70%);
+}
+
+.newsTitle {
+  position: absolute;
+  width: 78px;
+  height: 20px;
+  left: 14px;
+  top: 155px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #ececec;
+}
+
+.newsHeadline {
+  position: absolute;
+  width: 333px;
+  height: 40px;
+  left: 14px;
+  bottom: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: rgba(0, 0, 0, 0.6);
+  width: 95%;
+}
+
+@media (max-width: 500px) {
+  .news {
+    min-width: 330px;
+  }
+}

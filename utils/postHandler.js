@@ -10,7 +10,10 @@ export function handleJSONfiles(filePath) {
   jsonsInDir.forEach((file) => {
     const fileData = fs.readFileSync(path.join(filePath, file));
     const json = JSON.parse(fileData.toString());
-    posts.push(json);
+    posts.push({
+      ...json,
+      fileName: file.split(".")[0]
+    });
   });
   return posts;
 }

@@ -5,36 +5,41 @@ import EventsCarrousel from "components/EventsCarrousel";
 import NewsGrid from "components/NewsGrid";
 import Partners from "components/Partners";
 import MembershipBanner from "components/MembershipBanner";
+import { handleJSONfiles } from "../../utils/postHandler";
+import { Box } from "@mui/system";
 
-const Home = () => {
+export function getStaticProps() {
+  const newsData = handleJSONfiles("./public/posts/noticias");
+
+  return {
+    props: { newsData },
+  };
+}
+
+const Home = ({
+  newsData
+}) => {
+
   return (
     <>
       <PageTitle title="Home" />
-      <Container spacing={2} sx={{ my: 3 }}>
-        <Grid container spacing={6}>
-          <Grid item sx={{ width: "100%" }}>
-            <EventsCarrousel />
-          </Grid>
-          <Grid item>
-            <Typography variant='h4'paragraph sx={{textIndent:'3ch'}}>Notícias</Typography>
-            <NewsGrid />
-          </Grid>
-          <Grid item sx={{ width: "100%" }}>
-            <EventsCarrousel />
-          </Grid>
-          <Grid item sx={{
-            display:'flex',
-            alignContent:'center',
-            justifyContent:'center',
-            width: "100%"
-          }}>
-            <Partners/>
-          </Grid>
-          <Grid item sx={{ width: "100%" }}>
-            <MembershipBanner/>
-          </Grid>
-        </Grid>
+      <Container sx={{ my: 3 }}>
+        <Box my={6}>
+          <EventsCarrousel />
+        </Box>
+        <Box my={6}>
+          <NewsGrid {...{ newsData }} limitItems hasGridHeader />
+        </Box>
+        <Box my={6}>
+          <EventsCarrousel />
+        </Box>
       </Container>
+      <Box my={6}>
+        <Partners />
+      </Box>
+      <Box my={6}>
+        <MembershipBanner />
+      </Box>
     </>
   );
 };
