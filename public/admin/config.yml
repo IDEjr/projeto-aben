@@ -7,7 +7,10 @@ public_folder: images
 collections:
   - name: "diretorias"
     label: "Diretorias"
-    folder: "posts/diretorias"
+    folder: "public/posts/diretorias"
+    identifier_field: "titulo"
+    slug: "diretoria-{{year}}-{{month}}-{{day}}_{{slug}}"
+    extension: "json"
     create: true
     fields:
     - { label: "Título", name: "titulo", widget: "string" }
