@@ -89,6 +89,7 @@ const theme = responsiveFontSizes(
         primary: "#172b4d",
         main: "#172b4d",
         secondary: "#6b778c",
+        contrast: "#EFF0F6"
       },
     },
     shape: {

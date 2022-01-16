@@ -18,7 +18,7 @@ const News = ({
 }) => {
   const router = useRouter();
 
-  const handleClick = () => router.push(`/Noticias/${fileName}`);
+  const handleClick = () => router.push(`${fileName}`);
 
   return (
     <Card variant="outlined">

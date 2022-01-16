@@ -35,9 +35,6 @@ const Home = ({
         </Box>
       </Container>
       <Box my={6}>
-        <Partners />
-      </Box>
-      <Box my={6}>
         <MembershipBanner />
       </Box>
     </>

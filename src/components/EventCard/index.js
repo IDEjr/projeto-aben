@@ -13,11 +13,10 @@ const EventCard = ({
   imagemEvento,
   tituloEvento,
   dataEvento,
-  idEvento,
-  key,
+  fileName,
 }) => {
   const router = useRouter();
-  const handleClick = () => router.push(`/Eventos/${idEvento}`);
+  const handleClick = () => router.push(`${fileName}`);
 
   return (
     <>

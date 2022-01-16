@@ -11,7 +11,7 @@ const NewsGrid = ({
   newsData = [],
 }) => {
   const router = useRouter();
-  const handleClick = () => router.push("/Noticias");
+  const handleClick = () => router.push("/noticias");
 
   const defaultNumberOfNewsToRender = 6;
   const numberOfNewsToRender = limitItems
@@ -25,6 +25,7 @@ const NewsGrid = ({
           display="flex"
           direction="row"
           justifyContent="space-between"
+          mb={2}
         >
           <Typography variant="h4">
             Notícias

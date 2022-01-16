@@ -1,15 +1,15 @@
 const pages = [
   {
     title: "Home",
-    to: "/Home",
+    to: "/",
   },
   {
     title: "Sobre",
-    to: "/Sobre",
+    to: "/sobre",
     children: [
       {
         title: "A ABEn-RS",
-        to: "/Sobre",
+        to: "/sobre",
       },
       {
         title: "Diretorias",
@@ -17,25 +17,25 @@ const pages = [
       },
       {
         title: "História",
-        to: "/Historia",
+        to: "/historia",
       },
     ],
   },
   {
     title: "Notícias",
-    to: "/Noticias",
+    to: "/noticias",
   },
   {
     title: "Eventos",
-    to: "/Eventos",
+    to: "/eventos",
   },
   {
     title: "Associe-se",
-    to: "/Associese",
+    to: "/associese",
   },
   {
     title: "Contato",
-    to: "/Contato",
+    to: "/contato",
   },
 ];
 
