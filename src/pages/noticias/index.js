@@ -11,12 +11,14 @@ export function getStaticProps() {
   };
 }
 
-const Noticias = (props) => {
+const Noticias = ({
+  noticias
+}) => {
   return (
     <>
       <PageTitle title="Notícias" />
       <Container sx={{ my: 6 }}>
-        <NewsGrid newsData={props.noticias} />
+        <NewsGrid newsData={noticias} />
       </Container>
     </>
   );

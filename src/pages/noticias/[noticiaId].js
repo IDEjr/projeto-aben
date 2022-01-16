@@ -8,13 +8,15 @@ import {
   Typography,
 } from "@mui/material";
 import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
+import moment from 'moment-timezone';
+import PageTitle from "components/PageTitle";
 
 export function getStaticPaths() {
   const noticias = handleJSONfiles("./public/posts/noticias");
 
   const paths = noticias.map((noticia) => {
     return {
-      params: { noticiaId: noticia.noticiaId },
+      params: { noticiaId: noticia.fileName },
     };
   });
 
@@ -30,31 +32,39 @@ export function getStaticProps(context) {
   };
 }
 
-const Noticia = (props) => {
-  const noticia = props.noticia;
+const Noticia = ({
+  noticia
+}) => {
+  const {
+    date,
+    title,
+    banner,
+    content,
+    author,
+    show_text,
+    active,
+  } = noticia;
 
   return (
-    <>
-      <Container>
-        <Card>
-          <CardMedia component="img" height="280" src={noticia.imagem} alt="" />
-          <CardContent>
-            <Typography gutterBottom variant="body2" component="div">
-              {noticia.data}
-            </Typography>
-            <Typography gutterBottom variant="body2" component="div">
-              Por: {noticia.autor}
-            </Typography>
-            <Typography gutterBottom variant="h4" component="div">
-              {noticia.manchete}
-            </Typography>
-            <Typography variant="body3" color="text.secondary">
-              <ReactMarkdown>{noticia.texto}</ReactMarkdown>
-            </Typography>
-          </CardContent>
-        </Card>
-      </Container>
-    </>
+    <Container>
+      <Card>
+        <CardMedia component="img" height="280" src={"/" + banner} alt="" />
+        <CardContent>
+          <Typography gutterBottom variant="body2" component="div">
+            {`${moment.utc(date).local().format("DD/MM/YYYY")}`}
+          </Typography>
+          <Typography gutterBottom variant="body2" component="div">
+            Por: {author}
+          </Typography>
+          <Typography gutterBottom variant="h4" component="div">
+            {title}
+          </Typography>
+          <Typography variant="body3" color="text.secondary">
+            <ReactMarkdown>{content}</ReactMarkdown>
+          </Typography>
+        </CardContent>
+      </Card>
+    </Container>
   );
 };
 
