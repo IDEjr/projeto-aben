@@ -1,0 +1,22 @@
+{
+  "valores_efetivo": [
+    {
+      "categoria": "Enfermeiro",
+      "valor": "R$ 00,00"
+    },
+    {
+      "categoria": "Enfermeiro2",
+      "valor": "R$ 10,00"
+    }
+  ],
+  "valores_estrangeiro": [
+    {
+      "categoria": "Enfermeiro",
+      "valor": "R$ 20,00"
+    },
+    {
+      "categoria": "Enfermeiro22",
+      "valor": "R$ 50,00"
+    }
+  ]
+}
