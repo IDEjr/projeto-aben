@@ -9,6 +9,10 @@ import createEmotionCache from '../createEmotionCache';
 import Layout from '../components/Layout'
 import { GlobalStyles } from '@mui/styled-engine';
 import globalCss from 'styles/global';
+import CMS from 'netlify-cms-app';
+import { de } from 'netlify-cms-locales';
+
+CMS.registerLocale('pt', de);
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

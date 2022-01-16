@@ -4,7 +4,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 local_backend: true
-locale: 'PT-br'
+locale: 'pt'
 media_folder: public/images
 public_folder: images
 publish_mode: editorial_workflow
@@ -21,6 +21,7 @@ collections:
     fields:
     - { label: "Nome da chapa/ diretoria", name: "titulo", widget: "string" }
     - { label: "Ano de atuação", name: "data", widget: "date" }
+    - { label: "Visível ao público", name: "active",  widget: "boolean" }
     - label: 'Integrantes'
       name: "integrantes"
       widget: list
@@ -30,7 +31,6 @@ collections:
         - { label: "Foto", name: "photo", widget: "image" }
         - { label: "Bio", name: "bio", widget: "text" }
         - { label: "Email", name: "email", widget: "string" }
-        - { label: "Visível ao público", name: "active",  widget: "boolean" }
 
   - name: "noticias"
     label: "Noticas"
