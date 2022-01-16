@@ -4,7 +4,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 local_backend: true
-locale: 'PT-br'
+locale: 'pt'
 media_folder: public/images
 public_folder: images
 publish_mode: editorial_workflow
