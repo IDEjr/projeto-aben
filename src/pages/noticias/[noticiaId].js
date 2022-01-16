@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
 import moment from 'moment-timezone';
-import PageTitle from "components/PageTitle";
 
 export function getStaticPaths() {
   const noticias = handleJSONfiles("./public/posts/noticias");

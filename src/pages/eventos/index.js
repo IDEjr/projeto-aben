@@ -12,12 +12,14 @@ export function getStaticProps() {
   };
 }
 
-const Eventos = (props) => {
+const Eventos = ({
+  eventos
+}) => {
   return (
     <>
       <PageTitle title="Eventos" />
       <Container sx={{ my: 6 }}>
-        <EventsGrid events={props.eventos} />
+        <EventsGrid events={eventos} />
       </Container>
     </>
   );

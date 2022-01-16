@@ -3,20 +3,19 @@ import EventCard from "components/EventCard";
 import { Grid } from "@mui/material";
 
 const EventsGrid = ({ events }) => {
-  const eventsToRender = events.map((item) => (
-    <EventCard
-      imagemEvento={item.imagem}
-      tituloEvento={item.titulo}
-      dataEvento={item.data}
-      idEvento={item.eventoId}
-      key={item.key}
-    />
-  ));
 
   return (
     <div>
       <Grid container direction="row" alignItems="flex-start" sx={{ pl: 5 }}>
-        {eventsToRender}
+        {events.map(e => (
+          <EventCard
+            imagemEvento={e.banner}
+            tituloEvento={e.title}
+            dataEvento={e.date}
+            fileName={e.fileName}
+            key={e.fileName}
+          />
+        ))}
       </Grid>
     </div>
   );
