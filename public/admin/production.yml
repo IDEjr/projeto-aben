@@ -36,7 +36,7 @@ collections:
     label: "Noticas"
     folder: "public/posts/noticias"
     identifier_field: "titulo"
-    slug: "diretoria-{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "noticia-{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "json"
     create: true
     editor:
@@ -52,9 +52,9 @@ collections:
 
   - name: "eventos"
     label: "Eventos"
-    folder: "public/posts/noticias"
+    folder: "public/posts/eventos"
     identifier_field: "titulo"
-    slug: "diretoria-{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "evento-{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "json"
     create: true
     editor:
