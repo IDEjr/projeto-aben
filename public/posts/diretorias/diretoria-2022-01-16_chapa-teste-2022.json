@@ -1,0 +1,14 @@
+{
+  "data": "2022-01-16T21:35:22.297Z",
+  "titulo": "Chapa teste 2022",
+  "active": true,
+  "integrantes": [
+    {
+      "name": "Fulana",
+      "role": "Presidente",
+      "photo": "images/download.jpeg",
+      "bio": "testes",
+      "email": "test@email.com"
+    }
+  ]
+}
