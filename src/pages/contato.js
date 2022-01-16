@@ -37,10 +37,10 @@ const Contato = () => {
 
     emailjs
       .sendForm(
-        "service_qj6d5mm",
-        "template_zu1x13y",
+        "service_bw9yl5o",
+        "template_14wobdh",
         event.target,
-        "user_hKbajQwH7EuguFyuPXHEc"
+        "user_XiCwk6MPvAXmJ6KZQ3I7o"
       ) // colocar aqui as credenciais emailjs do pessoal da aben
       .then(
         (result) => {

@@ -33,10 +33,10 @@ const Associese = () => {
 
     emailjs
       .sendForm(
-        "service_qj6d5mm",
-        "template_63vxa9q",
+        "service_bw9yl5o",
+        "template_wchv4jd",
         event.target,
-        "user_hKbajQwH7EuguFyuPXHEc"
+        "user_XiCwk6MPvAXmJ6KZQ3I7o"
       ) // colocar aqui as credenciais emailjs do pessoal da aben
       .then(
         (result) => {
@@ -235,7 +235,7 @@ const Associese = () => {
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={6}>
                   <TextField
                     fullWidth
                     name="city"
@@ -244,15 +244,7 @@ const Associese = () => {
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={3}>
-                  <TextField
-                    fullWidth
-                    name="uf"
-                    required
-                    label="UF"
-                    defaultValue=""
-                  />
-                </Grid>
+                
                 
                 <Grid item xs={12} md={4}>
                   <InputMask mask="(99) 99999-9999">
