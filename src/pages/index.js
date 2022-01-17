@@ -7,6 +7,7 @@ import Partners from "components/Partners";
 import MembershipBanner from "components/MembershipBanner";
 import { handleJSONfiles } from "../../utils/postHandler";
 import { Box } from "@mui/system";
+import { useRouter } from 'next/router'
 
 export function getStaticProps() {
   const newsData = handleJSONfiles("./public/posts/noticias");
@@ -21,6 +22,13 @@ const Home = ({
   newsData,
   eventsData
 }) => {
+
+  const router = useRouter();
+  const invite_token = router.asPath.split("#invite_token")[1] || "";
+
+  if (invite_token) {
+    router.push(`admin/index.html/#invite_token=${invite_token}`);
+  }
 
   const sortedEventsData = useMemo(() => eventsData.sort(function (a, b) {
     return new Date(b.date) - new Date(a.date);
