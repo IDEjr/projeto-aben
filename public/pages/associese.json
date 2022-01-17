@@ -7,6 +7,10 @@
     {
       "categoria": "Enfermeiro2",
       "valor": "R$ 10,00"
+    },
+    {
+      "categoria": "Categoria X",
+      "valor": "R$ 250,00"
     }
   ],
   "valores_estrangeiro": [
