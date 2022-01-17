@@ -34,16 +34,20 @@ const Home = ({
     <>
       <PageTitle title="Home" />
       <Container sx={{ my: 3 }}>
-        <Box my={6}>
-          <EventsCarrousel
-            eventsData={sortedEventsData || []}
-          />
-        </Box>
-        <Box my={6}>
-          <NewsGrid newsData={sortedNewsData || []} limitItems hasGridHeader />
-        </Box>
-        <Box my={6}>
-        </Box>
+        {
+          !!sortedEventsData.length &&
+          <Box my={6}>
+            <EventsCarrousel
+              eventsData={sortedEventsData || []}
+            />
+          </Box>
+        }
+        {
+          !!sortedNewsData.length &&
+          <Box my={6}>
+            <NewsGrid newsData={sortedNewsData || []} limitItems hasGridHeader />
+          </Box>
+        }
       </Container>
       <Box my={6}>
         <MembershipBanner />

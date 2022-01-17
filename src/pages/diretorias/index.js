@@ -34,7 +34,10 @@ const Diretorias = ({
         sx={{
           my: 6,
         }}>
-        <DiretoriasGridView diretoria={sortedDiretorias[0]} />
+        {
+          !!sortedDiretorias.length &&
+          <DiretoriasGridView diretoria={sortedDiretorias[0]} />
+        }
       </Container>
       {/* <DiretoriasArchiveSwiper archive={sortedDiretorias.slice(1, sortedDiretorias.length) || []} /> */}
     </>

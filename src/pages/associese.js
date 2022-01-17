@@ -213,7 +213,7 @@ const Associese = ({
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={2}>
+                <Grid item xs={12} md={1}>
                   <TextField
                     fullWidth
                     name="addrNum"
@@ -222,7 +222,7 @@ const Associese = ({
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={5}>
                   <TextField
                     fullWidth
                     name="addrCompl"
@@ -249,7 +249,7 @@ const Associese = ({
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={4}>
                   <TextField
                     fullWidth
                     name="city"
@@ -258,7 +258,7 @@ const Associese = ({
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={2}>
                   <TextField
                     fullWidth
                     name="uf"
@@ -270,7 +270,7 @@ const Associese = ({
 
                 
                 
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6}>
                   <InputMask mask="(99) 99999-9999">
                     {() => (
                       <TextField
@@ -284,7 +284,7 @@ const Associese = ({
                     )}
                   </InputMask>
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6}>
                   <InputMask mask="(99) 99999-9999">
                     {() => (
                       <TextField
@@ -298,7 +298,7 @@ const Associese = ({
                     )}
                   </InputMask>
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6}>
                   <InputMask mask="(99) 99999-9999">
                     {() => (
                       <TextField
