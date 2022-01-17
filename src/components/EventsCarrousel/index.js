@@ -10,14 +10,13 @@ import "swiper/css/navigation";
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import { Button, Container, Typography } from "@mui/material";
-import newsList from "./mockdata";
 import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);
 
-const EventsCarrousel = ({ ...rest }) => {
+const EventsCarrousel = ({ eventsData, ...rest }) => {
   const router = useRouter();
   const handleClick = () => router.push("/eventos");
 
@@ -30,17 +29,21 @@ const EventsCarrousel = ({ ...rest }) => {
         mb={2}
       >
         <Typography variant="h4">
-          Notícias
+          Eventos
         </Typography>
         <Button variant="outline" onClick={handleClick}>
           Mais {"\u2794"}
         </Button>
       </Box>
       <CustomCarrousel>
-        {newsList.slice(0, 10).map((e) => {
+        {eventsData.slice(0, 10).map((e) => {
           return (
             <SwiperSlide key={e.id}>
-              <Slide image={e.image} title={e.title} content={e.content} />
+              <Slide
+                image={e.banner}
+                title={e.title}
+                content={e.description}
+                showText={e.show_text} />
             </SwiperSlide>
           );
         })}

@@ -11,11 +11,11 @@ import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
 import moment from 'moment-timezone';
 
 export function getStaticPaths() {
-  const noticias = handleJSONfiles("./public/posts/noticias");
+  const diretorias = handleJSONfiles("./public/posts/diretorias");
 
-  const paths = noticias.map((noticia) => {
+  const paths = diretorias.map((d) => {
     return {
-      params: { noticiaId: noticia.fileName },
+      params: { fileName: d.fileName },
     };
   });
 
@@ -23,35 +23,29 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps(context) {
-  const noticiaId = context.params.noticiaId;
-  const noticia = handleJSONfile(`./public/posts/noticias/${noticiaId}.json`);
+  const fileName = context.params.fileName;
+  const diretoria = handleJSONfile(`./public/posts/diretorias/${fileName}.json`);
 
   return {
-    props: { noticia },
+    props: { diretoria },
   };
 }
 
-const Noticia = ({
-  noticia
+const Diretoria = ({
+  diretoria
 }) => {
   const {
-    date,
-    title,
-    banner,
-    content,
+    role: title,
+    photo: banner,
+    bio: content,
     author,
-    show_text,
-    active,
-  } = noticia;
+  } = diretoria;
 
   return (
     <Container>
       <Card>
         <CardMedia component="img" height="280" src={"/" + banner} alt="" />
         <CardContent>
-          <Typography gutterBottom variant="body2" component="div">
-            {`${moment.utc(date).local().format("DD/MM/YYYY")}`}
-          </Typography>
           <Typography gutterBottom variant="body2" component="div">
             Por: {author}
           </Typography>
@@ -67,4 +61,4 @@ const Noticia = ({
   );
 };
 
-export default Noticia;
+export default Diretoria;

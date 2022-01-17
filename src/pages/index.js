@@ -1,6 +1,6 @@
 import { Container, Typography, Grid } from "@mui/material";
 import PageTitle from "components/PageTitle";
-import React from "react";
+import React, { useMemo } from "react";
 import EventsCarrousel from "components/EventsCarrousel";
 import NewsGrid from "components/NewsGrid";
 import Partners from "components/Partners";
@@ -10,28 +10,39 @@ import { Box } from "@mui/system";
 
 export function getStaticProps() {
   const newsData = handleJSONfiles("./public/posts/noticias");
+  const eventsData = handleJSONfiles("./public/posts/eventos");
 
   return {
-    props: { newsData },
+    props: { newsData, eventsData },
   };
 }
 
 const Home = ({
-  newsData
+  newsData,
+  eventsData
 }) => {
+
+  const sortedEventsData = useMemo(() => eventsData.sort(function (a, b) {
+    return new Date(b.date) - new Date(a.date);
+  }), [eventsData])
+
+  const sortedNewsData = useMemo(() => newsData.sort(function (a, b) {
+    return new Date(b.date) - new Date(a.date);
+  }), [newsData])
 
   return (
     <>
       <PageTitle title="Home" />
       <Container sx={{ my: 3 }}>
         <Box my={6}>
-          <EventsCarrousel />
+          <EventsCarrousel
+            eventsData={sortedEventsData || []}
+          />
         </Box>
         <Box my={6}>
-          <NewsGrid {...{ newsData }} limitItems hasGridHeader />
+          <NewsGrid newsData={sortedNewsData || []} limitItems hasGridHeader />
         </Box>
         <Box my={6}>
-          <EventsCarrousel />
         </Box>
       </Container>
       <Box my={6}>

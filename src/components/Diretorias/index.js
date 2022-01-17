@@ -28,29 +28,26 @@ const CustomCard = ({
         borderRadius: 2
       }}
       {...rest}>
-      <CardActionArea
-        onClick={() => diretoria?.slug ? router.push(`${router.pathname}/${diretoria.slug}`) : null}>
-        <CardHeader
-          title={diretoria.title}
-          subheader={diretoria.first_name}
-          avatar={
-            <Avatar>
-              <Image
-                src={diretoria.photo}
-                alt={diretoria.title + " - Avatar"}
-                layout="fill" />
-            </Avatar>
-          }
-          sx={{
-            height: "100px"
-          }}
-        />
-        <CardContent sx={{ height: "180px" }}>
-          <Typography>
-            {diretoria.bio}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardHeader
+        title={diretoria.role}
+        subheader={diretoria.name}
+        avatar={
+          <Avatar>
+            <Image
+              src={`/${diretoria.photo}`}
+              alt={diretoria.role + " - Avatar"}
+              layout="fill" />
+          </Avatar>
+        }
+        sx={{
+          height: "100px"
+        }}
+      />
+      <CardContent sx={{ height: "180px" }}>
+        <Typography>
+          {diretoria.bio}
+        </Typography>
+      </CardContent>
       <CardActions>
         <Box display="flex" flexDirection="column-reverse" p={1}>
           {
@@ -91,12 +88,12 @@ const DiretoriasGridView = ({
   diretoria
 }) => (
   <Box>
-    <CustomTitle>{diretoria.title}</CustomTitle>
+    <CustomTitle>{diretoria.titulo}</CustomTitle>
     <Grid
       container
       spacing={3}>
       {
-        diretoria.content.map(d => (
+        diretoria.integrantes.map(d => (
           <Grid
             item
             key={d.id}
@@ -134,7 +131,7 @@ const DiretoriasArchiveSwiper = ({
           {
             archive.map(d => (
               <Box
-                key={d.title}
+                key={d.titulo}
                 minWidth="300px"
                 sx={{
                   mr: 2,

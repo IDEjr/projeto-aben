@@ -1,11 +1,13 @@
 import React from 'react';
 import style from "./Slide.module.css";
 import Proptypes from "prop-types";
+import ReactMarkdown from "react-markdown";
 
 const Slide = ({
   title,
   content,
   image,
+  showText,
   ...rest
 }) => {
 
@@ -15,13 +17,12 @@ const Slide = ({
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "top",
-        
       }}
       className={
         style.slide
-      }>
+      } >
       {
-        title &&
+        (title && showText) &&
         <div
           className={
             style.slide__title
@@ -33,14 +34,14 @@ const Slide = ({
         </div>
       }
       {
-        content &&
+        (content && showText) &&
         <div className={
           style.slide__content
         }>
-          {content}
+          <ReactMarkdown>{content}</ReactMarkdown>
         </div>
       }
-    </div>
+    </div >
   )
 }
 

@@ -14,14 +14,28 @@ import React, { useState } from "react";
 import InputMask from "react-input-mask";
 import * as emailjs from "emailjs-com";
 import BasicModal from "components/Modal";
+import { handleJSONfile } from "../../utils/postHandler";
 
-const Associese = () => {
+export function getStaticProps(context) {
+  const content = handleJSONfile(`./public/pages/associese.json`);
+
+  return {
+    props: { content },
+  };
+}
+
+const Associese = ({
+  content
+}) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [checked, setChecked] = useState(false);
   const checkedOn = () => setChecked(true);
   const checkedOff = () => setChecked(false);
+
+  const valoresEfetivo = content.valores_efetivo || [];
+  const valoresEstrangeiro = content.valores_estrangeiro || [];
 
   const ModalHandler = () => {
     handleClose();
@@ -94,7 +108,7 @@ const Associese = () => {
                     required
                     label="Nome"
                     defaultValue=""
-                    //ref={nameInputRef}
+                  //ref={nameInputRef}
                   />
                 </Grid>
                 <Grid item xs={12} md={4}>
@@ -119,7 +133,7 @@ const Associese = () => {
                     defaultValue=""
                   />
                 </Grid>
-                <Grid item xs={12} md={4}> 
+                <Grid item xs={12} md={4}>
                   <TextField
                     fullWidth
                     name="sex"
@@ -253,7 +267,7 @@ const Associese = () => {
                     defaultValue=""
                   />
                 </Grid>
-                
+
                 <Grid item xs={12} md={4}>
                   <InputMask mask="(99) 99999-9999">
                     {() => (
@@ -263,7 +277,7 @@ const Associese = () => {
                         required
                         label="Telefone Residencial"
                         defaultValue=""
-                        //ref={numberInputRef}
+                      //ref={numberInputRef}
                       />
                     )}
                   </InputMask>
@@ -277,7 +291,7 @@ const Associese = () => {
                         required
                         label="Telefone Comercial"
                         defaultValue=""
-                        //ref={numberInputRef}
+                      //ref={numberInputRef}
                       />
                     )}
                   </InputMask>
@@ -291,7 +305,7 @@ const Associese = () => {
                         required
                         label="Celular"
                         defaultValue=""
-                        //ref={numberInputRef}
+                      //ref={numberInputRef}
                       />
                     )}
                   </InputMask>
@@ -364,116 +378,44 @@ const Associese = () => {
                 <Typography variant="h5">Associado Efetivo</Typography>
               </Grid>
 
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">Enfermeiro</Typography>
-                <Typography>R$ 241,00</Typography>
-              </Grid>
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">
-                  Técnico e Auxiliar de Enfermagem
-                </Typography>
-                <Typography>R$ 79,00</Typography>
-              </Grid>
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">Estudante de Pós Graduação </Typography>
-                <Typography>R$ 120,00</Typography>
-              </Grid>
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">Estudante de Graduação</Typography>
-                <Typography>R$ 70,00</Typography>
-              </Grid>
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">
-                  Estudante Técnico de Enfermagem
-                </Typography>
-                <Typography>R$ 43,00</Typography>
-              </Grid>
-            </Grid>
-            <Grid
-              container
-              item
-              pl={2}
-              pr={2}
-              xs={12}
-              md={6}
-              my={1}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
+              {
+                valoresEfetivo.map(v => (
+                  <Grid
+                    key={v.categoria + v.value}
+                    item
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexDirection: "row",
+                    }}
+                  >
+                    <Typography variant="p">{v.categoria}</Typography>
+                    <Typography>{v.valor}</Typography>
+                  </Grid>
+                ))
+              }
+
               <Grid item my={1}>
                 <Typography variant="h5">Associado Estrangeiro</Typography>
               </Grid>
 
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">Enfermeiro</Typography>
-                <Typography>R$ 293,00</Typography>
-              </Grid>
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">Estudante</Typography>
-                <Typography>R$ 146,00</Typography>
-              </Grid>
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
-                <Typography variant="p">Escolas e Associações</Typography>
-                <Typography>R$ 366,00</Typography>
-              </Grid>
+              {
+                valoresEstrangeiro.map(v => (
+                  <Grid
+                    key={v.categoria + v.value}
+                    item
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexDirection: "row",
+                    }}
+                  >
+                    <Typography variant="p">{v.categoria}</Typography>
+                    <Typography>{v.valor}</Typography>
+                  </Grid>
+                ))
+              }
+
             </Grid>
           </Grid>
         </Box>
