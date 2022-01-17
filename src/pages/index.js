@@ -1,38 +1,61 @@
 import { Container, Typography, Grid } from "@mui/material";
 import PageTitle from "components/PageTitle";
-import React from "react";
+import React, { useMemo } from "react";
 import EventsCarrousel from "components/EventsCarrousel";
 import NewsGrid from "components/NewsGrid";
 import Partners from "components/Partners";
 import MembershipBanner from "components/MembershipBanner";
 import { handleJSONfiles } from "../../utils/postHandler";
 import { Box } from "@mui/system";
+import { useRouter } from 'next/router'
 
 export function getStaticProps() {
   const newsData = handleJSONfiles("./public/posts/noticias");
+  const eventsData = handleJSONfiles("./public/posts/eventos");
 
   return {
-    props: { newsData },
+    props: { newsData, eventsData },
   };
 }
 
 const Home = ({
-  newsData
+  newsData,
+  eventsData
 }) => {
+
+  const router = useRouter();
+  const invite_token = router.asPath.split("#invite_token")[1] || "";
+
+  if (invite_token) {
+    router.push(`admin/index.html/#invite_token=${invite_token}`);
+  }
+
+  const sortedEventsData = useMemo(() => eventsData.sort(function (a, b) {
+    return new Date(b.date) - new Date(a.date);
+  }), [eventsData])
+
+  const sortedNewsData = useMemo(() => newsData.sort(function (a, b) {
+    return new Date(b.date) - new Date(a.date);
+  }), [newsData])
 
   return (
     <>
       <PageTitle title="Home" />
       <Container sx={{ my: 3 }}>
-        <Box my={6}>
-          <EventsCarrousel />
-        </Box>
-        <Box my={6}>
-          <NewsGrid {...{ newsData }} limitItems hasGridHeader />
-        </Box>
-        <Box my={6}>
-          <EventsCarrousel />
-        </Box>
+        {
+          !!sortedEventsData.length &&
+          <Box my={6}>
+            <EventsCarrousel
+              eventsData={sortedEventsData || []}
+            />
+          </Box>
+        }
+        {
+          !!sortedNewsData.length &&
+          <Box my={6}>
+            <NewsGrid newsData={sortedNewsData || []} limitItems hasGridHeader />
+          </Box>
+        }
       </Container>
       <Box my={6}>
         <MembershipBanner />

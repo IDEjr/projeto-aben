@@ -31,12 +31,13 @@ collections:
         - { label: "Foto", name: "photo", widget: "image" }
         - { label: "Bio", name: "bio", widget: "text" }
         - { label: "Email", name: "email", widget: "string" }
+        - { label: "Phone", name: "phone", widget: "string" }
 
   - name: "noticias"
-    label: "Noticas"
+    label: "Notícas"
     folder: "public/posts/noticias"
     identifier_field: "titulo"
-    slug: "diretoria-{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "noticia-{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "json"
     create: true
     editor:
@@ -52,9 +53,9 @@ collections:
 
   - name: "eventos"
     label: "Eventos"
-    folder: "public/posts/noticias"
+    folder: "public/posts/eventos"
     identifier_field: "titulo"
-    slug: "diretoria-{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "evento-{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "json"
     create: true
     editor:
@@ -66,6 +67,24 @@ collections:
     - { label: "Data", name: "date", widget: "date" }
     - { label: "Mostrar texto no carrousel", name: "show_text",  widget: "boolean" }
     - { label: "Visível ao público", name: "active",  widget: "boolean" }
+
+  - name: "anuncios"
+    label: "Anúncios"
+    folder: "public/posts/anuncios"
+    identifier_field: "titulo"
+    slug: "anuncio-{{year}}-{{month}}-{{day}}_{{slug}}"
+    extension: "json"
+    create: true
+    editor:
+      preview: false
+    fields:
+    - { label: "Título", name: "title", widget: "string" }
+    - { label: "Banner do anúncio", name: "banner", widget: "image" }
+    - { label: "Descrição do anúncio", name: "description", widget: "markdown" }
+    - { label: "Data", name: "date", widget: "date" }
+    - { label: "Mostrar texto no carrousel", name: "show_text",  widget: "boolean" }
+    - { label: "Visível ao público", name: "active",  widget: "boolean" }
+
   - name: "pages"
     label: "Páginas"
     files:
@@ -94,7 +113,7 @@ collections:
           preview: false
         fields:
         - { label: "Conteúdo da página", name: "content", widget: "markdown" }
-            
+
       - label: "Página Associe-se"
         name: "page_associese"
         file: "public/pages/associese.json"

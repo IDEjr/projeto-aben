@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useRouter } from "next/router";
+import moment from 'moment-timezone';
 
 const EventCard = ({
   imagemEvento,
@@ -16,7 +17,7 @@ const EventCard = ({
   fileName,
 }) => {
   const router = useRouter();
-  const handleClick = () => router.push(`${fileName}`);
+  const handleClick = () => router.push(`eventos/${fileName}`);
 
   return (
     <>
@@ -25,7 +26,7 @@ const EventCard = ({
           <CardMedia component="img" height="512" src={imagemEvento} alt="" />
           <CardContent>
             <Typography gutterBottom variant="h6" component="div">
-              Data: {dataEvento}
+              Data: {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
             </Typography>
             <Typography gutterBottom variant="h6" component="div">
               {tituloEvento}

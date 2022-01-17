@@ -1,8 +1,5 @@
 import { Container, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import { ButtonBase } from 'components/ButtonBase'
-import News from 'components/News'
-import classes from './PageTitle.module.css'
 
 export default function PageTitle({ title }) {
 

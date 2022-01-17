@@ -11,11 +11,11 @@ import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
 import moment from 'moment-timezone';
 
 export function getStaticPaths() {
-  const eventos = handleJSONfiles("./public/posts/eventos");
+  const diretorias = handleJSONfiles("./public/posts/diretorias");
 
-  const paths = eventos.map((evento) => {
+  const paths = diretorias.map((d) => {
     return {
-      params: { eventoId: evento.fileName },
+      params: { fileName: d.fileName },
     };
   });
 
@@ -23,36 +23,37 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps(context) {
-  const eventoId = context.params.eventoId;
-  const evento = handleJSONfile(`./public/posts/eventos/${eventoId}.json`);
+  const fileName = context.params.fileName;
+  const diretoria = handleJSONfile(`./public/posts/diretorias/${fileName}.json`);
 
   return {
-    props: { evento },
+    props: { diretoria },
   };
 }
 
-const Evento = ({
-  evento
+const Diretoria = ({
+  diretoria
 }) => {
   const {
-    date,
-    title,
-    banner,
-    description,
-    show_text,
-    active,
-  } = evento;
+    role: title,
+    photo: banner,
+    bio: content,
+    author,
+  } = diretoria;
 
   return (
     <Container>
       <Card>
         <CardMedia component="img" height="280" src={"/" + banner} alt="" />
         <CardContent>
+          <Typography gutterBottom variant="body2" component="div">
+            Por: {author}
+          </Typography>
           <Typography gutterBottom variant="h4" component="div">
-          {`${moment.utc(date).local().format("DD/MM/YYYY")}`}: {title}
+            {title}
           </Typography>
           <Typography variant="body3" color="text.secondary">
-            <ReactMarkdown>{description}</ReactMarkdown>
+            <ReactMarkdown>{content}</ReactMarkdown>
           </Typography>
         </CardContent>
       </Card>
@@ -60,4 +61,4 @@ const Evento = ({
   );
 };
 
-export default Evento;
+export default Diretoria;

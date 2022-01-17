@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./NewsGrid.module.css";
 import News from "../News/index";
 import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
@@ -45,9 +44,9 @@ const NewsGrid = ({
                 xs={12}
                 md={4}>
                 <News
-                  imagemNoticia={item.imagem}
-                  mancheteNoticia={item.manchete}
-                  dataNoticia={item.data}
+                  imagemNoticia={item.banner}
+                  mancheteNoticia={item.title}
+                  dataNoticia={item.date}
                   fileName={item.fileName}
                 />
               </Grid>
