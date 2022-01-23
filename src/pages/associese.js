@@ -9,6 +9,7 @@ import {
   FormControlLabel,
   Card,
 } from "@mui/material";
+import ReactMarkdown from "react-markdown";
 import PageTitle from "components/PageTitle";
 import React, { useState } from "react";
 import InputMask from "react-input-mask";
@@ -34,8 +35,7 @@ const Associese = ({
   const checkedOn = () => setChecked(true);
   const checkedOff = () => setChecked(false);
 
-  const valoresEfetivo = content.valores_efetivo || [];
-  const valoresEstrangeiro = content.valores_estrangeiro || [];
+  const valores = content.valores;
 
   const ModalHandler = () => {
     handleClose();
@@ -362,64 +362,7 @@ const Associese = ({
         </Card>
         <Box my={10}>
           <Typography variant="h3">Valores</Typography>
-          <Grid container my={3}>
-            <Grid
-              container
-              item
-              pl={2}
-              pr={2}
-              xs={12}
-              md={6}
-              my={1}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Grid item my={1}>
-                <Typography variant="h5">Associado Efetivo</Typography>
-              </Grid>
-
-              {
-                valoresEfetivo.map(v => (
-                  <Grid
-                    key={v.categoria + v.value}
-                    item
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      flexDirection: "row",
-                    }}
-                  >
-                    <Typography variant="p">{v.categoria}</Typography>
-                    <Typography>{v.valor}</Typography>
-                  </Grid>
-                ))
-              }
-
-              <Grid item my={1}>
-                <Typography variant="h5">Associado Estrangeiro</Typography>
-              </Grid>
-
-              {
-                valoresEstrangeiro.map(v => (
-                  <Grid
-                    key={v.categoria + v.value}
-                    item
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      flexDirection: "row",
-                    }}
-                  >
-                    <Typography variant="p">{v.categoria}</Typography>
-                    <Typography>{v.valor}</Typography>
-                  </Grid>
-                ))
-              }
-
-            </Grid>
-          </Grid>
+          <ReactMarkdown>{valores}</ReactMarkdown>
         </Box>
       </Container>
     </>
