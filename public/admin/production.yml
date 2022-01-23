@@ -122,16 +122,7 @@ collections:
         editor:
           preview: false
         fields:
-          - label: 'Valores - Associado Efetivo'
-            name: "valores_efetivo"
-            widget: list
-            fields:
-              - { label: "Categoria", name: "categoria", widget: "string", default: "Enfermeiro" }
-              - { label: "Valor", name: "valor", widget: "string", default: "R$ 00,00" }
-          - label: 'Valores - Associado Estrangeiro'
-            name: "valores_estrangeiro"
-            widget: list
-            fields:
-              - { label: "Categoria", name: "categoria", widget: "string", default: "Enfermeiro" }
-              - { label: "Valor", name: "valor", widget: "string", default: "R$ 00,00" }
+          - label: 'Valores'
+            name: "valores"
+            widget: markdown
     
