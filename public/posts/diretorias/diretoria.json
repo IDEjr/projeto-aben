@@ -1,0 +1,16 @@
+{
+    "data": "2022-01-16T21:35:22.297Z",
+    "titulo": "Chapa teste 2022",
+    "banner": "images/borboleta_com_frase.jpg",
+    "description": "A chapa teste 2022 é a **chapa** teste!",
+    "active": true,
+    "integrantes": [
+      {
+        "name": "Fulana",
+        "role": "Presidente",
+        "photo": "images/diretorias/diretoriaAvatar01.png",
+        "bio": "Fulana é presidente desde o dia que o arquivo .json foi criado.",
+        "email": "fulana@email.com"
+      }
+    ]
+  }

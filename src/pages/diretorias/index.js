@@ -1,16 +1,11 @@
+import { Container } from "@mui/material";
 import {
-  Avatar,
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Grid,
-  Typography
-} from '@mui/material';
-import { DiretoriasArchiveSwiper, DiretoriasGridView } from 'components/Diretorias';
-import PageTitle from 'components/PageTitle';
-import React, { useMemo } from 'react';
-import { handleJSONfiles } from '../../../utils/postHandler';
+  DiretoriasArchiveSwiper,
+  DiretoriasGridView,
+} from "components/Diretorias";
+import PageTitle from "components/PageTitle";
+import React, { useMemo } from "react";
+import { handleJSONfiles } from "../../../utils/postHandler";
 
 export function getStaticProps() {
   const diretorias = handleJSONfiles("./public/posts/diretorias");
@@ -20,12 +15,14 @@ export function getStaticProps() {
   };
 }
 
-const Diretorias = ({
-  diretorias = [],
-}) => {
-  const sortedDiretorias = useMemo(() => diretorias.sort(function (a, b) {
-    return new Date(b.data) - new Date(a.data);
-  }), [diretorias])
+const Diretorias = ({ diretorias = [] }) => {
+  const sortedDiretorias = useMemo(
+    () =>
+      diretorias.sort(function (a, b) {
+        return new Date(b.data) - new Date(a.data);
+      }),
+    [diretorias]
+  );
 
   return (
     <>
@@ -33,16 +30,15 @@ const Diretorias = ({
       <Container
         sx={{
           my: 6,
-        }}>
-        {
-          !!sortedDiretorias.length &&
+        }}
+      >
+        {!!sortedDiretorias.length && (
           <DiretoriasGridView diretoria={sortedDiretorias[0]} />
-        }
+        )}
       </Container>
       {/* <DiretoriasArchiveSwiper archive={sortedDiretorias.slice(1, sortedDiretorias.length) || []} /> */}
     </>
-  )
-}
+  );
+};
 
-
-export default Diretorias
+export default Diretorias;
