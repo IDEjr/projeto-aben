@@ -9,7 +9,9 @@ import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
 
-const MembershipBanner = () => {
+const MembershipBanner = ({
+  bannerAzul = {}
+}) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const router = useRouter();
@@ -36,12 +38,10 @@ const MembershipBanner = () => {
               justifyContent: "center"
             }}>
             <Typography variant="h3" color="text.contrast">
-              Seja um associado da ABEN-RS!
+              {bannerAzul.title}
             </Typography>
-            <Typography color="text.contrast" sx={{my: 4}}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
-              lectus eget risus convallis pulvinar sed consequat scelerisque nibh.
-              Quis etiam felis egestas sapien nec rhoncus, ut pellentesque.
+            <Typography color="text.contrast" sx={{ my: 4 }}>
+              {bannerAzul.content}
             </Typography>
             <Button
               sx={{

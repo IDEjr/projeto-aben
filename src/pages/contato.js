@@ -7,8 +7,20 @@ import { Box } from "@mui/system";
 import MapView from "components/MapView";
 import BasicModal from "components/Modal";
 import { Card } from "@mui/material";
+import { PrecisionManufacturingSharp } from "@mui/icons-material";
+import { handleJSONfile } from "../../utils/postHandler";
 
-const Contato = () => {
+export function getStaticProps(context) {
+  const contato = handleJSONfile (`./public/pages/contato.json`);
+
+  return {
+    props: { contato },
+  };
+}
+
+const Contato = ({
+  contato = {}
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
@@ -83,6 +95,7 @@ const Contato = () => {
           container
           display="flex"
           flexDirection="column"
+          alignContent="center"
           spacing={2}
           sx={{
             my: 4,
@@ -90,22 +103,22 @@ const Contato = () => {
         >
           <Grid item>
             <Typography fontSize="1.5rem">
-              <b>Endereço:</b> Av. Venâncio Aires, 1191/142 - Bom Fim
+              <b>Endereço:</b> {contato.end}
             </Typography>
           </Grid>
           <Grid item>
             <Typography fontSize="1.5rem">
-              <b>CEP:</b> 90.040-193 - Porto Alegre
+              <b>CEP:</b> {contato.cep}
             </Typography>
           </Grid>
           <Grid item>
             <Typography fontSize="1.5rem">
-              <b>E-mail:</b> aben-rs@abennacional.org.br
+              <b>E-mail:</b> {contato.email}
             </Typography>
           </Grid>
           <Grid item>
             <Typography fontSize="1.5rem">
-              <b>Telefone:</b>(51) 3332-8622
+              <b>Telefone:</b> {contato.tel}
             </Typography>
           </Grid>
         </Grid>
