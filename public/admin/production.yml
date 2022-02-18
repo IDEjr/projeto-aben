@@ -32,6 +32,9 @@ collections:
         - { label: "Bio", name: "bio", widget: "text" }
         - { label: "Email", name: "email", widget: "string" }
         - { label: "Phone", name: "phone", widget: "string" }
+        - { label: "Banner da página da diretoria", name: "banner", widget: "image" }
+        - { label: "Título da página da diretoria", name: "title", widget: "string" }
+        - { label: "Conteúdo da Página da diretoria", name: "description", widget: "markdown" }
 
   - name: "noticias"
     label: "Notícas"

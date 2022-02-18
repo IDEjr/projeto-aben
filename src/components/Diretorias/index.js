@@ -3,6 +3,7 @@ import {
   Avatar,
   Box,
   Card,
+  CardActionArea,
   CardActions,
   CardContent,
   CardHeader,
@@ -20,7 +21,7 @@ const CustomTitle = ({ children, onClick }) => (
   </Typography>
 );
 
-const CustomCard = ({ diretoria, ...rest }) => {
+const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
   const router = useRouter();
 
   return (
@@ -33,75 +34,77 @@ const CustomCard = ({ diretoria, ...rest }) => {
       }}
       {...rest}
     >
-      <CardHeader
-        title={diretoria.role}
-        subheader={diretoria.name}
-        avatar={
-          <Avatar>
-            <Image
-              src={`/${diretoria.photo}`}
-              alt={diretoria.role + " - Avatar"}
-              layout="fill"
-            />
-          </Avatar>
-        }
-        sx={{
-          height: "100px",
-        }}
-      />
-      <CardContent sx={{ height: "180px" }}>
-        <Typography>{diretoria.bio}</Typography>
-      </CardContent>
-      <CardActions>
-        <Box display="flex" flexDirection="column-reverse" p={1}>
-          {diretoria.phone && (
-            <>
-              <Box display="flex" flexDirection="row" pt={2}>
-                <Phone />
-                <Typography
-                  sx={{
-                    ml: 1.5,
-                  }}
-                >
-                  {diretoria.phone || ""}
-                </Typography>
-              </Box>
-            </>
-          )}
-          {diretoria.email && (
-            <>
-              <Box display="flex" flexDirection="row" pt={2}>
-                <Email />
-                <Typography
-                  sx={{
-                    ml: 1.5,
-                  }}
-                >
-                  {diretoria.email || ""}
-                </Typography>
-              </Box>
-            </>
-          )}
-        </Box>
-      </CardActions>
+      <CardActionArea
+        onClick={() => router.push(`/diretorias/${fileName}?index=${index}`)}
+      >
+        <CardHeader
+          title={diretoria.role}
+          subheader={diretoria.name}
+          avatar={
+            <Avatar>
+              <Image
+                src={`/${diretoria.photo}`}
+                alt={diretoria.role + " - Avatar"}
+                layout="fill"
+              />
+            </Avatar>
+          }
+          sx={{
+            height: "100px",
+          }}
+        />
+        <CardContent sx={{ height: "180px" }}>
+          <Typography>{diretoria.bio}</Typography>
+        </CardContent>
+        <CardActions>
+          <Box display="flex" flexDirection="column-reverse" p={1}>
+            {diretoria.phone && (
+              <>
+                <Box display="flex" flexDirection="row" pt={2}>
+                  <Phone />
+                  <Typography
+                    sx={{
+                      ml: 1.5,
+                    }}
+                  >
+                    {diretoria.phone || ""}
+                  </Typography>
+                </Box>
+              </>
+            )}
+            {diretoria.email && (
+              <>
+                <Box display="flex" flexDirection="row" pt={2}>
+                  <Email />
+                  <Typography
+                    sx={{
+                      ml: 1.5,
+                    }}
+                  >
+                    {diretoria.email || ""}
+                  </Typography>
+                </Box>
+              </>
+            )}
+          </Box>
+        </CardActions>
+      </CardActionArea>
     </Card>
   );
 };
 
 const DiretoriasGridView = ({ diretoria }) => {
-  const router = useRouter();
   return (
     <>
       <Box>
         <CustomTitle
-          onClick={() => router.push(`/diretorias/${diretoria.fileName}`)}
         >
           {diretoria.titulo}
         </CustomTitle>
         <Grid container spacing={3}>
-          {diretoria.integrantes.map((d) => (
+          {diretoria.integrantes.map((d, index) => (
             <Grid item key={d.id} xs="12" md="6" lg="4">
-              <CustomCard diretoria={d} />
+              <CustomCard diretoria={d} fileName={diretoria.fileName} index={index} />
             </Grid>
           ))}
         </Grid>

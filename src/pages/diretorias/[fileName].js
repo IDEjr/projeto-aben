@@ -9,6 +9,8 @@ import {
 } from "@mui/material";
 import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
 import moment from "moment-timezone";
+import { useRouter } from "next/router";
+import { useMemo } from 'react';
 
 export function getStaticPaths() {
   const diretorias = handleJSONfiles("./public/posts/diretorias");
@@ -23,18 +25,23 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps(context) {
-  const fileName = context.params.fileName;
-  const diretoria = handleJSONfile(
+  const {
+    fileName,
+  } = context.params;
+  const chapa = handleJSONfile(
     `./public/posts/diretorias/${fileName}.json`
   );
 
   return {
-    props: { diretoria },
+    props: { chapa },
   };
 }
 
-const Diretoria = ({ diretoria }) => {
-  const { titulo: title, banner: banner, description: content } = diretoria;
+const Diretoria = ({ chapa }) => {
+  const router = useRouter()
+  const diretoria = useMemo(() => chapa.integrantes[router.query.index] || {}, [chapa.integrantes, router.query.index]);
+
+  const { title, banner, description } = diretoria;
 
   return (
     <Container>
@@ -45,7 +52,7 @@ const Diretoria = ({ diretoria }) => {
             {title}
           </Typography>
           <Typography variant="body3" color="text.secondary">
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown>{description}</ReactMarkdown>
           </Typography>
         </CardContent>
       </Card>
