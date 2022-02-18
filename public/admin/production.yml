@@ -47,7 +47,7 @@ collections:
       preview: false
     fields:
     - { label: "Título", name: "title", widget: "string" }
-    - { label: "Banner da notícia", name: "banner", widget: "image" }
+    - { label: "Banner da notícia (1366x400)", name: "banner", widget: "image" }
     - { label: "Corpo da Notícia", name: "content", widget: "markdown" }
     - { label: "Data", name: "date", widget: "date" }
     - { label: "Autor da Postagem", name: "author",  widget: "string" }
@@ -65,26 +65,9 @@ collections:
       preview: false
     fields:
     - { label: "Título", name: "title", widget: "string" }
-    - { label: "Banner do evento", name: "banner", widget: "image" }
+    - { label: "Banner do evento (1366x400)", name: "banner", widget: "image" }
     - { label: "Descrição do Evento", name: "description", widget: "markdown" }
     - { label: "Data", name: "date", widget: "date" }
-    - { label: "Visível ao público", name: "active",  widget: "boolean" }
-
-  - name: "anuncios"
-    label: "Anúncios"
-    folder: "public/posts/anuncios"
-    identifier_field: "titulo"
-    slug: "anuncio-{{year}}-{{month}}-{{day}}_{{slug}}"
-    extension: "json"
-    create: true
-    editor:
-      preview: false
-    fields:
-    - { label: "Título", name: "title", widget: "string" }
-    - { label: "Banner do anúncio", name: "banner", widget: "image" }
-    - { label: "Descrição do anúncio", name: "description", widget: "markdown" }
-    - { label: "Data", name: "date", widget: "date" }
-    - { label: "Mostrar texto no carrousel", name: "show_text",  widget: "boolean" }
     - { label: "Visível ao público", name: "active",  widget: "boolean" }
 
   - name: "pages"

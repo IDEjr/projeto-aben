@@ -36,14 +36,15 @@ const EventsCarrousel = ({ eventsData, ...rest }) => {
         </Button>
       </Box>
       <CustomCarrousel>
-        {eventsData.slice(0, 10).map((e) => {
+        {eventsData.slice(0, 10).map(({ fileName, banner, title }) => {
           return (
-            <SwiperSlide key={e.id}>
+            <SwiperSlide key={fileName}>
               <Slide
-                image={e.banner}
-                title={e.title}
-                content={e.description}
-                showText={e.show_text} />
+                {...{
+                  fileName,
+                  banner,
+                  title,
+                }} />
             </SwiperSlide>
           );
         })}

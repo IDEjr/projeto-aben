@@ -2,46 +2,32 @@ import React from 'react';
 import style from "./Slide.module.css";
 import Proptypes from "prop-types";
 import ReactMarkdown from "react-markdown";
+import { Box } from '@mui/system';
+import Image from 'next/image';
+import { CardActionArea, CardMedia, IconButton } from '@mui/material';
+import { useRouter } from "next/router";
 
 const Slide = ({
   title,
-  content,
-  image,
-  showText,
+  banner,
+  fileName,
   ...rest
 }) => {
+  const router = useRouter();
 
   return (
-    <div
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "top",
-      }}
-      className={
-        style.slide
-      } >
-      {
-        (title && showText) &&
-        <div
-          className={
-            style.slide__title
-          }>
-          <h3
-            className={
-              style.title
-            }>{title}</h3>
-        </div>
-      }
-      {
-        (content && showText) &&
-        <div className={
-          style.slide__content
-        }>
-          <ReactMarkdown>{content}</ReactMarkdown>
-        </div>
-      }
-    </div >
+    <Box height="auto" width="100%" borderRadius={1}>
+      <CardActionArea
+        onClick={() => router.push(`/eventos/${fileName}`)}>
+        <CardMedia
+          component="img"
+          src={"/" + banner}
+          height="auto"
+          width="100%"
+        >
+        </CardMedia>
+      </CardActionArea>
+    </Box>
   )
 }
 

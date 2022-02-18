@@ -1,5 +1,5 @@
 .slide {
-  height: 425px;
+  width: 1366px;
   border-radius: 8px;
   color: #EFEFEF;
   display: flex;
@@ -36,4 +36,11 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+}
+
+.eventImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }
