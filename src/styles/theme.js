@@ -1,5 +1,4 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
-import shadows from "./shadows";
 
 const primaryBlue = "#117FF2";
 const primaryYellow = "#F6D80B";
@@ -44,46 +43,6 @@ const theme = responsiveFontSizes(
         contrastText: "#ffffff",
         main: darkBlue,
         light: "#C4D9FF",
-      },
-      error: {
-        contrastText: "#ffffff",
-        main: "#f44336",
-        light: "#f9dbd9",
-      },
-      success: {
-        contrastText: "#ffffff",
-        main: "#01c851",
-      },
-      warning: {
-        contrastText: "#ffffff",
-        main: "#ff9800",
-      },
-      white: {
-        contrastText: "#ffffff",
-        main: "#ffffff",
-      },
-      orange: {
-        main: "#FF9C0E",
-        light: "#fff0db",
-        contrastText: "#ffffff",
-      },
-      purple: {
-        main: "#7400B8",
-        contrastText: "#ffffff",
-      },
-      yellow: {
-        main: "#FFDB01",
-        contrastText: "#ffffff",
-        light: "FFF7C9",
-      },
-      grey: {
-        contrastText: "#ffffff",
-        main: "#A2A4B9",
-        light: "#C5CAD2;",
-      },
-      filterColor: {
-        main: "#EFF0F6",
-        contrastText: "#253858",
       },
       text: {
         primary: "#172b4d",
@@ -164,7 +123,6 @@ const theme = responsiveFontSizes(
         color: "#ffffff",
       },
     },
-    shadows: shadows,
   })
 );
 

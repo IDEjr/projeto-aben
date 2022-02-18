@@ -46,10 +46,10 @@ const Evento = ({
   return (
     <Container>
       <Card>
-        <CardMedia component="img" height="280" src={"/" + banner} alt="" />
+        <CardMedia component="img" height="100%" src={"/" + banner} alt="" />
         <CardContent>
           <Typography gutterBottom variant="h4" component="div">
-          {`${moment.utc(date).local().format("DD/MM/YYYY")}`}: {title}
+            {`${moment.utc(date).local().format("DD/MM/YYYY")}`}: {title}
           </Typography>
           <Typography variant="body3" color="text.secondary">
             <ReactMarkdown>{description}</ReactMarkdown>

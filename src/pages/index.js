@@ -5,22 +5,24 @@ import EventsCarrousel from "components/EventsCarrousel";
 import NewsGrid from "components/NewsGrid";
 import Partners from "components/Partners";
 import MembershipBanner from "components/MembershipBanner";
-import { handleJSONfiles } from "../../utils/postHandler";
+import { handleJSONfile, handleJSONfiles } from "../../utils/postHandler";
 import { Box } from "@mui/system";
 import { useRouter } from 'next/router'
 
 export function getStaticProps() {
   const newsData = handleJSONfiles("./public/posts/noticias");
   const eventsData = handleJSONfiles("./public/posts/eventos");
+  const bannerAzul = handleJSONfile(`./public/pages/banner_azul.json`);
 
   return {
-    props: { newsData, eventsData },
+    props: { newsData, eventsData, bannerAzul },
   };
 }
 
 const Home = ({
   newsData,
-  eventsData
+  eventsData,
+  bannerAzul
 }) => {
 
   const router = useRouter();
@@ -57,9 +59,12 @@ const Home = ({
           </Box>
         }
       </Container>
-      <Box my={6}>
-        <MembershipBanner />
-      </Box>
+      {
+        bannerAzul?.active &&
+        <Box my={6}>
+          <MembershipBanner {...{ bannerAzul }} />
+        </Box>
+      }
     </>
   );
 };

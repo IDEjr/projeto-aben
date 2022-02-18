@@ -1,23 +1,27 @@
 import React from "react";
 import EventCard from "components/EventCard";
-import { Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 
 const EventsGrid = ({ events }) => {
 
   return (
-    <div>
-      <Grid container direction="row" alignItems="flex-start" sx={{ pl: 5 }}>
+    <Container>
+      <Grid container spacing={2}>
         {events.map(e => (
-          <EventCard
-            imagemEvento={e.banner}
-            tituloEvento={e.title}
-            dataEvento={e.date}
-            fileName={e.fileName}
+          <Grid item
             key={e.fileName}
-          />
+            xs={12}
+            md={4}>
+            <EventCard
+              imagemEvento={e.banner}
+              tituloEvento={e.title}
+              dataEvento={e.date}
+              fileName={e.fileName}
+            />
+          </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

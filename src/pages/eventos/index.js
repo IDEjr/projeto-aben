@@ -5,7 +5,8 @@ import EventsGrid from "components/EventsGrid";
 import { handleJSONfiles } from "../../../utils/postHandler";
 
 export function getStaticProps() {
-  const eventos = handleJSONfiles("./public/posts/eventos");
+  const eventos = handleJSONfiles("./public/posts/eventos")
+    .filter(e => e.active);
 
   return {
     props: { eventos },
