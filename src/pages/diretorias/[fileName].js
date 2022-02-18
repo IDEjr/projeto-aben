@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
-import moment from 'moment-timezone';
+import moment from "moment-timezone";
 
 export function getStaticPaths() {
   const diretorias = handleJSONfiles("./public/posts/diretorias");
@@ -24,31 +24,23 @@ export function getStaticPaths() {
 
 export function getStaticProps(context) {
   const fileName = context.params.fileName;
-  const diretoria = handleJSONfile(`./public/posts/diretorias/${fileName}.json`);
+  const diretoria = handleJSONfile(
+    `./public/posts/diretorias/${fileName}.json`
+  );
 
   return {
     props: { diretoria },
   };
 }
 
-const Diretoria = ({
-  diretoria
-}) => {
-  const {
-    role: title,
-    photo: banner,
-    bio: content,
-    author,
-  } = diretoria;
+const Diretoria = ({ diretoria }) => {
+  const { titulo: title, banner: banner, description: content } = diretoria;
 
   return (
     <Container>
       <Card>
         <CardMedia component="img" height="280" src={"/" + banner} alt="" />
         <CardContent>
-          <Typography gutterBottom variant="body2" component="div">
-            Por: {author}
-          </Typography>
           <Typography gutterBottom variant="h4" component="div">
             {title}
           </Typography>
