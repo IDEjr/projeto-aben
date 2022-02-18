@@ -68,7 +68,6 @@ collections:
     - { label: "Banner do evento", name: "banner", widget: "image" }
     - { label: "Descrição do Evento", name: "description", widget: "markdown" }
     - { label: "Data", name: "date", widget: "date" }
-    - { label: "Mostrar texto no carrousel", name: "show_text",  widget: "boolean" }
     - { label: "Visível ao público", name: "active",  widget: "boolean" }
 
   - name: "anuncios"

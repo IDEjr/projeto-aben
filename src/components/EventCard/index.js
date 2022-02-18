@@ -20,21 +20,19 @@ const EventCard = ({
   const handleClick = () => router.push(`eventos/${fileName}`);
 
   return (
-    <>
-      <Card variant="outlined" sx={{ maxWidth: 520, m: 1.3 }}>
-        <CardActionArea onClick={handleClick}>
-          <CardMedia component="img" height="512" src={imagemEvento} alt="" />
-          <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
-              Data: {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
-            </Typography>
-            <Typography gutterBottom variant="h6" component="div">
-              {tituloEvento}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </>
+    <Card variant="outlined">
+      <CardActionArea onClick={handleClick}>
+        <CardMedia component="img" height="100%" src={imagemEvento} alt="" />
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            Data: {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            {tituloEvento}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 };
 

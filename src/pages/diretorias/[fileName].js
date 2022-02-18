@@ -46,7 +46,10 @@ const Diretoria = ({ chapa }) => {
   return (
     <Container>
       <Card>
-        <CardMedia component="img" height="280" src={"/" + banner} alt="" />
+        {
+          !!banner &&
+          <CardMedia component="img" height="100%" src={"/" + banner} alt="" />
+        }
         <CardContent>
           <Typography gutterBottom variant="h4" component="div">
             {title}
