@@ -1,4 +1,5 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { ptBR } from '@mui/x-data-grid';
 
 const primaryBlue = "#117FF2";
 const primaryYellow = "#F6D80B";
@@ -123,7 +124,8 @@ const theme = responsiveFontSizes(
         color: "#ffffff",
       },
     },
-  })
+  },
+    ptBR)
 );
 
 export default theme;
