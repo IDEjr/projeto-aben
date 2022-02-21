@@ -9,7 +9,7 @@ media_folder: public/images
 public_folder: images
 publish_mode: editorial_workflow
 collections:
-  - name: "diretorias"
+  - name: "diretorias" # Chapa
     label: "Diretorias"
     folder: "public/posts/diretorias"
     identifier_field: "titulo"
@@ -39,7 +39,7 @@ collections:
   - name: "noticias"
     label: "Notícas"
     folder: "public/posts/noticias"
-    identifier_field: "titulo"
+    identifier_field: "title"
     slug: "noticia-{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "json"
     create: true
@@ -57,7 +57,7 @@ collections:
   - name: "eventos"
     label: "Eventos"
     folder: "public/posts/eventos"
-    identifier_field: "titulo"
+    identifier_field: "title"
     slug: "evento-{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "json"
     create: true
@@ -69,6 +69,20 @@ collections:
     - { label: "Descrição do Evento", name: "description", widget: "markdown" }
     - { label: "Data", name: "date", widget: "date" }
     - { label: "Visível ao público", name: "active",  widget: "boolean" }
+
+  - name: "file"
+    label: "Arquivos"
+    folder: "public/files"
+    identifier_field: "nomeArq"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    extension: "json"
+    create: true
+    editor:
+      preview: false
+    fields:
+    - { label: "Título - Dê o nome do arquivo", name: "title", widget: "string" }
+    - { label: "Descrição - Acrescente uma breve explicação sobre o arquivo", name: "description", widget: "string" }
+    - { label: "Arquivo - Adicione aqui o arquivo", name: "file", widget: "file" }
 
   - name: "pages"
     label: "Páginas"

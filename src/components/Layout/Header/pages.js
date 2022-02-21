@@ -30,6 +30,10 @@ const pages = [
     to: "/eventos",
   },
   {
+    title: "Arquivo",
+    to: "/arquivo",
+  },
+  {
     title: "Associe-se",
     to: "/associese",
   },
