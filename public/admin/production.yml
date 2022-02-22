@@ -4,7 +4,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 local_backend: true
-locale: 'pt'
+locale: "pt"
 media_folder: public/images
 public_folder: images
 publish_mode: editorial_workflow
@@ -19,22 +19,34 @@ collections:
     editor:
       preview: false
     fields:
-    - { label: "Nome da chapa/ diretoria", name: "titulo", widget: "string" }
-    - { label: "Ano de atuação", name: "data", widget: "date" }
-    - { label: "Visível ao público", name: "active",  widget: "boolean" }
-    - label: 'Integrantes'
-      name: "integrantes"
-      widget: list
-      fields:
-        - { label: "Nome", name: "name", widget: "string" }
-        - { label: "Cargo", name: "role", widget: "string" }
-        - { label: "Foto", name: "photo", widget: "image" }
-        - { label: "Bio", name: "bio", widget: "text" }
-        - { label: "Email", name: "email", widget: "string" }
-        - { label: "Phone", name: "phone", widget: "string" }
-        - { label: "Banner da página da diretoria", name: "banner", widget: "image" }
-        - { label: "Título da página da diretoria", name: "title", widget: "string" }
-        - { label: "Conteúdo da Página da diretoria", name: "description", widget: "markdown" }
+      - { label: "Nome da chapa/ diretoria", name: "titulo", widget: "string" }
+      - { label: "Ano de atuação", name: "data", widget: "date" }
+      - { label: "Visível ao público", name: "active", widget: "boolean" }
+      - label: "Integrantes"
+        name: "integrantes"
+        widget: list
+        fields:
+          - { label: "Nome", name: "name", widget: "string" }
+          - { label: "Cargo", name: "role", widget: "string" }
+          - { label: "Foto", name: "photo", widget: "image" }
+          - { label: "Bio", name: "bio", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - {
+              label: "Banner da página da diretoria",
+              name: "banner",
+              widget: "image",
+            }
+          - {
+              label: "Título da página da diretoria",
+              name: "title",
+              widget: "string",
+            }
+          - {
+              label: "Conteúdo da Página da diretoria",
+              name: "description",
+              widget: "markdown",
+            }
 
   - name: "noticias"
     label: "Notícas"
@@ -46,13 +58,21 @@ collections:
     editor:
       preview: false
     fields:
-    - { label: "Título", name: "title", widget: "string" }
-    - { label: "Banner da notícia (1366x400)", name: "banner", widget: "image" }
-    - { label: "Corpo da Notícia", name: "content", widget: "markdown" }
-    - { label: "Data", name: "date", widget: "date" }
-    - { label: "Autor da Postagem", name: "author",  widget: "string" }
-    - { label: "Mostrar texto no carrousel", name: "show_text",  widget: "boolean" }
-    - { label: "Visível ao público", name: "active",  widget: "boolean" }
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Banner da notícia (1366x400)",
+          name: "banner",
+          widget: "image",
+        }
+      - { label: "Corpo da Notícia", name: "content", widget: "markdown" }
+      - { label: "Data", name: "date", widget: "date" }
+      - { label: "Autor da Postagem", name: "author", widget: "string" }
+      - {
+          label: "Mostrar texto no carrousel",
+          name: "show_text",
+          widget: "boolean",
+        }
+      - { label: "Visível ao público", name: "active", widget: "boolean" }
 
   - name: "eventos"
     label: "Eventos"
@@ -64,11 +84,19 @@ collections:
     editor:
       preview: false
     fields:
-    - { label: "Título", name: "title", widget: "string" }
-    - { label: "Banner do evento (1366x400)", name: "banner", widget: "image" }
-    - { label: "Descrição do Evento", name: "description", widget: "markdown" }
-    - { label: "Data", name: "date", widget: "date" }
-    - { label: "Visível ao público", name: "active",  widget: "boolean" }
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Banner do evento (1366x400)",
+          name: "banner",
+          widget: "image",
+        }
+      - {
+          label: "Descrição do Evento",
+          name: "description",
+          widget: "markdown",
+        }
+      - { label: "Data", name: "date", widget: "date" }
+      - { label: "Visível ao público", name: "active", widget: "boolean" }
 
   - name: "file"
     label: "Arquivos"
@@ -80,9 +108,47 @@ collections:
     editor:
       preview: false
     fields:
-    - { label: "Título - Dê o nome do arquivo", name: "title", widget: "string" }
-    - { label: "Descrição - Acrescente uma breve explicação sobre o arquivo", name: "description", widget: "string" }
-    - { label: "Arquivo - Adicione aqui o arquivo", name: "file", widget: "file" }
+      - {
+          label: "Título - Dê o nome do arquivo",
+          name: "title",
+          widget: "string",
+        }
+      - {
+          label: "Descrição - Acrescente uma breve explicação sobre o arquivo",
+          name: "description",
+          widget: "string",
+        }
+      - {
+          label: "Arquivo - Adicione aqui o arquivo",
+          name: "file",
+          widget: "file",
+        }
+
+  - name: "publicações"
+    label: "Publicações"
+    folder: "public/posts/publicações"
+    identifier_field: "title"
+    slug: "publicação-{{year}}-{{month}}-{{day}}_{{slug}}"
+    extension: "json"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Banner da publicação (1366x400)",
+          name: "banner",
+          widget: "image",
+        }
+      - { label: "Corpo da publicação", name: "content", widget: "markdown" }
+      - { label: "Data", name: "date", widget: "date" }
+      - { label: "Autor da Postagem", name: "author", widget: "string" }
+      - {
+          label: "Mostrar texto no carrousel",
+          name: "show_text",
+          widget: "boolean",
+        }
+      - { label: "Visível ao público", name: "active", widget: "boolean" }
 
   - name: "pages"
     label: "Páginas"
@@ -99,11 +165,31 @@ collections:
             name: "footer"
             widget: "object"
             fields:
-            - { label: "Instagram", name: "instagram", widget: "string", default: "abenrs_" }
-            - { label: "Email para contato", name: "email", widget: "string", default: "aben-rs@abennacional.org.br" }
-            - { label: "Telefone para Contato", name: "phone", widget: "string", default: "(51) 3232-3232" }
-            - { label: "Facebook", name: "facebook", widget: "string", default: "facebook/aben" }
-            
+              - {
+                  label: "Instagram",
+                  name: "instagram",
+                  widget: "string",
+                  default: "abenrs_",
+                }
+              - {
+                  label: "Email para contato",
+                  name: "email",
+                  widget: "string",
+                  default: "aben-rs@abennacional.org.br",
+                }
+              - {
+                  label: "Telefone para Contato",
+                  name: "phone",
+                  widget: "string",
+                  default: "(51) 3232-3232",
+                }
+              - {
+                  label: "Facebook",
+                  name: "facebook",
+                  widget: "string",
+                  default: "facebook/aben",
+                }
+
       - label: "Página História"
         name: "page_historia"
         file: "public/pages/historia.json"
@@ -112,7 +198,7 @@ collections:
         editor:
           preview: false
         fields:
-        - { label: "Conteúdo da página", name: "content", widget: "markdown" }
+          - { label: "Conteúdo da página", name: "content", widget: "markdown" }
 
       - label: "Banner azul - Associe-se"
         name: "banner_azul"
@@ -122,9 +208,13 @@ collections:
         editor:
           preview: false
         fields:
-        - { label: "Título do Banner Azul", name: "title", widget: "string" }
-        - { label: "Conteúdo do Banner Azul", name: "content", widget: "string" }
-        - { label: "Usar o Banner Azul", name: "active", widget: "boolean" }
+          - { label: "Título do Banner Azul", name: "title", widget: "string" }
+          - {
+              label: "Conteúdo do Banner Azul",
+              name: "content",
+              widget: "string",
+            }
+          - { label: "Usar o Banner Azul", name: "active", widget: "boolean" }
 
       - label: "Contato"
         name: "contato"
@@ -134,10 +224,10 @@ collections:
         editor:
           preview: false
         fields:
-        - { label: "Endereço", name: "end", widget: "string" }
-        - { label: "CEP", name: "cep", widget: "string" }
-        - { label: "Email", name: "email", widget: "string" }
-        - { label: "Telefone", name: "tel", widget: "string" }
+          - { label: "Endereço", name: "end", widget: "string" }
+          - { label: "CEP", name: "cep", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Telefone", name: "tel", widget: "string" }
 
       - label: "Página Associe-se"
         name: "page_associese"
@@ -147,7 +237,6 @@ collections:
         editor:
           preview: false
         fields:
-          - label: 'Valores'
+          - label: "Valores"
             name: "valores"
             widget: markdown
-    

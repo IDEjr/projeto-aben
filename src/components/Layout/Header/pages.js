@@ -26,6 +26,10 @@ const pages = [
     to: "/noticias",
   },
   {
+    title: "Publicações",
+    to: "/posts",
+  },
+  {
     title: "Eventos",
     to: "/eventos",
   },
