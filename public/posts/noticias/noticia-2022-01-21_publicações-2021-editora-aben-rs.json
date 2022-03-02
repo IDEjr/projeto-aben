@@ -2,8 +2,8 @@
   "date": "2022-01-20T23:41:17.129Z",
   "title": "Publicações 2021 Editora ABEn-RS",
   "author": "Denise",
-  "show_text": true,
-  "active": true,
+  "show_text": false,
+  "active": false,
   "banner": "images/untitled.bmp",
   "content": "Vejam as Publicações 2021:\n\n![](images/capaanaisboaspraticas.jpg \"Boas Praticas em Servicos de Saude e de Enfermagem\")"
 }
