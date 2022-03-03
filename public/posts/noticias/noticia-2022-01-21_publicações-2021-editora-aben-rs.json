@@ -1,9 +1,9 @@
 {
-  "date": "2022-01-20T23:41:17.129Z",
+  "date": "2022-03-02T23:41:17.129Z",
   "title": "Publicações 2021 Editora ABEn-RS",
   "author": "Denise",
   "show_text": false,
-  "active": true,
-  "banner": "images/untitled.jpg",
-  "content": "Vejam as Publicações 2021:\n\n![](images/capaanaisboaspraticas.jpg \"Boas Praticas em Servicos de Saude e de Enfermagem\")"
+  "active": false,
+  "banner": "images/image_publica.jpeg",
+  "content": "Vejam as Publicações 2021:\n\n* Anais Boas Praticas em Servicos de Saude e de Enfermagem\n* Aulas Vivas\n* Programa de Pós Graduação em Enfermagem UNISINOS Mestrado profissional: uma síntese dos 10 anos de produção"
 }
