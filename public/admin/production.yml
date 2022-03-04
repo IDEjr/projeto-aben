@@ -49,7 +49,7 @@ collections:
             }
 
   - name: "noticias"
-    label: "Notícas"
+    label: "Notícias"
     folder: "public/posts/noticias"
     identifier_field: "title"
     slug: "noticia-{{year}}-{{month}}-{{day}}_{{slug}}"

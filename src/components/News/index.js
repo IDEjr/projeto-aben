@@ -22,21 +22,19 @@ const News = ({
   const handleClick = () => router.push(`noticias/${fileName}`);
 
   return (
-    <Box>
-      <Card variant="outlined">
-        <CardActionArea onClick={handleClick}>
-          <CardMedia component="img" height="140" src={"/" + imagemNoticia} alt="" />
-          <CardContent>
-            <Typography gutterBottom variant="body2" component="div">
-              {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
-            </Typography>
-            <Typography gutterBottom variant="h6" component="div">
-              {mancheteNoticia}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Box>
+    <Card variant="outlined" sx={{ height: "100%" }}>
+      <CardActionArea onClick={handleClick}>
+        <CardMedia component="img" sx={{ objectFit: "contain", maxHeight: "200px" }} src={"/" + imagemNoticia} alt="" />
+        <CardContent>
+          <Typography gutterBottom variant="body2" component="div">
+            {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            {mancheteNoticia}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 };
 

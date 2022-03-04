@@ -21,6 +21,8 @@ const CustomTitle = ({ children, onClick }) => (
   </Typography>
 );
 
+const LINES_TO_SHOW = 2;
+
 const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
   const router = useRouter();
 
@@ -54,7 +56,8 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
           }}
         />
         <CardContent sx={{ height: "180px" }}>
-          <Typography>{diretoria.bio}</Typography>
+          <Typography
+          >{diretoria.bio.slice(0, 200).concat("...")}</Typography>
         </CardContent>
         <CardActions>
           <Box display="flex" flexDirection="column-reverse" p={1}>

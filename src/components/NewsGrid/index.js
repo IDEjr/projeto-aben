@@ -35,7 +35,7 @@ const NewsGrid = ({
         </Box>
       )}
 
-      <Grid container spacing={2}>
+      <Grid container spacing={2} >
         {
           newsData
             .slice(0, numberOfNewsToRender)

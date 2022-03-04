@@ -18,13 +18,13 @@ const Post = ({ imagemPost, manchetePost, dataPost, fileName }) => {
 
   return (
     <Box>
-      <Card variant="outlined">
+      <Card variant="outlined" sx={{ height: "100%" }}>
         <CardActionArea onClick={handleClick}>
           <CardMedia
             component="img"
-            height="140"
             src={"/" + imagemPost}
             alt=""
+            sx={{objectFit: "contain", maxHeight: "200px"}}
           />
           <CardContent>
             <Typography gutterBottom variant="body2" component="div">

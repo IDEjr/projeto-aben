@@ -46,7 +46,7 @@ const Evento = ({
   return (
     <Container>
       <Card>
-        <CardMedia component="img" height="100%" src={"/" + banner} alt="" />
+        <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
         <CardContent>
           <Typography gutterBottom variant="h4" component="div">
             {`${moment.utc(date).local().format("DD/MM/YYYY")}`}: {title}

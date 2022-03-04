@@ -16,14 +16,16 @@ const Slide = ({
   const router = useRouter();
 
   return (
-    <Box height="auto" width="100%" borderRadius={1}>
+    <Box height="auto" maxHeight="400px" width="100%" borderRadius={1}>
       <CardActionArea
         onClick={() => router.push(`/eventos/${fileName}`)}>
         <CardMedia
           component="img"
           src={"/" + banner}
-          height="auto"
-          width="100%"
+          sx={{
+            height: "400px",
+            objectFit: "contain"
+          }}
         >
         </CardMedia>
       </CardActionArea>
