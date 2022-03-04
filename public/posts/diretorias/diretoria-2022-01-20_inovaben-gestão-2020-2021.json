@@ -4,13 +4,13 @@
   "active": true,
   "integrantes": [
     {
-      "bio": "Graduação em Enfermagem pela Escola Madre Ana Möeller (1972), Licenciatura Plena em Enfermagem pela Pontifícia Universidade Católica do Rio Grande do Sul (1973), e Mestrado em Enfermagem pela Universidade Federal do Rio Grande do Sul (1980), Doutorado em Gerontologia Biomédica pela PUCRS (2012). Estágio Pós Doutorado concluído em dezembro de 2014 pela PUCRS. Presidente do Conselho Estadual da Pessoa Idosa 2020 atual. Presidente da Associação Brasileira de Enfermagem, Seção RS 2020-2022, atual. ",
+      "bio": "Graduação em Enfermagem pela Escola Madre Ana Möeller (1972) e Licenciatura em Enfermagem pela PUCRS (1973),  Mestrado em Enfermagem pela UFRGS (1980), Doutorado em Gerontologia Biomédica pela PUCRS (2012),Estágio Pós-Doutorado  pela PUCRS (2014). Presidente do Conselho Estadual da Pessoa Idosa 2020 atual e Presidente da Associação Brasileira de Enfermagem, Seção RS (2020-2022). ",
       "name": "Iride Cristofoli Caberlon",
       "banner": "images/logoAben.jpg",
       "phone": " (51) 3332.8622 / 99739.0555",
       "photo": "images/presidentesABEn.svg",
       "role": "Presidente ",
-      "title": "INOVABEn-RS",
+      "title": "Presidente da Gestão INOVABEn-RS (2020-2022)",
       "email": " aben-rs@abennacional.org.br",
       "description": "A Presidente durante sua gestão....."
     },
@@ -21,9 +21,20 @@
       "phone": " (51) 3332.8622 / 99739.0555",
       "photo": "images/untitled.jpg",
       "role": "Vice-Presidente",
-      "title": "inovaben",
+      "title": "Vice-Presidente da Gestão INOVABEn-RS (2020-2022)",
       "email": "aben-rs@abennacional.org.br",
       "description": "A Vice-Presidente"
+    },
+    {
+      "bio": "Graduação em Enfermagem e Licenciatura pela UFRGS (1977 e 1985), três especialização e entre elas  Ativação dos Processos de Mudança na Formação Superior dos Profissionais da Área da Saúde pela Fundação Osvaldo Cruz (2006), Mestrado em Administração da Educação pela Pontifícia Universidade Católica do Rio Grande do Sul (1992) e doutorado pelo Programa de Pós-Graduação em Enfermagem da UFRGS (2015). Diretora de Educação da Associação Brasileira de Enfermagem - ABEn/RS (2020-2022).",
+      "name": "Dagmar Elaine Kaiser",
+      "banner": "images/logoAben.jpg",
+      "phone": "(51) 3332.8622 / 99739.0555",
+      "photo": "images/dagmar-kaiser-1-.jpg",
+      "role": "Diretora de Educação",
+      "title": "Diretoria de Educação da Gestão INOVABEn-RS (2020-2022)",
+      "email": "aben-rs@abennacional.org.br",
+      "description": "tqtetr"
     }
   ]
 }
