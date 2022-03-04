@@ -4,6 +4,6 @@
   "banner": "images/homesiteabenrs.png",
   "content": "## Em breve, confira as novidades no **NOVO Site** da **Associação Brasileira de Enfermagem - Seção RS (ABEn-RS)!!!**\n\n##### Acesse [aqui](https://kind-edison-58f9f4.netlify.app/)",
   "author": "Denise",
-  "show_text": false,
+  "show_text": true,
   "active": true
 }
