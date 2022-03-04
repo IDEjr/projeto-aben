@@ -38,7 +38,7 @@ const Post = ({ post }) => {
   return (
     <Container disableGutters>
       <Box backgroundColor="#ffffff" my={{ xs: 0, md: 6 }}>
-        <CardMedia component="img" src={"/" + banner} alt="" />
+        <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
         <CardContent sx={{ py: 6 }}>
           <Typography gutterBottom variant="body2" component="div">
             {`${moment.utc(date).local().format("DD/MM/YYYY")}`}

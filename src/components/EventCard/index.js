@@ -22,7 +22,7 @@ const EventCard = ({
   return (
     <Card variant="outlined">
       <CardActionArea onClick={handleClick}>
-        <CardMedia component="img" height="100%" src={imagemEvento} alt="" />
+        <CardMedia component="img" sx={{objectFit: "contain", maxHeight: "200px"}} src={imagemEvento} alt="" />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             Data: {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}

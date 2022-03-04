@@ -15,7 +15,7 @@ export default function NewsModal(props) {
   return (
     <Box>
       <Dialog onClick={props.onConfirm} open={props.opened}>
-        <CardMedia component="img" height="140" src={props.newsImage} alt="" />
+        <CardMedia component="img" sx={{objectFit: "contain", maxHeight: "200px"}} src={props.newsImage} alt="" />
         <DialogTitle>{props.newsTitle}</DialogTitle>
         <DialogContent>{props.newsContent}</DialogContent>
         <DialogActions>
