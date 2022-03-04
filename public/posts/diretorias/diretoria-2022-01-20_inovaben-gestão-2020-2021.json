@@ -1,0 +1,29 @@
+{
+  "data": "2022-01-20T17:09:43.586Z",
+  "titulo": "INOVABEn - Gestão 2020-2021",
+  "active": true,
+  "integrantes": [
+    {
+      "bio": "Graduação em Enfermagem pela Escola Madre Ana Möeller (1972), Licenciatura Plena em Enfermagem pela Pontifícia Universidade Católica do Rio Grande do Sul (1973), e Mestrado em Enfermagem pela Universidade Federal do Rio Grande do Sul (1980), Doutorado em Gerontologia Biomédica pela PUCRS (2012). Estágio Pós Doutorado concluído em dezembro de 2014 pela PUCRS. Presidente do Conselho Estadual da Pessoa Idosa 2020 atual. Presidente da Associação Brasileira de Enfermagem, Seção RS 2020-2022, atual. ",
+      "name": "Iride Cristofoli Caberlon",
+      "banner": "images/logoAben.jpg",
+      "phone": " (51) 3332.8622 / 99739.0555",
+      "photo": "images/presidentesABEn.svg",
+      "role": "Presidente ",
+      "title": "INOVABEn-RS",
+      "email": " aben-rs@abennacional.org.br",
+      "description": "A Presidente durante sua gestão....."
+    },
+    {
+      "bio": "Graduação em Enfermagem pela Universidade Federal do Rio Grande do Sul, Especialização em Administração Hospitalar, Mestrado em Saúde Coletiva pela Universidade Luterana do Brasil com ênfase em serviços de saúde e Doutorado em Educação pela PUCRS. Representante da região Sul da Rede PICS Brasil Curadora da Comunidade PICS do Projeto IdeiaSus/FIOCRUZ e Vice- Presidente da ABEN/RS(2020-2022), atual. ",
+      "name": "Rosália Figueiró Borges",
+      "banner": "images/homesiteabenrs.png",
+      "phone": " (51) 3332.8622 / 99739.0555",
+      "photo": "images/untitled.jpg",
+      "role": "Vice-Presidente",
+      "title": "inovaben",
+      "email": "aben-rs@abennacional.org.br",
+      "description": "A Vice-Presidente"
+    }
+  ]
+}
