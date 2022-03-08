@@ -124,11 +124,11 @@ collections:
           widget: "file",
         }
 
-  - name: "publicações"
+  - name: "publicacoes"
     label: "Publicações"
-    folder: "public/posts/publicações"
+    folder: "public/posts/publicacoes"
     identifier_field: "title"
-    slug: "publicação-{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "publicacao-{{year}}-{{month}}-{{day}}_{{slug}}"
     extension: "json"
     create: true
     editor:
@@ -199,6 +199,16 @@ collections:
           preview: false
         fields:
           - { label: "Conteúdo da página", name: "content", widget: "markdown" }
+
+      - label: "Página Sobre"
+        name: "page_sobre"
+        file: "public/pages/sobre.json"
+        extension: "json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
 
       - label: "Banner azul - Associe-se"
         name: "banner_azul"
