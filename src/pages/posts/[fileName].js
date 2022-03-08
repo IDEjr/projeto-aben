@@ -25,7 +25,7 @@ export function getStaticPaths() {
 
 export function getStaticProps(context) {
   const fileName = context.params.fileName;
-  const post = handleJSONfile(`./public/posts/publicações/${fileName}.json`);
+  const post = handleJSONfile(`./public/posts/publicacoes/${fileName}.json`);
 
   return {
     props: { post },

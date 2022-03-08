@@ -4,7 +4,7 @@ import PostsGrid from "components/PostsGrid";
 import { handleJSONfiles } from "../../../utils/postHandler";
 
 export function getStaticProps() {
-  const posts = handleJSONfiles("./public/posts/publicações");
+  const posts = handleJSONfiles("./public/posts/publicacoes");
 
   return {
     props: { posts },
