@@ -49,9 +49,7 @@ const Post = ({ post }) => {
           <Typography gutterBottom variant="h4" sx={{ mt: 2 }} component="div">
             {title}
           </Typography>
-          <Typography variant="body3" color="text.secondary">
-            <ReactMarkdown>{content}</ReactMarkdown>
-          </Typography>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </CardContent>
       </Box>
     </Container>

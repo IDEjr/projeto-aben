@@ -268,8 +268,8 @@ const Associese = ({
                   />
                 </Grid>
 
-                
-                
+
+
                 <Grid item xs={12} md={6}>
                   <InputMask mask="(99) 99999-9999">
                     {() => (
@@ -362,7 +362,7 @@ const Associese = ({
         </Card>
         <Box my={10}>
           <Typography variant="h3">Valores</Typography>
-          <ReactMarkdown>{valores}</ReactMarkdown>
+          <div dangerouslySetInnerHTML={{ __html: valores }} />
         </Box>
       </Container>
     </>
