@@ -12,7 +12,7 @@ import moment from "moment-timezone";
 import { Box } from "@mui/system";
 
 export function getStaticPaths() {
-  const posts = handleJSONfiles("./public/posts/publicações");
+  const posts = handleJSONfiles("./public/posts/publicacoes");
 
   const paths = posts.map((post) => {
     return {
