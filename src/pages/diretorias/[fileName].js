@@ -54,9 +54,7 @@ const Diretoria = ({ chapa }) => {
           <Typography gutterBottom variant="h4" component="div">
             {title}
           </Typography>
-          <Typography variant="body3" color="text.secondary">
-            <ReactMarkdown>{description}</ReactMarkdown>
-          </Typography>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
         </CardContent>
       </Card>
     </Container>

@@ -12,7 +12,7 @@ import moment from "moment-timezone";
 import { Box } from "@mui/system";
 
 export function getStaticPaths() {
-  const posts = handleJSONfiles("./public/posts/publicações");
+  const posts = handleJSONfiles("./public/posts/publicacoes");
 
   const paths = posts.map((post) => {
     return {
@@ -49,9 +49,7 @@ const Post = ({ post }) => {
           <Typography gutterBottom variant="h4" sx={{ mt: 2 }} component="div">
             {title}
           </Typography>
-          <Typography variant="body3" color="text.secondary">
-            <ReactMarkdown>{content}</ReactMarkdown>
-          </Typography>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </CardContent>
       </Box>
     </Container>

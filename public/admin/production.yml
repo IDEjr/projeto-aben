@@ -43,9 +43,9 @@ collections:
               widget: "string",
             }
           - {
-              label: "Conteúdo da Página da diretoria",
+              label: "Conteúdo da Página da diretoria (HTML)",
               name: "description",
-              widget: "markdown",
+              widget: "string",
             }
 
   - name: "noticias"
@@ -64,7 +64,7 @@ collections:
           name: "banner",
           widget: "image",
         }
-      - { label: "Corpo da Notícia", name: "content", widget: "markdown" }
+      - { label: "Corpo da Notícia (HTML)", name: "content", widget: "string" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
       - {
@@ -91,9 +91,9 @@ collections:
           widget: "image",
         }
       - {
-          label: "Descrição do Evento",
+          label: "Descrição do Evento (HTML)",
           name: "description",
-          widget: "markdown",
+          widget: "string",
         }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Visível ao público", name: "active", widget: "boolean" }
@@ -140,7 +140,7 @@ collections:
           name: "banner",
           widget: "image",
         }
-      - { label: "Corpo da publicação", name: "content", widget: "markdown" }
+      - { label: "Corpo da publicação (HTML)", name: "content", widget: "string" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
       - {
@@ -198,7 +198,7 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: "Conteúdo da página", name: "content", widget: "markdown" }
+          - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
 
       - label: "Página Sobre"
         name: "page_sobre"
@@ -247,6 +247,6 @@ collections:
         editor:
           preview: false
         fields:
-          - label: "Valores"
+          - label: "Valores (HTML)"
             name: "valores"
-            widget: markdown
+            widget: string

@@ -51,9 +51,7 @@ const Evento = ({
           <Typography gutterBottom variant="h4" component="div">
             {`${moment.utc(date).local().format("DD/MM/YYYY")}`}: {title}
           </Typography>
-          <Typography variant="body3" color="text.secondary">
-            <ReactMarkdown>{description}</ReactMarkdown>
-          </Typography>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
         </CardContent>
       </Card>
     </Container>
