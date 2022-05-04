@@ -30,6 +30,10 @@ const theme = responsiveFontSizes(
       action: {
         active: "#6b778c",
       },
+      white: {
+        contrastText: primaryBlue,
+        main: "#fff",
+      },
       primary: {
         contrastText: "#ffffff",
         main: primaryBlue,

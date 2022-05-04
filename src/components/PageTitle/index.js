@@ -1,9 +1,10 @@
-import { Container, Typography } from '@mui/material'
+import { Container, Typography, useMediaQuery } from '@mui/material'
 import { Box } from '@mui/system'
 
 export default function PageTitle({ title }) {
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('md'));
 
-  return (
+  if (isMobile) return (
     <Box
       sx={{
         display: "flex",
@@ -12,8 +13,14 @@ export default function PageTitle({ title }) {
         backgroundColor: "primary.main",
       }}>
       <Container>
-
+        <Typography
+          variant="h2"
+          color="primary.contrastText">
+          {title}
+        </Typography>
       </Container>
     </Box>
   )
+
+  return null
 }

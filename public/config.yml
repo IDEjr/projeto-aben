@@ -158,6 +158,11 @@ collections:
         editor:
           preview: false
         fields:
+          - {
+            label: "Banner Associe-se",
+            name: "banner",
+            widget: "image",
+          }
           - label: "Conteúdo do Rodapé"
             name: "footer"
             widget: "object"

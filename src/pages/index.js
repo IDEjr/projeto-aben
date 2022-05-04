@@ -91,11 +91,6 @@ const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
           </Box>
         )}
       </Container>
-      {bannerAzul?.active && (
-        <Box my={6}>
-          <MembershipBanner {...{ bannerAzul }} />
-        </Box>
-      )}
     </>
   );
 };
