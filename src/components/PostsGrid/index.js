@@ -37,6 +37,8 @@ const PostsGrid = ({ limitItems, hasGridHeader, posts = [] }) => {
               manchetePost={item.title}
               dataPost={item.date}
               fileName={item.fileName}
+              useRedirect={item.useRedirect}
+              url={item.url}
             />
           </Grid>
         ))}

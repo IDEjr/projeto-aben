@@ -16,6 +16,8 @@ const News = ({
   mancheteNoticia,
   dataNoticia,
   fileName,
+  url,
+  useRedirect
 }) => {
   const router = useRouter();
 
@@ -23,11 +25,15 @@ const News = ({
 
   return (
     <Card variant="outlined" sx={{ height: "100%" }}>
-      <CardActionArea onClick={handleClick} sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignContent: "space-between"
-      }}>
+      <CardActionArea
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignContent: "space-between"
+        }}
+        {...(useRedirect
+          ? { href: url, target: "_blank", rel: "noopener noreferrer" }
+          : { onClick: handleClick })}>
         <CardMedia component="img" sx={{ objectFit: "contain", minHeight: "250px" }} src={"/" + imagemNoticia} alt="" />
         <CardContent >
           <Typography align="center" variant="h6" component="div" sx={{

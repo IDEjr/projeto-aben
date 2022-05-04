@@ -15,13 +15,18 @@ const EventCard = ({
   tituloEvento,
   dataEvento,
   fileName,
+  useRedirect,
+  url
 }) => {
   const router = useRouter();
   const handleClick = () => router.push(`eventos/${fileName}`);
 
   return (
     <Card variant="outlined">
-      <CardActionArea onClick={handleClick}>
+      <CardActionArea
+        {...(useRedirect
+          ? { href: url, target: "_blank", rel: "noopener noreferrer" }
+          : { onClick: handleClick })}>
         <CardMedia component="img" sx={{ objectFit: "contain", maxHeight: "200px" }} src={imagemEvento} alt="" />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div" sx={{

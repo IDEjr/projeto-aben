@@ -45,6 +45,8 @@ const NewsGrid = ({
               mancheteNoticia={item.title}
               dataNoticia={item.date}
               fileName={item.fileName}
+              useRedirect={item.useRedirect}
+              url={item.url}
             />
           </Grid>
         ))}

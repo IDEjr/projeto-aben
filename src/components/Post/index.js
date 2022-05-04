@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import moment from "moment-timezone";
 import { Box } from "@mui/system";
 
-const Post = ({ imagemPost, manchetePost, dataPost, fileName }) => {
+const Post = ({ imagemPost, manchetePost, dataPost, fileName, url, useRedirect }) => {
   const router = useRouter();
 
   const handleClick = () => router.push(`posts/${fileName}`);
@@ -22,7 +22,10 @@ const Post = ({ imagemPost, manchetePost, dataPost, fileName }) => {
         display: "flex",
         flexDirection: "column",
         alignContent: "space-between"
-      }}>
+      }}
+        {...(useRedirect
+          ? { href: url, target: "_blank", rel: "noopener noreferrer" }
+          : { onClick: handleClick })}>
         <CardMedia
           component="img"
           src={"/" + imagemPost}
