@@ -34,7 +34,7 @@ export function getStaticProps(context) {
 }
 
 const Post = ({ post }) => {
-  const { date, title, banner, content, author, show_text, active } = post;
+  const { date, title, banner, content, author, active } = post;
 
   return (
     <Container disableGutters>

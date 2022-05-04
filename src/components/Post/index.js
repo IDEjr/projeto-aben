@@ -32,11 +32,12 @@ const Post = ({ imagemPost, manchetePost, dataPost, fileName }) => {
         <CardContent>
           <Typography align="left" variant="h6" component="div" sx={{
             fontSize: '16px',
-            '-webkit-line-clamp': 2,
             display: '-webkit-box',
-            overflow: 'hidden',
+            '-webkit-line-clamp': 2,
             '-webkit-box-orient': 'vertical',
-            lineClamp: 2,
+            overflow: 'hidden',
+            lineBreak: 'anywhere',
+            whiteSpace: "normal",
             height: '50px',
           }} >
             {manchetePost}

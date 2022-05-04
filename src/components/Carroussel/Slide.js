@@ -11,6 +11,9 @@ const Slide = ({
   title,
   banner,
   fileName,
+  route,
+  useRedirect,
+  url,
   ...rest
 }) => {
   const router = useRouter();
@@ -18,7 +21,9 @@ const Slide = ({
   return (
     <Box height="auto" maxHeight="400px" width="100%" borderRadius={1}>
       <CardActionArea
-        onClick={() => router.push(`/eventos/${fileName}`)}>
+        {...(useRedirect
+          ? { href: url, target: "_blank", rel: "noopener noreferrer" }
+          : { onClick: () => router.push(`${route}${fileName}`) })}>
         <CardMedia
           component="img"
           src={"/" + banner}
