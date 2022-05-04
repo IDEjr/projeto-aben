@@ -9,12 +9,18 @@ import createEmotionCache from '../createEmotionCache';
 import Layout from '../components/Layout'
 import { GlobalStyles } from '@mui/styled-engine';
 import globalCss from 'styles/global';
+import { useRouter } from 'next/router';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const router = useRouter()
+
+  const LayoutToUse = router.asPath.startsWith('/admin')
+    ? React.Fragment
+    : Layout
 
   return (
     <CacheProvider value={emotionCache}>
@@ -26,9 +32,9 @@ export default function MyApp(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <GlobalStyles styles={globalCss} />
-        <Layout>
+        <LayoutToUse>
           <Component {...pageProps} />
-        </Layout>
+        </LayoutToUse>
       </ThemeProvider>
     </CacheProvider>
   );
