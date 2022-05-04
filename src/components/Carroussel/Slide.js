@@ -31,8 +31,7 @@ const Slide = ({
             height: "400px",
             objectFit: "contain"
           }}
-        >
-        </CardMedia>
+        />
       </CardActionArea>
     </Box>
   )
