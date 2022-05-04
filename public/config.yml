@@ -44,7 +44,7 @@ collections:
             }
           - {
               label: "Conteúdo da Página da diretoria (HTML)",
-              name: "description",
+              name: "content",
               widget: "string",
             }
 
@@ -67,12 +67,8 @@ collections:
       - { label: "Corpo da Notícia (HTML)", name: "content", widget: "string" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
-      - {
-          label: "Mostrar texto no carrousel",
-          name: "show_text",
-          widget: "boolean",
-        }
       - { label: "Visível ao público", name: "active", widget: "boolean" }
+      - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean" }
 
   - name: "eventos"
     label: "Eventos"
@@ -92,7 +88,7 @@ collections:
         }
       - {
           label: "Descrição do Evento (HTML)",
-          name: "description",
+          name: "content",
           widget: "string",
         }
       - { label: "Data", name: "date", widget: "date" }
@@ -115,7 +111,7 @@ collections:
         }
       - {
           label: "Descrição - Acrescente uma breve explicação sobre o arquivo",
-          name: "description",
+          name: "content",
           widget: "string",
         }
       - {
@@ -135,7 +131,6 @@ collections:
       preview: true
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Teste", name: "teste", widget: "html" }
       - {
           label: "Banner da publicação (1366x400)",
           name: "banner",
@@ -144,12 +139,8 @@ collections:
       - { label: "Corpo da publicação (HTML)", name: "content", widget: "string" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
-      - {
-          label: "Mostrar texto no carrousel",
-          name: "show_text",
-          widget: "boolean",
-        }
       - { label: "Visível ao público", name: "active", widget: "boolean" }
+      - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean" }
 
   - name: "pages"
     label: "Páginas"
@@ -249,5 +240,5 @@ collections:
           preview: true
         fields:
           - label: "Valores (HTML)"
-            name: "valores"
+            name: "content"
             widget: text
