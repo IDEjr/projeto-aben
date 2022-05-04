@@ -22,13 +22,21 @@ const EventCard = ({
   return (
     <Card variant="outlined">
       <CardActionArea onClick={handleClick}>
-        <CardMedia component="img" sx={{objectFit: "contain", maxHeight: "200px"}} src={imagemEvento} alt="" />
+        <CardMedia component="img" sx={{ objectFit: "contain", maxHeight: "200px" }} src={imagemEvento} alt="" />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            Data: {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
-          </Typography>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="h6" component="div" sx={{
+            fontSize: '16px',
+            '-webkit-line-clamp': 2,
+            display: '-webkit-box',
+            overflow: 'hidden',
+            '-webkit-box-orient': 'vertical',
+            lineClamp: 2,
+            height: '50px',
+          }}>
             {tituloEvento}
+          </Typography>
+          <Typography gutterBottom align="center" variant="body2" component="div" >
+            {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
           </Typography>
         </CardContent>
       </CardActionArea>

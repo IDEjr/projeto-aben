@@ -36,23 +36,18 @@ const NewsGrid = ({
       )}
 
       <Grid container spacing={2} >
-        {
-          newsData
-            .slice(0, numberOfNewsToRender)
-            .map((item) => (
-              <Grid item key={item.fileName}
-                xs={12}
-                md={4}>
-                <News
-                  imagemNoticia={item.banner}
-                  mancheteNoticia={item.title}
-                  dataNoticia={item.date}
-                  fileName={item.fileName}
-                />
-              </Grid>
-            ))
-        }
-
+        {newsData.slice(0, numberOfNewsToRender).map((item) => (
+          <Grid item key={item.fileName}
+            xs={12}
+            md={4}>
+            <News
+              imagemNoticia={item.banner}
+              mancheteNoticia={item.title}
+              dataNoticia={item.date}
+              fileName={item.fileName}
+            />
+          </Grid>
+        ))}
       </Grid>
 
     </Container>

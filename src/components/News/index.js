@@ -23,18 +23,30 @@ const News = ({
 
   return (
     <Card variant="outlined" sx={{ height: "100%" }}>
-      <CardActionArea onClick={handleClick}>
-        <CardMedia component="img" sx={{ objectFit: "contain", maxHeight: "200px" }} src={"/" + imagemNoticia} alt="" />
-        <CardContent>
-          <Typography gutterBottom variant="body2" component="div">
-            {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
-          </Typography>
-          <Typography gutterBottom variant="h6" component="div">
+      <CardActionArea onClick={handleClick} sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignContent: "space-between"
+      }}>
+        <CardMedia component="img" sx={{ objectFit: "contain", minHeight: "250px" }} src={"/" + imagemNoticia} alt="" />
+        <CardContent >
+          <Typography align="center" variant="h6" component="div" sx={{
+            fontSize: '16px',
+            '-webkit-line-clamp': 2,
+            display: '-webkit-box',
+            overflow: 'hidden',
+            '-webkit-box-orient': 'vertical',
+            lineClamp: 2,
+            height: '50px',
+          }} >
             {mancheteNoticia}
           </Typography>
         </CardContent>
+        <Typography align="right" variant="body2" component="div">
+          {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
+        </Typography>
       </CardActionArea>
-    </Card>
+    </Card >
   );
 };
 

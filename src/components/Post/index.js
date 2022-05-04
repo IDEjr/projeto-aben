@@ -17,26 +17,36 @@ const Post = ({ imagemPost, manchetePost, dataPost, fileName }) => {
   const handleClick = () => router.push(`posts/${fileName}`);
 
   return (
-    <Box>
-      <Card variant="outlined" sx={{ height: "100%" }}>
-        <CardActionArea onClick={handleClick}>
-          <CardMedia
-            component="img"
-            src={"/" + imagemPost}
-            alt=""
-            sx={{objectFit: "contain", maxHeight: "200px"}}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="body2" component="div">
-              {`${moment.utc(dataPost).local().format("DD/MM/YYYY")}`}
-            </Typography>
-            <Typography gutterBottom variant="h6" component="div">
-              {manchetePost}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Box>
+    <Card variant="outlined" sx={{ height: "100%" }}>
+      <CardActionArea onClick={handleClick} sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignContent: "space-between"
+      }}>
+        <CardMedia
+          component="img"
+          src={"/" + imagemPost}
+          alt=""
+          sx={{ objectFit: "contain", maxHeight: "200px" }}
+        />
+        <CardContent>
+          <Typography align="left" variant="h6" component="div" sx={{
+            fontSize: '16px',
+            '-webkit-line-clamp': 2,
+            display: '-webkit-box',
+            overflow: 'hidden',
+            '-webkit-box-orient': 'vertical',
+            lineClamp: 2,
+            height: '50px',
+          }} >
+            {manchetePost}
+          </Typography>
+          <Typography gutterBottom align="center" variant="body2" component="div">
+            {`${moment.utc(dataPost).local().format("DD/MM/YYYY")}`}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 };
 

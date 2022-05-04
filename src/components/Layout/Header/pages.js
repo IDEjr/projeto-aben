@@ -4,7 +4,7 @@ const pages = [
     to: "/",
   },
   {
-    title: "Sobre",
+    title: "Conheça",
     to: "/sobre",
     children: [
       {
