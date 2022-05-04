@@ -16,7 +16,10 @@ import { useRouter } from "next/router";
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);
 
-const EventsCarrousel = ({ eventsData, ...rest }) => {
+const Carroussel = ({
+  data,
+  ...rest
+}) => {
   const router = useRouter();
   const handleClick = () => router.push("/eventos");
 
@@ -35,16 +38,11 @@ const EventsCarrousel = ({ eventsData, ...rest }) => {
           Mais {"\u2794"}
         </Button>
       </Box>
-      <CustomCarrousel>
-        {eventsData.slice(0, 10).map(({ fileName, banner, title }) => {
+      <CustomCarrousel autoplay>
+        {data.slice(0, 10).map(e => {
           return (
-            <SwiperSlide key={fileName}>
-              <Slide
-                {...{
-                  fileName,
-                  banner,
-                  title,
-                }} />
+            <SwiperSlide key={e.fileName}>
+              <Slide {...e} />
             </SwiperSlide>
           );
         })}
@@ -53,4 +51,4 @@ const EventsCarrousel = ({ eventsData, ...rest }) => {
   );
 };
 
-export default EventsCarrousel;
+export default Carroussel;

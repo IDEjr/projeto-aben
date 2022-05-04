@@ -39,7 +39,6 @@ const Evento = ({
     title,
     banner,
     content,
-    show_text,
     active,
   } = evento;
 
