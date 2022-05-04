@@ -10,6 +10,7 @@ import {
 import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
 import moment from "moment-timezone";
 import { Box } from "@mui/system";
+import ContentView from "components/ContentView";
 
 export function getStaticPaths() {
   const posts = handleJSONfiles("./public/posts/publicacoes");
@@ -37,21 +38,9 @@ const Post = ({ post }) => {
 
   return (
     <Container disableGutters>
-      <Box backgroundColor="#ffffff" my={{ xs: 0, md: 6 }}>
-        <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
-        <CardContent sx={{ py: 6 }}>
-          <Typography gutterBottom variant="body2" component="div">
-            {`${moment.utc(date).local().format("DD/MM/YYYY")}`}
-          </Typography>
-          <Typography gutterBottom variant="body2" component="div">
-            Por: {author}
-          </Typography>
-          <Typography gutterBottom variant="h4" sx={{ mt: 2 }} component="div">
-            {title}
-          </Typography>
-          <div dangerouslySetInnerHTML={{ __html: content }} />
-        </CardContent>
-      </Box>
+      <ContentView
+        {...{ banner, date, author, title, content }}
+      />
     </Container>
   );
 };
