@@ -39,8 +39,8 @@ const News = ({
           <Typography align="center" variant="h6" component="div" sx={{
             fontSize: '16px',
             display: '-webkit-box',
-            '-webkit-line-clamp': 2,
-            '-webkit-box-orient': 'vertical',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
             overflow: 'hidden',
             lineBreak: 'anywhere',
             whiteSpace: "normal",
@@ -48,10 +48,10 @@ const News = ({
           }} >
             {mancheteNoticia}
           </Typography>
+          <Typography gutterBottom align="center" variant="caption" component="div" sx={{ mt: 2, mb: 0 }}>
+            {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
+          </Typography>
         </CardContent>
-        <Typography align="right" variant="body2" component="div">
-          {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
-        </Typography>
       </CardActionArea>
     </Card >
   );

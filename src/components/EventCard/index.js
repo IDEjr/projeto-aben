@@ -32,8 +32,8 @@ const EventCard = ({
           <Typography gutterBottom variant="h6" component="div" sx={{
             fontSize: '16px',
             display: '-webkit-box',
-            '-webkit-line-clamp': 2,
-            '-webkit-box-orient': 'vertical',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
             overflow: 'hidden',
             lineBreak: 'anywhere',
             whiteSpace: "normal",
@@ -41,7 +41,7 @@ const EventCard = ({
           }}>
             {tituloEvento}
           </Typography>
-          <Typography gutterBottom align="center" variant="body2" component="div" >
+          <Typography gutterBottom align="center" variant="caption" component="div" sx={{ mt: 2, mb: 0 }}>
             {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
           </Typography>
         </CardContent>
