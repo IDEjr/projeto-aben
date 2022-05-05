@@ -3,5 +3,7 @@
   "title": "Associe-se INOVABEn-RS 2022",
   "banner": "images/capavideoassocie-se.png",
   "content": "<h2 style=\"text-align:center\">Assista a &quot;INOVABEn-RS 2022: ASSOCIE-SE!&quot; no <a href=\"https://youtu.be/ecjuRyHdpmM\">YouTube</a></h2>  <p style=\"margin-right:8px; text-align:left\">&nbsp;</p>",
-  "active": true
+  "active": true,
+  "useRedirect": true,
+  "url": "https://youtu.be/ecjuRyHdpmM"
 }
