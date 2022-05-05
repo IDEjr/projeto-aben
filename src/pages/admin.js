@@ -1,7 +1,6 @@
 import { Button, Divider, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import Layout from 'components/Layout'
-import { Editor, EditorState, RichUtils } from 'draft-js'
 import { useEffect, useState } from 'react'
 
 const HtmlPreviewDiretorias = ({ entry }) => {
