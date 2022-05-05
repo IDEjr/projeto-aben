@@ -42,7 +42,7 @@ const Carroussel = ({
           </Button>
         </Box>
       </Container> */}
-      <Grid container>
+      <Grid container rowSpacing={6}>
         <Grid item xs={12} lg={8}>
           <CustomCarrousel autoplay>
             {data.slice(0, 10).map(e => {
