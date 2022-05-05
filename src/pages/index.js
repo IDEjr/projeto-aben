@@ -69,13 +69,13 @@ const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
   return (
     <>
       <PageTitle title="Home" />
+      {!!carrousselData.length && (
+        <Box mt={6}>
+          <Carroussel
+            data={carrousselData || []} />
+        </Box>
+      )}
       <Container sx={{ my: 3 }}>
-        {!!carrousselData.length && (
-          <Box my={6}>
-            <Carroussel
-              data={carrousselData || []} />
-          </Box>
-        )}
         {!!sortedNewsData.length && (
           <Box my={6}>
             <NewsGrid

@@ -18,11 +18,13 @@ const Post = ({ imagemPost, manchetePost, dataPost, fileName, url, useRedirect }
 
   return (
     <Card variant="outlined" sx={{ height: "100%" }}>
-      <CardActionArea onClick={handleClick} sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignContent: "space-between"
-      }}
+      <CardActionArea
+        sx={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between"
+        }}
         {...(useRedirect
           ? { href: url, target: "_blank", rel: "noopener noreferrer" }
           : { onClick: handleClick })}>
@@ -30,7 +32,7 @@ const Post = ({ imagemPost, manchetePost, dataPost, fileName, url, useRedirect }
           component="img"
           src={"/" + imagemPost}
           alt=""
-          sx={{ objectFit: "contain", maxHeight: "200px" }}
+          sx={{ objectFit: "contain", maxHeight: "200px", flex: 1 }}
         />
         <CardContent>
           <Typography align="left" variant="h6" component="div" sx={{

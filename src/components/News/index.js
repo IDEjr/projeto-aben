@@ -27,16 +27,22 @@ const News = ({
     <Card variant="outlined" sx={{ height: "100%" }}>
       <CardActionArea
         sx={{
+          height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignContent: "space-between"
+          justifyContent: "space-between"
         }}
         {...(useRedirect
           ? { href: url, target: "_blank", rel: "noopener noreferrer" }
           : { onClick: handleClick })}>
-        <CardMedia component="img" sx={{ objectFit: "contain", minHeight: "250px" }} src={"/" + imagemNoticia} alt="" />
-        <CardContent >
-          <Typography align="center" variant="h6" component="div" sx={{
+        <CardMedia
+          component="img"
+          src={"/" + imagemNoticia}
+          alt=""
+          sx={{ objectFit: "contain", maxHeight: "200px", flex: 1 }}
+        />
+        <CardContent>
+          <Typography align="left" variant="h6" component="div" sx={{
             fontSize: '16px',
             display: '-webkit-box',
             WebkitLineClamp: 2,
@@ -45,7 +51,7 @@ const News = ({
             lineBreak: 'anywhere',
             whiteSpace: "normal",
             height: '50px',
-          }} >
+          }}>
             {mancheteNoticia}
           </Typography>
           <Typography gutterBottom align="center" variant="caption" component="div" sx={{ mt: 2, mb: 0 }}>
@@ -53,7 +59,7 @@ const News = ({
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card >
+    </Card>
   );
 };
 

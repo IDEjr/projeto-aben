@@ -24,10 +24,21 @@ const EventCard = ({
   return (
     <Card variant="outlined">
       <CardActionArea
+        sx={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between"
+        }}
         {...(useRedirect
           ? { href: url, target: "_blank", rel: "noopener noreferrer" }
           : { onClick: handleClick })}>
-        <CardMedia component="img" sx={{ objectFit: "contain", maxHeight: "200px" }} src={imagemEvento} alt="" />
+        <CardMedia
+          component="img"
+          src={imagemEvento}
+          alt=""
+          sx={{ objectFit: "contain", maxHeight: "200px", flex: 1 }}
+        />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div" sx={{
             fontSize: '16px',
