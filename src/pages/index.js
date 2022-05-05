@@ -1,7 +1,6 @@
 import { Container, Typography, Grid } from "@mui/material";
 import PageTitle from "components/PageTitle";
 import React, { useMemo } from "react";
-import EventsCarrousel from "components/EventsCarrousel";
 import NewsGrid from "components/NewsGrid";
 import Partners from "components/Partners";
 import MembershipBanner from "components/MembershipBanner";
@@ -9,6 +8,13 @@ import { handleJSONfile, handleJSONfiles } from "../../utils/postHandler";
 import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 import PostsGrid from "components/PostsGrid";
+import Carroussel from "components/Carroussel";
+
+const RouteEnum = {
+  Events: "/eventos/",
+  News: "/noticias/",
+  Posts: "/posts/",
+};
 
 export function getStaticProps() {
   const newsData = handleJSONfiles("./public/posts/noticias");
@@ -21,6 +27,10 @@ export function getStaticProps() {
   };
 }
 
+const sortCallback = (a, b) => {
+  return new Date(b.date) - new Date(a.date);
+}
+
 const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
   const router = useRouter();
   const invite_token = router.asPath.split("#invite_token")[1] || "";
@@ -31,37 +41,41 @@ const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
 
   const sortedEventsData = useMemo(
     () =>
-      eventsData.sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date);
-      }),
+      eventsData.sort(sortCallback),
     [eventsData]
   );
 
   const sortedNewsData = useMemo(
     () =>
-      newsData.sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date);
-      }),
+      newsData.sort(sortCallback),
     [newsData]
   );
 
   const sortedPostsData = useMemo(
     () =>
-      posts.sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date);
-      }),
+      posts.sort(sortCallback),
     [posts]
   );
+
+  const carrousselData = useMemo(() => [
+    ...sortedEventsData
+      .map(e => ({ ...e, route: RouteEnum.Events })),
+    ...sortedNewsData.filter(e => e.carroussel)
+      .map(e => ({ ...e, route: RouteEnum.News })),
+    ...sortedPostsData.filter(e => e.carroussel)
+      .map(e => ({ ...e, route: RouteEnum.Posts })),
+  ].sort(sortCallback), [sortedEventsData, sortedNewsData, sortedPostsData]);
 
   return (
     <>
       <PageTitle title="Home" />
+      {!!carrousselData.length && (
+        <Box mt={6}>
+          <Carroussel
+            data={carrousselData || []} />
+        </Box>
+      )}
       <Container sx={{ my: 3 }}>
-        {!!sortedEventsData.length && (
-          <Box my={6}>
-            <EventsCarrousel eventsData={sortedEventsData || []} />
-          </Box>
-        )}
         {!!sortedNewsData.length && (
           <Box my={6}>
             <NewsGrid
@@ -77,11 +91,6 @@ const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
           </Box>
         )}
       </Container>
-      {bannerAzul?.active && (
-        <Box my={6}>
-          <MembershipBanner {...{ bannerAzul }} />
-        </Box>
-      )}
     </>
   );
 };

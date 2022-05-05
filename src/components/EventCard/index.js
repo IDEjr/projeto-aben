@@ -15,20 +15,45 @@ const EventCard = ({
   tituloEvento,
   dataEvento,
   fileName,
+  useRedirect,
+  url
 }) => {
   const router = useRouter();
   const handleClick = () => router.push(`eventos/${fileName}`);
 
   return (
     <Card variant="outlined">
-      <CardActionArea onClick={handleClick}>
-        <CardMedia component="img" sx={{objectFit: "contain", maxHeight: "200px"}} src={imagemEvento} alt="" />
+      <CardActionArea
+        sx={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between"
+        }}
+        {...(useRedirect
+          ? { href: url, target: "_blank", rel: "noopener noreferrer" }
+          : { onClick: handleClick })}>
+        <CardMedia
+          component="img"
+          src={imagemEvento}
+          alt=""
+          sx={{ objectFit: "contain", maxHeight: "200px", flex: 1 }}
+        />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            Data: {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
-          </Typography>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="h6" component="div" sx={{
+            fontSize: '16px',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            lineBreak: 'anywhere',
+            whiteSpace: "normal",
+            height: '50px',
+          }}>
             {tituloEvento}
+          </Typography>
+          <Typography gutterBottom align="center" variant="caption" component="div" sx={{ mt: 2, mb: 0 }}>
+            {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
           </Typography>
         </CardContent>
       </CardActionArea>

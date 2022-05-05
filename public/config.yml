@@ -1,6 +1,5 @@
 backend:
-  name: test-repo
-  #name: git-gateway
+  name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
 local_backend: true
@@ -17,7 +16,7 @@ collections:
     extension: "json"
     create: true
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Nome da chapa/ diretoria", name: "titulo", widget: "string" }
       - { label: "Ano de atuação", name: "data", widget: "date" }
@@ -44,7 +43,7 @@ collections:
             }
           - {
               label: "Conteúdo da Página da diretoria (HTML)",
-              name: "description",
+              name: "content",
               widget: "string",
             }
 
@@ -56,7 +55,7 @@ collections:
     extension: "json"
     create: true
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - {
@@ -67,12 +66,10 @@ collections:
       - { label: "Corpo da Notícia (HTML)", name: "content", widget: "string" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
-      - {
-          label: "Mostrar texto no carrousel",
-          name: "show_text",
-          widget: "boolean",
-        }
-      - { label: "Visível ao público", name: "active", widget: "boolean" }
+      - { label: "Visível ao público", name: "active", widget: "boolean", required: false }
+      - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean", required: false }
+      - { label: "Usar redirecionamento - ATENÇÃO: Ao usar esta opção, o card/ banner irá redirecionar o usuário para a url abaixo!", name: "useRedirect", widget: "boolean", required: false }
+      - { label: "Url Externa", name: "url", widget: "string", required: false }
 
   - name: "eventos"
     label: "Eventos"
@@ -82,7 +79,7 @@ collections:
     extension: "json"
     create: true
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - {
@@ -92,11 +89,13 @@ collections:
         }
       - {
           label: "Descrição do Evento (HTML)",
-          name: "description",
+          name: "content",
           widget: "string",
         }
       - { label: "Data", name: "date", widget: "date" }
-      - { label: "Visível ao público", name: "active", widget: "boolean" }
+      - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean", required: false }
+      - { label: "Usar redirecionamento - ATENÇÃO: Ao usar esta opção, o card/ banner irá redirecionar o usuário para a url abaixo!", name: "useRedirect", widget: "boolean", required: false }
+      - { label: "Url Externa", name: "url", widget: "string", required: false }
 
   - name: "file"
     label: "Arquivos"
@@ -115,7 +114,7 @@ collections:
         }
       - {
           label: "Descrição - Acrescente uma breve explicação sobre o arquivo",
-          name: "description",
+          name: "content",
           widget: "string",
         }
       - {
@@ -143,12 +142,10 @@ collections:
       - { label: "Corpo da publicação (HTML)", name: "content", widget: "string" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
-      - {
-          label: "Mostrar texto no carrousel",
-          name: "show_text",
-          widget: "boolean",
-        }
-      - { label: "Visível ao público", name: "active", widget: "boolean" }
+      - { label: "Visível ao público", name: "active", widget: "boolean", required: false }
+      - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean", required: false }
+      - { label: "Usar redirecionamento - ATENÇÃO: Ao usar esta opção, o card/ banner irá redirecionar o usuário para a url abaixo!", name: "useRedirect", widget: "boolean", required: false }
+      - { label: "Url Externa", name: "url", widget: "string", required: false }
 
   - name: "pages"
     label: "Páginas"
@@ -161,6 +158,11 @@ collections:
         editor:
           preview: false
         fields:
+          - {
+            label: "Banner Associe-se",
+            name: "banner",
+            widget: "image",
+          }
           - label: "Conteúdo do Rodapé"
             name: "footer"
             widget: "object"
@@ -196,7 +198,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-          preview: false
+          preview: true
         fields:
           - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
 
@@ -206,7 +208,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-          preview: false
+          preview: true
         fields:
           - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
 
@@ -245,8 +247,8 @@ collections:
         extension: "json"
         format: "json"
         editor:
-          preview: false
+          preview: true
         fields:
           - label: "Valores (HTML)"
-            name: "valores"
+            name: "content"
             widget: text

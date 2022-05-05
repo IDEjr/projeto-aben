@@ -13,18 +13,23 @@ const Header = () => {
 
   return (
     <Box backgroundColor="#ffffff">
-      <Container disableGutters>
-        {
-          isMobile ?
+      {
+        isMobile ?
+          <Container disableGutters>
             <MobileNavBar />
-            :
-            <Box pt={2} px={3}>
-              <Title />
-              <Navbar />
-            </Box>
-        }
+          </Container>
 
-      </Container>
+          :
+          <Box>
+            <Box pt={2} px={3}>
+              <Container disableGutters>
+                <Title />
+              </Container>
+            </Box>
+            <Navbar />
+          </Box>
+      }
+
     </Box>
   );
 };

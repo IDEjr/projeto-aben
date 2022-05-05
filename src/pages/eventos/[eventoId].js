@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { handleJSONfile, handleJSONfiles } from "../../../utils/postHandler";
 import moment from 'moment-timezone';
+import ContentView from "components/ContentView";
 
 export function getStaticPaths() {
   const eventos = handleJSONfiles("./public/posts/eventos");
@@ -38,22 +39,15 @@ const Evento = ({
     date,
     title,
     banner,
-    description,
-    show_text,
+    content,
     active,
   } = evento;
 
   return (
     <Container>
-      <Card>
-        <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
-            {`${moment.utc(date).local().format("DD/MM/YYYY")}`}: {title}
-          </Typography>
-          <div dangerouslySetInnerHTML={{ __html: description }} />
-        </CardContent>
-      </Card>
+      <ContentView
+        {...{ banner, title, date, content }}
+      />
     </Container>
   );
 };

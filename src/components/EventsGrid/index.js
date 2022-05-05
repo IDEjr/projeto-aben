@@ -17,6 +17,8 @@ const EventsGrid = ({ events }) => {
               tituloEvento={e.title}
               dataEvento={e.date}
               fileName={e.fileName}
+              useRedirect={e.useRedirect}
+              url={e.url}
             />
           </Grid>
         ))}

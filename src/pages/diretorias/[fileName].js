@@ -41,7 +41,7 @@ const Diretoria = ({ chapa }) => {
   const router = useRouter()
   const diretoria = useMemo(() => chapa.integrantes[router.query.index] || {}, [chapa.integrantes, router.query.index]);
 
-  const { title, banner, description } = diretoria;
+  const { title, banner, content } = diretoria;
 
   return (
     <Container>
@@ -54,7 +54,7 @@ const Diretoria = ({ chapa }) => {
           <Typography gutterBottom variant="h4" component="div">
             {title}
           </Typography>
-          <div dangerouslySetInnerHTML={{ __html: description }} />
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </CardContent>
       </Card>
     </Container>

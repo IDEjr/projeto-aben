@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Button, Box, Typography, Menu, MenuItem } from "@mui/material";
+import { Button, Box, Typography, Menu, MenuItem, Container } from "@mui/material";
 import { useRouter } from "next/router";
 import pages from "./pages";
+
+const darkTheme = true;
+
+const buttonStyle = {
+  borderRadius: 0,
+  py: 1.5
+}
 
 const NavBarItem = ({
   item,
@@ -22,12 +29,19 @@ const NavBarItem = ({
     return (
       <Link href={item.to} passHref>
         <Button
+          disableElevation
+          sx={buttonStyle}
           fullWidth
+          variant="contained"
           color={
-            ative ?
-              "primary"
-              :
-              "text"
+            darkTheme
+              ? ative
+                ? "white"
+                : "primary"
+              : ative ?
+                "primary"
+                :
+                "text"
           }>
           {item.title}
         </Button>
@@ -37,13 +51,20 @@ const NavBarItem = ({
   return (
     <>
       <Button
+        disableElevation
+        sx={buttonStyle}
         onClick={handleClick}
         fullWidth
+        variant="contained"
         color={
-          ative ?
-            "primary"
-            :
-            "text"
+          darkTheme
+            ? ative
+              ? "white"
+              : "primary"
+            : ative ?
+              "primary"
+              :
+              "text"
         }>
         {item.title}
       </Button>
@@ -82,15 +103,21 @@ const NavBarItem = ({
 const Navbar = () => {
   return (
     <Box
-      display="flex"
-      flexDirection="row"
-      justifyContent="space-between"
-      py={1}
+      backgroundColor={darkTheme ? "primary.main" : "inherit"}
+      mt={1}
     >
-      {
-        pages.map(p =>
-          <NavBarItem key={p.title} item={p} />)
-      }
+      <Container>
+        <Box
+          display="flex"
+          px={2}
+          flexDirection="row"
+          justifyContent="space-between">
+          {
+            pages.map(p =>
+              <NavBarItem key={p.title} item={p} />)
+          }
+        </Box>
+      </Container>
     </Box>
   );
 };

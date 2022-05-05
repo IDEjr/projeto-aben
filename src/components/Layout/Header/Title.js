@@ -13,7 +13,7 @@ const Title = () => {
         <Image src={logoAben} alt="ABEN LOGO" />
       </Box>
       <Typography variant="h3" >
-        Associação Brasileira de Enfermagem - ABEn-RS
+        Associação Brasileira de Enfermagem (ABEn-RS)
       </Typography>
     </Box>
   );

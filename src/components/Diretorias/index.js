@@ -52,7 +52,7 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
             </Avatar>
           }
           sx={{
-            height: "100px",
+            height: "200px",
           }}
         />
         <CardContent sx={{ height: "180px" }}>
@@ -104,7 +104,7 @@ const DiretoriasGridView = ({ diretoria }) => {
         >
           {diretoria.titulo}
         </CustomTitle>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           {diretoria.integrantes.map((d, index) => (
             <Grid item key={d.id} xs="12" md="6" lg="4">
               <CustomCard diretoria={d} fileName={diretoria.fileName} index={index} />

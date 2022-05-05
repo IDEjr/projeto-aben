@@ -30,7 +30,7 @@ const Arquivo = ({
       width: 250,
     },
     {
-      field: "description",
+      field: "content",
       headerName: "Descrição",
       width: 250,
     },
