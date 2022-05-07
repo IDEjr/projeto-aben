@@ -1,7 +1,10 @@
 {
   "date": "2022-04-30T20:23:34.015Z",
-  "content": "<h2 style=\"text-align:center\"><span style=\"font-size:20px\"><strong><span style=\"color:#e67e22\">Save the date</span></strong> 09/05/2022!</span></h2>  <h2 style=\"text-align:center\"><span style=\"font-size:18px\">Clique em not&iacute;cias para ver a programa&ccedil;&atilde;o. </span></h2>",
-  "banner": "images/cardsemenfmaio.png",
+  "content": " ",
+  "banner": "images/capacardsemenfabenrs2022.png",
   "title": "83a. Semana Brasileira de Enfermagem - SBEn/ABEn-RS",
-  "active": true
+  "active": true,
+  "carroussel": true,
+  "useRedirect": true,
+  "url": "https://drive.google.com/file/d/1-bKqLXzqhNS05vWCDgQj1W_bbHWY-7Sw/view?usp=sharing"
 }
