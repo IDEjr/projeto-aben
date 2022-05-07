@@ -2,7 +2,7 @@
   "useRedirect": false,
   "active": true,
   "author": "Denise",
-  "carroussel": true,
+  "carroussel": false,
   "banner": "images/livesmar.png",
   "date": "2022-03-17T20:02:38.688Z",
   "url": "",
