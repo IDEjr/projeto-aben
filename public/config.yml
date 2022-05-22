@@ -42,9 +42,9 @@ collections:
               widget: "string",
             }
           - {
-              label: "Conteúdo da Página da diretoria (HTML)",
+              label: "Conteúdo da Página da diretoria",
               name: "content",
-              widget: "string",
+              widget: "editorWrapper",
             }
 
   - name: "noticias"
@@ -55,7 +55,7 @@ collections:
     extension: "json"
     create: true
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - {
@@ -63,7 +63,7 @@ collections:
           name: "banner",
           widget: "image",
         }
-      - { label: "Corpo da Notícia (HTML)", name: "content", widget: "string" }
+      - { label: "Corpo da Notícia", name: "content", widget: "editorWrapper" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
       - { label: "Visível ao público", name: "active", widget: "boolean", required: false }
@@ -79,7 +79,7 @@ collections:
     extension: "json"
     create: true
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - {
@@ -88,9 +88,9 @@ collections:
           widget: "image",
         }
       - {
-          label: "Descrição do Evento (HTML)",
+          label: "Descrição do Evento",
           name: "content",
-          widget: "string",
+          widget: "editorWrapper",
         }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean", required: false }
@@ -131,7 +131,7 @@ collections:
     extension: "json"
     create: true
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - {
@@ -139,7 +139,7 @@ collections:
           name: "banner",
           widget: "image",
         }
-      - { label: "Corpo da publicação (HTML)", name: "content", widget: "string" }
+      - { label: "Corpo da publicação", name: "content", widget: "editorWrapper" }
       - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
       - { label: "Visível ao público", name: "active", widget: "boolean", required: false }
@@ -198,9 +198,9 @@ collections:
         extension: "json"
         format: "json"
         editor:
-          preview: true
+          preview: false
         fields:
-          - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
+          - { label: "Conteúdo da página", name: "content", widget: "editorWrapper" }
 
       - label: "Página Sobre"
         name: "page_sobre"
@@ -208,9 +208,9 @@ collections:
         extension: "json"
         format: "json"
         editor:
-          preview: true
+          preview: false
         fields:
-          - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
+          - { label: "Conteúdo da página", name: "content", widget: "editorWrapper" }
 
       - label: "Banner azul - Associe-se"
         name: "banner_azul"
@@ -247,8 +247,8 @@ collections:
         extension: "json"
         format: "json"
         editor:
-          preview: true
+          preview: false
         fields:
-          - label: "Valores (HTML)"
+          - label: "Valores"
             name: "content"
-            widget: text
+            widget: editorWrapper
