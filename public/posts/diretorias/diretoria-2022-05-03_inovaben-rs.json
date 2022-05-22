@@ -1,18 +1,172 @@
 {
   "data": "2022-05-03T11:42:35.715Z",
-  "titulo": " Presidente  INOVABEn-RS  ",
+  "titulo": " Gestão  INOVABEn-RS  ",
   "active": true,
   "integrantes": [
     {
-      "bio": "Minhas realizações nessa gestão estão definidas pelo Estatuto da ABEn-RS no\nArt. 49 São atribuições do Presidente: \nI — representar a ABEn ativa, passiva, judicial, extrajudicial, nacional e internacionalmente, podendo constituir \nrepresentantes legais; \nII — convocar, presidir e coordenar as reuniões da Diretoria, do CONABEn, da AND, reuniões, sessões, congressos e \neventos de caráter nacional e internacional; \nIII — autorizar despesas aprovadas no Plano Orçamentário e de caráter extraordinário; \nIV — exercer o direito de voto de qualidade; \nV — apresentar, anualmente, à AND, o Plano de Trabalho, o Programa de Atividades e o Relatório Anual de \nAtividades da Diretoria e da ABEn; \nVI — coordenar as relações nacionais e internacionais com outras organizações e entidades; \nVII — expedir o Edital de Convocação para Eleições; \nVIII - gerenciar e movimentar as contas bancárias institucionais, de forma conjunta com o Diretor Financeiro da \nABEn Nacional;",
-      "name": "Iride Cristofoli Caberlon",
-      "banner": "images/logoabenrs.png",
+      "bio": "Enfermagem é uma arte progressiva, tal que ficar parada é ir para trás (Florence Nightingale)",
+      "name": "1. Iride Cristofoli Caberlon",
+      "banner": "images/sem-título.png",
       "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193 ",
-      "photo": "images/iride.png",
+      "photo": "images/iridepremio.png",
       "role": "Presidente",
       "title": "PRESIDENTE",
-      "email": "aben-rs@abennacional.org.br",
-      "content": "Enfermagem é uma arte progressiva, tal que ficar parada é ir para trás.(Florence Nightingale)"
+      "content": "<p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Art. 49 S&atilde;o atribui&ccedil;&otilde;es da Presidenta:&nbsp;</strong></span><br /> <span style=\"font-size:14px\">I &mdash; <strong>Representa</strong>r a ABEn ativa, passiva, judicial, extrajudicial, nacional e internacionalmente, podendo constituir&nbsp;<br /> representantes legais;&nbsp;<br /> II &mdash; <strong>Convoca</strong>r, presidir e coordenar as reuni&otilde;es da Diretoria, do CONABEn, da AND, reuni&otilde;es, sess&otilde;es, congressos e&nbsp;<br /> eventos de car&aacute;ter nacional e internacional;&nbsp;<br /> III &mdash; <strong>Autorizar</strong> despesas aprovadas no Plano Or&ccedil;ament&aacute;rio e de car&aacute;ter extraordin&aacute;rio;&nbsp;<br /> IV &mdash; exercer o direito de voto de qualidade;&nbsp;<br /> V &mdash; <strong>Apresenta</strong>r, anualmente, &agrave; AND, o Plano de Trabalho, o Programa de Atividades e o Relat&oacute;rio Anual de&nbsp;<br /> Atividades da Diretoria e da ABEn;&nbsp;<br /> VI &mdash; <strong>Coordenar</strong> as rela&ccedil;&otilde;es nacionais e internacionais com outras organiza&ccedil;&otilde;es e entidades;&nbsp;<br /> VII &mdash; Expedir o Edital de Convoca&ccedil;&atilde;o para Elei&ccedil;&otilde;es;&nbsp;<br /> VIII - <strong>Gerenciar</strong> e <strong>movimentar</strong> as contas banc&aacute;rias institucionais, de forma conjunta com o Diretor Financeiro da&nbsp;<br /> ABEn Nacional;</span></p>",
+      "email": "aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Não podemos prever o futuro, mas podemos criá-lo. (Peter Drucker)",
+      "name": "3. Debora Monteiro da Silva",
+      "banner": "images/logoabenrs.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193 ",
+      "photo": "images/debora.jpg",
+      "role": "Secretaria Geral",
+      "title": " SECRETARIA GERAL",
+      "content": "<p>Minhas responsabilidades nesta gest&atilde;o est&atilde;o amparadas no Estatuto da ABEn &nbsp;Art. 51 S&atilde;o atribui&ccedil;&otilde;es do Secret&aacute;rio-Geral:</p>  <p>I &mdash; coordenar as rela&ccedil;&otilde;es institucionais com as Se&ccedil;&otilde;es;</p>  <p>II &mdash; redigir as atas lavradas nas reuni&otilde;es de Diretoria Nacional, do CONABEn e da AND;</p>  <p>III &mdash; assessorar as Comiss&otilde;es Especiais da ABEn;</p>  <p>IV &mdash; representar o Presidente, quando designado, em reuni&otilde;es e sess&otilde;es solenes, por delega&ccedil;&atilde;o;</p>  <p>V &mdash; promover e organizar as reuni&otilde;es ordin&aacute;rias e extraordin&aacute;rias necess&aacute;rias ao funcionamento da ABEn;</p>  <p>VI &mdash; elaborar relat&oacute;rio anual de atividades com avalia&ccedil;&atilde;o de resultados.</p>",
+      "email": "aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Há tanta suavidade em nada dizer e tudo entender...(Fernando Pessoa)",
+      "name": "5.Dagmar Elaine Kaiser",
+      "banner": "images/sem-título.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193 ",
+      "photo": "images/dagmar-kaiser-1-.jpg",
+      "role": "Diretora de Educação em Enfermagem",
+      "title": " DIRETORA DE EDUCACAO E ENFERMAGEM ",
+      "content": "<p>Minhas responsabilidades s&atilde;o regidas pelo Estatuto da ABEn que esta descrito no Art. 53 Compete ao Diretor de Educa&ccedil;&atilde;o em Enfermagem:&nbsp;</p>  <p>I &mdash; coordenar, organizar e operacionalizar as atividades do Centro de Educa&ccedil;&atilde;o em Enfermagem;&nbsp;</p>  <p>II &mdash; organizar e manter atualizado o cadastro de informa&ccedil;&otilde;es sobre educa&ccedil;&atilde;o em Enfermagem, incluindo dados sobre as Escolas, Faculdades, Cursos (de Gradua&ccedil;&atilde;o, P&oacute;s-Gradua&ccedil;&atilde;o e de N&iacute;vel T&eacute;cnico Profissionalizante) ou Departamentos de Enfermagem filiados &agrave; ABEn, e institui&ccedil;&otilde;es que se relacionem com o ensino de Enfermagem, no Pa&iacute;s e no estrangeiro;&nbsp;</p>  <p>III &mdash; desenvolver interc&acirc;mbio com as Escolas, Faculdades, Cursos (de Gradua&ccedil;&atilde;o, P&oacute;s-Gradua&ccedil;&atilde;o e de N&iacute;vel T&eacute;cnico Profissionalizante) ou Departamentos de Enfermagem filiados &agrave; ABEn, para fins de assessoramento em assuntos relacionados &agrave; educa&ccedil;&atilde;o em Enfermagem;&nbsp;</p>  <p>IV &mdash; coordenar e articular o trabalho das Comiss&otilde;es Permanentes de Educa&ccedil;&atilde;o Profissional em N&iacute;vel T&eacute;cnico de Enfermagem, de Gradua&ccedil;&atilde;o e de P&oacute;s-Gradua&ccedil;&atilde;o;&nbsp;</p>  <p>V &mdash; presidir o Conselho Consultivo Nacional de Escolas e Cursos de Enfermagem;&nbsp;</p>  <p>VI &mdash; coordenar a organiza&ccedil;&atilde;o e a realiza&ccedil;&atilde;o do Semin&aacute;rio Nacional de Diretrizes para a Educa&ccedil;&atilde;o em Enfermagem (SENADEn);&nbsp;</p>  <p>VII &mdash; participar em projetos e programas de estudos e pesquisas na &aacute;rea de educa&ccedil;&atilde;o;&nbsp;</p>  <p>VIII &mdash; representar a ABEn, por delega&ccedil;&atilde;o de compet&ecirc;ncia, em espa&ccedil;os de formula&ccedil;&atilde;o e encaminhamentos de&nbsp;<br /> pol&iacute;ticas e de an&aacute;lise cr&iacute;tica de projetos educacionais relacionados &agrave; educa&ccedil;&atilde;o em Enfermagem, nos &acirc;mbitos nacional e internacional.</p>",
+      "email": " aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Existe cuidado sem cura, mas não existe cura sem cuidado (Florence Nightingale).",
+      "name": "2. Rosalia Figueiró Borges",
+      "banner": "images/logoeditorapng.png",
+      "phone": " Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/rosalia-borges.png",
+      "role": "Vice-Presidente",
+      "title": " VICE PRESIDENTE",
+      "content": "<p>Minhas responsabilidades na gest&atilde;o est&atilde;o pautadas pelo Estatuto da ABEn<br /> Art. 50 S&atilde;o atribui&ccedil;&otilde;es do Vice-Presidente:&nbsp;</p>  <p>I &mdash; substituir o Presidente em seus impedimentos e aus&ecirc;ncia;&nbsp;</p>  <p>II &mdash; suceder o Presidente em caso de vac&acirc;ncia do cargo;&nbsp;</p>  <p>III &mdash; representar a ABEn sempre que designada pela Presidente;&nbsp;</p>  <p>IV &mdash; colaborar com o Presidente nas atividades da ABEn;&nbsp;</p>  <p>V&mdash; coordenar a gest&atilde;o administrativa da ABEn em parceria com o Presidente e o Secret&aacute;rio Geral;&nbsp;</p>  <p>VI &mdash; elaborar a agenda de reuni&otilde;es da Diretoria, do CONABEn e da AND;&nbsp;</p>  <p>VII &mdash; elaborar o relat&oacute;rio de atividades da Semana Brasileira de Enfermagem &nbsp;</p>  <p>VIII &mdash; desempenhar outras fun&ccedil;&otilde;es por delega&ccedil;&atilde;o de compet&ecirc;ncia.</p>",
+      "email": " aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Seja a mudança que você quer ver no mundo.(Mahatma Gandhi)",
+      "name": "7. Ana Karina Silva da Rocha Tanaka",
+      "banner": "images/sem-título.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193 ",
+      "photo": "images/anatanaka.gif",
+      "role": "Diretor de Estudos e Pesquisas em Enfermagem:",
+      "title": " DIRETORA DE ESTUDOS E PESQUISA EM ENFERMAGEM  ",
+      "content": "<p>Art. 54 Compete ao Diretor de Estudos e Pesquisas em Enfermagem:&nbsp;</p>  <p>I &mdash; coordenar, organizar e operacionalizar as atividades do Centro de Estudos e Pesquisa em Enfermagem (CEPEn);&nbsp;</p>  <p>II &mdash; executar projetos e programas de estudos e pesquisas da ABEn, em parceria com as outras Diretorias e Comit&ecirc;s;&nbsp;</p>  <p>III &mdash; incentivar e divulgar estudos e pesquisas na &aacute;rea da Enfermagem;&nbsp;</p>  <p>IV &mdash; assegurar a guarda e integridade do acervo bibliogr&aacute;fico, hist&oacute;rico e documental da ABEn;</p>  <p>V &mdash; coordenar a organiza&ccedil;&atilde;o e a realiza&ccedil;&atilde;o do Semin&aacute;rio Nacional de Pesquisa em Enfermagem (SENPE);&nbsp;</p>  <p>VI &mdash; apoiar a organiza&ccedil;&atilde;o e a realiza&ccedil;&atilde;o do Col&oacute;quio Latino-Americano de Hist&oacute;ria de Enfermagem (CLAHEn);&nbsp;</p>  <p>VII &mdash; coordenar o F&oacute;rum de Pesquisadores em Enfermagem da ABEn;&nbsp;</p>  <p>VIII &mdash; integrar, como membro nato, o Departamento Cient&iacute;fico de Hist&oacute;ria da Enfermagem da ABEn Nacional;&nbsp;</p>  <p>IX &mdash; representar a ABEn em espa&ccedil;os de formula&ccedil;&atilde;o de pol&iacute;ticas relacionadas &agrave; gera&ccedil;&atilde;o e aplica&ccedil;&atilde;o do&nbsp;<br /> conhecimento.</p>",
+      "email": " aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Tenho em mim todos os sonhos do mundo (Fernando Pessoa)",
+      "name": "4. Alexander Quadros",
+      "banner": "images/sem-título.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193 ",
+      "photo": "images/alexanderquadros.jpeg",
+      "role": "Diretor Financeiro ",
+      "title": " DIRETOR FINANCEIRO ",
+      "content": "<p>Minhas responsabilidades est&atilde;o descritas no Estatuto da ABEn no:</p>  <p>Art. 52 S&atilde;o atribui&ccedil;&otilde;es do Diretor Financeiro:&nbsp;</p>  <p>I&mdash; participar da elabora&ccedil;&atilde;o da proposta or&ccedil;ament&aacute;ria e submet&ecirc;-la &agrave; aprecia&ccedil;&atilde;o e aprova&ccedil;&atilde;o da AND;&nbsp;</p>  <p>II &mdash; acompanhar a execu&ccedil;&atilde;o do plano or&ccedil;ament&aacute;rio e a gest&atilde;o de conv&ecirc;nios e contratos;&nbsp;</p>  <p>III &mdash; acompanhar o fluxo de pagamentos referentes ao valor per capita repassado pelas Se&ccedil;&otilde;es;&nbsp;</p>  <p>IV &mdash; apresentar &agrave; AND, para aprecia&ccedil;&atilde;o e aprova&ccedil;&atilde;o, o relat&oacute;rio anual da Diretoria Financeira, contendo o balan&ccedil;o cont&aacute;bil-financeiro e o balan&ccedil;o patrimonial com parecer do Conselho Fiscal Nacional;&nbsp;</p>  <p>V &mdash; manter a Diretoria Nacional e o Conselho Fiscal informados sobre a situa&ccedil;&atilde;o financeira da ABEn;&nbsp;</p>  <p>VI &mdash; definir estrat&eacute;gias de capta&ccedil;&atilde;o e gest&atilde;o de recursos;&nbsp;</p>  <p>VII &mdash; gerenciar e movimentar as contas banc&aacute;rias institucionais, de forma conjunta com o Presidente da ABEn Nacional e, quando aplic&aacute;vel &agrave;s Se&ccedil;&otilde;es estaduais e do Distrito Federal, em conjunto com o Presidente da Se&ccedil;&atilde;o respectiva.&nbsp;<br /> Par&aacute;grafo &uacute;nico. Para o cumprimento de suas atribui&ccedil;&otilde;es, a Diretoria Financeira contar&aacute; com equipe t&eacute;cnica profissional</p>",
+      "email": "aben-rsfinanceiro@gmail.com"
+    },
+    {
+      "bio": "Um trabalho te dá um propósito e um significado. A vida é vazia sem ambos (Stephen Hawking)",
+      "name": "8. Miriam Trombetta",
+      "banner": "images/miriamcomp.png",
+      "phone": "Av. Venâncio Aires nº 1191 sala 142 – Bom Fim CEP:90040-193 – Porto Alegre – RS",
+      "photo": "images/miriamabenrs.jpeg",
+      "role": "Diretora de Desenvolvimento da Pratica Profissional e do Trabalho de Enfermagem",
+      "title": "DIRETORA DE DESENVOLVIMENTO DA PRATICAS PROFISSIONAL E DO TRABALHO  DE ENFERMAGEM",
+      "content": "<p style=\"text-align:center\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">Estatuto da ABEn Art. 55&nbsp; -&nbsp;&nbsp;</span></span><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">Competencias do Diretor&nbsp;</span></span></strong></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">I &mdash; coordenar, organizar e operacionalizar as atividades do Centro de Desenvolvimento da Pr&aacute;tica Profissional e do Trabalho de Enfermagem;</span></span></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">II &mdash; articular as atividades da Comiss&atilde;o Permanente do Trabalho de Enfermagem; </span></span></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">III &mdash; articular o trabalho da Comiss&atilde;o Permanente de Sistematiza&ccedil;&atilde;o da Pr&aacute;tica de Enfermagem; </span></span></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">IV - articular o trabalho dos Departamentos Cient&iacute;ficos relacionados &agrave; pr&aacute;tica profissional e ao trabalho de Enfermagem; </span></span></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">V &mdash; presidir o Conselho Consultivo Nacional de Sociedades e Associa&ccedil;&otilde;es de Enfermagem ou de Enfermeiros Especialistas </span></span></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">VI &mdash; representar a ABEn em espa&ccedil;os de formula&ccedil;&atilde;o de pol&iacute;ticas relacionadas &agrave; pr&aacute;tica profissional e ao trabalho de Enfermagem; </span></span></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">VII &mdash; participar de programas de educa&ccedil;&atilde;o permanente relativos &agrave; pr&aacute;tica profissional e ao trabalho de Enfermagem; </span></span></p>  <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">VIII &mdash; coordenar a organiza&ccedil;&atilde;o e a realiza&ccedil;&atilde;o dos eventos tem&aacute;ticos da pr&aacute;tica profissional e do trabalho de Enfermagem: Semin&aacute;rio Internacional sobre o Trabalho na Enfermagem (SITEn), Jornada Brasileira de Enfermagem Gerontol&oacute;gica, Semin&aacute;rio Nacional de Diretrizes para Enfermagem na Aten&ccedil;&atilde;o B&aacute;sica em Sa&uacute;de (SENABS), Simp&oacute;sio Nacional de Diagn&oacute;stico de Enfermagem (SINADEn) e outros, em articula&ccedil;&atilde;o com as Comiss&otilde;es Permanentes e os Departamentos Cient&iacute;ficos respectivos.</span></span></p>",
+      "email": " aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "O mais importante na comunicação é ouvir o que não foi dito. (Peter Drucker)",
+      "name": "9. Erica Rosalba Mallmann Duarte",
+      "banner": "images/sem-título.png",
+      "phone": "51982697088",
+      "photo": "images/erica.jpg",
+      "role": "Diretora de Comunicação Social e Publicação",
+      "title": "DIRETORA DE COMUNICACAO SOCIAL E PUBLICACAO ",
+      "content": "<p style=\"text-align:center\"><strong><span style=\"font-size:16px\">Art. 56 Compete ao Diretor de Comunica&ccedil;&atilde;o Social e Publica&ccedil;&otilde;es:</span></strong><span style=\"font-size:14px\"> </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">I &mdash; coordenar a comunica&ccedil;&atilde;o social da ABEn, nos &acirc;mbitos nacional e internacional; </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">II &mdash; assessorar a elabora&ccedil;&atilde;o de conte&uacute;dos informativos veiculados pelos canais de comunica&ccedil;&atilde;o da ABEn; </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">III &mdash; manter atualizado o fluxo de not&iacute;cias sobre a ABEn e assuntos de interesse para os associados e a sociedade em geral; </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">IV &mdash; promover o fortalecimento da comunica&ccedil;&atilde;o com as Se&ccedil;&otilde;es; </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">V &mdash; coordenar o processo editorial das publica&ccedil;&otilde;es peri&oacute;dicas da ABEn; </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">VI &mdash; coordenar o F&oacute;rum de Editores Cient&iacute;ficos de Revistas de Enfermagem; </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">VII &mdash; incentivar a produ&ccedil;&atilde;o editorial nas Se&ccedil;&otilde;es; </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">VIII &mdash; realizar assessorias e consultorias editoriais</span></p>",
+      "email": "ermduarte@gmail.com"
+    },
+    {
+      "bio": "Lutar pela igualdade sempre que as diferenças nos discriminem;\nlutar pelas diferenças sempre que a igualdade nos descaracterize.\n                                                           Boaventura de Souza Santos",
+      "name": "Scheila Mai",
+      "banner": "images/image.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/image.png",
+      "role": "Coordenadora do Departamento Cientifico de Atenção Primaria a Saúde (DAPS)",
+      "title": "Coordenadora do Departamento Cientifico de Atenção Primaria a Saúde (DAPS)",
+      "content": "<p style=\"text-align:justify\"><span style=\"font-family:Tahoma,Geneva,sans-serif\"><span style=\"font-size:16px\"><span style=\"color:#000000\">Este departamento foi criado em 1&ordm; de dezembro de 2017 na Diretoria da Gest&atilde;o 2016-2019, sendo coordenado pela Dra.Enfermeira Sandra Rejane Soares Ferreira,&nbsp; tendo como finalidade congregar profissionais e estudantes de enfermagem, para promover o desenvolvimento t&eacute;cnico, cient&iacute;fico, pol&iacute;tico e cultural no &acirc;mbito da Enfermagem na Aten&ccedil;&atilde;o Prim&aacute;ria &agrave; Sa&uacute;de (APS), qualificando e fortalecendo a pr&aacute;tica profissional da enfermagem na aten&ccedil;&atilde;o &agrave;s pessoas em todo seu &nbsp;ciclo de vida, bem como suas fam&iacute;lias e comunidade.</span></span></span></p>",
+      "email": "aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "A primeira igualdade é a justiça (Victor Hugo)",
+      "name": "Conselheira Titular -Karen Cardoso e Conselheira Suplente - Sandra Leal ",
+      "banner": "images/sem-título.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/image_publica.jpeg",
+      "role": "Conselho Fiscal",
+      "title": " Conselheiras Fiscal                                                     ",
+      "content": "<p style=\"text-align:center\"><span style=\"font-size:16px\">Art. 69 O Conselho Fiscal Nacional, &oacute;rg&atilde;o de fiscaliza&ccedil;&atilde;o da ABEn, ser&aacute; composto por tr&ecirc;s membros titulares e tr&ecirc;s suplentes, com mandato de tr&ecirc;s anos.</span><span style=\"font-size:14px\"> </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">&sect; 1&deg; Compete ao Conselho Fiscal Nacional apreciar todos os assuntos relacionados a patrim&ocirc;nio, bens, rendas, fundos, aspectos econ&ocirc;micos e financeiros da vida da ABEn e mat&eacute;rias correlatas, assim como fiscalizar os respectivos atos executivos da Diretoria Nacional. </span></p>  <p style=\"text-align:center\"><span style=\"font-size:14px\">&sect; 2&deg; Ao Conselho Fiscal Nacional cabe emitir parecer sobre: I &mdash; as contribui&ccedil;&otilde;es dos associados e demais receitas; II &mdash; despesas dos diferentes setores de atividade; III &mdash; or&ccedil;amento de cada exerc&iacute;cio; IV &mdash; balancetes e balan&ccedil;o geral; V &mdash; presta&ccedil;&atilde;o de contas e relat&oacute;rios da Diretoria; VI &mdash; invent&aacute;rio dos bens.</span></p>",
+      "email": "aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Cada idade tem a sua beleza e essa beleza deve sempre ser uma liberdade.",
+      "name": "Marines Aires",
+      "banner": "images/image-2-.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/capa-ale-cartilha-apresentadceg.png",
+      "role": "Coordenadora Departamento Cientifico de Enfermagem Gerontológica",
+      "title": "Departamento Cientifico de Enfermagem Gerontológica",
+      "content": "<p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>O Departamento Cientifico de Enfermagem Gerontologica (DCRG) foi criado no ano de 2009 tendo como finalidade congregar profissionais especializados e atuantes em saude do idoso. </strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Sua primeira Coordenadora foi a Enfermeira Professora Dra Margarita Rubin Unicovski. </strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>O objetivo do departamento e o de promover o desenvolvimento tecnico cientifico, politico e cultural no ambito da Enfermagem Gerontologica qualificando e fortalecendo a pratica profissional das categorias de enfermagem e dos estudantes na atencao a pessoa idosa, suas familias e cuidadores.&nbsp; &nbsp;</strong></span></p>",
+      "email": "abenrscergs@gmail.com"
+    },
+    {
+      "bio": "Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana seja apenas outra alma humana. Carl Yung",
+      "name": "Liciane da Silva Costa",
+      "banner": "images/image-1-.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/photo-2022-05-22-13-54-24.jpg",
+      "role": "Coordenadora do Departamento de Saúde Mental e Enfermagem Psiquiátrica",
+      "title": "Departamento Cientifico de Saúde Mental e Enfermagem Psiquiátrica",
+      "content": "<p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>O Departamento Cientifico de Saude Mental e Enfermagem Psiquiatrica foi criado como grupo de interesse em 2019 para se constituir em um departamento. Neste momento seu regimento interno ja esta finalizado.</strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Tanto no grupo de interesse como agora no departamento a Coordenacao continua da Enfermeira Professora Dra Liciane da Silva Costa.</strong></span></p>",
+      "email": "aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Um bom líder faz com que homens comuns façam coisas incomuns (Peter Drucker).",
+      "name": "Miriam Maciel",
+      "banner": "images/sem-título.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/nurse.svg",
+      "role": "Coordenadora do Departamento Cientifico de Gestão de Serviços de Enfermagem",
+      "title": "Coordenadora do Departamento Cientifico de Gestão de Serviços de Enfermagem",
+      "content": "<p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>O Departamento Cientifico de Gestao de Servicos de Enfermagem foi criado em 2009 como grupo de interesse em Gestao.</strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Sua principal atividade neste periodo foi o Simposio Estadual de Gestao de Servicos de Enfermagem que esta na sua XI Edicao. </strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Em 2022 com a&nbsp; aprovacao de seu Regimento interno constitui-se em Departamento.</strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>A Coordenacao do grupo de interesse durante todo esse periodo esteve a cargo da Enfermeira Professora Ms Terezinha Valduga e desde 2020 esta sob a Coordenação da Enfermeira Ms Miriam Maciel</strong></span></p>",
+      "email": "aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "O processo de enfermagem é o conhecimento da enfermagem levado para \nescrita  e transformado em puro cuidado (Erica Duarte).",
+      "name": "Marcos Barragan",
+      "banner": "images/sem-título.png",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/281566653_1897482377118456_7201890383935217481_n.jpeg",
+      "role": "Coordenador da Comissão de Sistematização da Assistência de Enfermagem",
+      "title": "Comissão de Sistematização da Assistência de Enfermagem",
+      "content": "<p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>O Comissao de Sistematizacao da Assistencia de Enfermagem foi criada em 2019.</strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Com a finalidade de promover o desenvolvimento tecnico, cientifico, politico e cultural, qualificando e fortalecendo a pratica profissional e o ensino de enfermagem. </strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Foi coordenado inicialmente pelas Professoras Maria de Fatima Lucena e Miriam Abreu de Almeida.</strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Atualmente esta sob a Coordenqcao do Enfermeiro Professor Dr. Marcos Barragan&nbsp; &nbsp;&nbsp;</strong></span></p>",
+      "email": "aben-rs@abennacional.org.br"
+    },
+    {
+      "bio": "Gostaria de dizer para você que viva como quem sabe que vai morrer um dia, e que morra como quem soube viver direito (Texto de Chico Xavier)",
+      "name": "Dra Rosane Montari Ciconet",
+      "banner": "images/logoAben.jpg",
+      "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
+      "photo": "images/homenagemabenrs.png",
+      "role": "Coordenadora do Grupo de interesse em Urgências e Emergências",
+      "title": "Grupo de interesse em Urgências e Emergências",
+      "content": "<p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>O grupo de interesse em Urgencia e Emergencia foi criado em 2019.</strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Tem a finalidade de reunir profissionais que dicutam,aprendam e ensinem enfermagem em urgencia e emergencia.</strong></span></p>  <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong>Esta sendo Coordenado pela Enfermeira Dra Rosane Montari Ciconet</strong></span></p>",
+      "email": "aben-rs@abennacional.org.br"
     }
   ]
 }

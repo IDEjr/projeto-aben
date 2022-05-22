@@ -1,7 +1,6 @@
-import { Button, Divider, TextField, Typography } from '@mui/material'
+import { Divider, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import Layout from 'components/Layout'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 const HtmlPreviewDiretorias = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
@@ -22,22 +21,6 @@ const HtmlPreviewDiretorias = ({ entry }) => {
   )
 }
 
-const HtmlPreviewPages = ({ entry }) => {
-  const data = entry.getIn(['data']).toJS()
-
-  console.log({ data })
-
-  return (
-    <div dangerouslySetInnerHTML={{ __html: data.content }} />
-  )
-}
-
-const HtmlPreview = ({ entry }) => {
-  return (
-    <div dangerouslySetInnerHTML={{ __html: entry.getIn(['data', 'content']) }} />
-  )
-}
-
 var schema = {
   properties: {
     separator: { type: 'string' },
@@ -54,17 +37,16 @@ const Admin = () => {
   useEffect(() => {
     (async () => {
       const CMS = (await import('netlify-cms-app')).default
+      const EditorWrapper = (
+        await import("components/NetlifyWrappers/EditorWrapper")
+      ).default;
       CMS.init()
 
+      // Can be changed to an internal url instead of cdn.
+      CMS.registerPreviewStyle("https://cdn.quilljs.com/1.3.6/quill.snow.css");
+      CMS.registerWidget("editorWrapper", EditorWrapper);
+
       CMS.registerPreviewTemplate('diretorias', HtmlPreviewDiretorias)
-
-      CMS.registerPreviewTemplate('noticias', HtmlPreview)
-      CMS.registerPreviewTemplate('eventos', HtmlPreview)
-      CMS.registerPreviewTemplate('publicacoes', HtmlPreview)
-
-      CMS.registerPreviewTemplate('page_historia', HtmlPreviewPages)
-      CMS.registerPreviewTemplate('page_sobre', HtmlPreviewPages)
-      CMS.registerPreviewTemplate('page_associese', HtmlPreviewPages)
     })()
   }, [])
 
