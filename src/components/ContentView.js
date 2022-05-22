@@ -1,6 +1,21 @@
 import { Box, Card, CardContent, CardMedia, Container, Typography } from "@mui/material";
 import React from "react";
 import moment from 'moment-timezone';
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
+import styled from "@emotion/styled";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
+const StyledReactQuill = styled(ReactQuill)`
+  .ql-snow {
+    border: none;
+    font-size: 18px;
+  }
+  .ql-video {
+    width: 1010px;
+    height: 500px;
+  }
+`;
 
 const ContentView = ({
   title, banner, date, content, author
@@ -15,7 +30,13 @@ const ContentView = ({
             {title}
           </Typography>
           <Box px={5}>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            <StyledReactQuill
+              value={content}
+              readOnly={true}
+              modules={{
+                toolbar: false,
+              }}
+            />
           </Box>
           <Box>
             {author ?

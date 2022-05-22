@@ -16,6 +16,21 @@ import InputMask from "react-input-mask";
 import * as emailjs from "emailjs-com";
 import BasicModal from "components/Modal";
 import { handleJSONfile } from "../../utils/postHandler";
+import "react-quill/dist/quill.snow.css";
+import dynamic from "next/dynamic";
+import styled from "@emotion/styled";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
+const StyledReactQuill = styled(ReactQuill)`
+  .ql-snow {
+    border: none;
+    font-size: 18px;
+  }
+  .ql-video {
+    width: 1010px;
+    height: 500px;
+  }
+`;
 
 export function getStaticProps(context) {
   const content = handleJSONfile(`./public/pages/associese.json`);
@@ -362,7 +377,13 @@ const Associese = ({
         </Card>
         <Box my={10}>
           <Typography variant="h3">Valores</Typography>
-          <div dangerouslySetInnerHTML={{ __html: valores }} />
+          <StyledReactQuill
+            value={valores}
+            readOnly={true}
+            modules={{
+              toolbar: false,
+            }}
+          />
         </Box>
       </Container>
     </>

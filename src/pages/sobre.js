@@ -2,6 +2,21 @@ import React from "react";
 import { Container } from "@mui/material";
 import PageTitle from "components/PageTitle";
 import { handleJSONfile } from "../../utils/postHandler";
+import "react-quill/dist/quill.snow.css";
+import dynamic from "next/dynamic";
+import styled from "@emotion/styled";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
+const StyledReactQuill = styled(ReactQuill)`
+  .ql-snow {
+    border: none;
+    font-size: 18px;
+  }
+  .ql-video {
+    width: 1010px;
+    height: 500px;
+  }
+`;
 
 export function getStaticProps() {
   const sobreData = handleJSONfile(`./public/pages/sobre.json`);
@@ -18,7 +33,13 @@ const Sobre = ({ sobreData }) => {
     <>
       <PageTitle title="Sobre" />
       <Container sx={{ my: 6 }}>
-        <div dangerouslySetInnerHTML={{__html: sobreData.content}} />
+        <StyledReactQuill
+          value={sobreData.content}
+          readOnly={true}
+          modules={{
+            toolbar: false,
+          }}
+        />
       </Container>
     </>
   );
