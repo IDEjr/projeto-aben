@@ -6,14 +6,14 @@ const Title = () => {
   return (
     <Box sx={{
       display: 'flex',
-      justifyContent: 'space-around',
+      justifyContent: 'center',
       alignItems: 'center',
     }}>
       <Box width="90px" mr={2}>
         <Image src={logoAben} alt="ABEN LOGO" />
       </Box>
       <Typography variant="h3" >
-        Associação Brasileira de Enfermagem (ABEn-RS)
+        Associação Brasileira de Enfermagem - RS
       </Typography>
     </Box>
   );
