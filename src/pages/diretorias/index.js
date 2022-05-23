@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import {
   DiretoriasArchiveSwiper,
   DiretoriasGridView,
@@ -32,11 +32,16 @@ const Diretorias = ({ diretorias = [] }) => {
           my: 6,
         }}
       >
-        {!!sortedDiretorias.length && (
-          <DiretoriasGridView diretoria={sortedDiretorias[0]} />
-        )}
+        <Grid container rowSpacing={6}>
+          {!!sortedDiretorias.length && (
+            sortedDiretorias.map(e =>
+              <Grid key={e.fileName} item xs={12}>
+                <DiretoriasGridView diretoria={e} />
+              </Grid>
+            )
+          )}
+        </Grid>
       </Container>
-      {/* <DiretoriasArchiveSwiper archive={sortedDiretorias.slice(1, sortedDiretorias.length) || []} /> */}
     </>
   );
 };

@@ -40,10 +40,15 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
         onClick={() => router.push(`/diretorias/${fileName}?index=${index}`)}
       >
         <CardHeader
+          titleTypographyProps={{
+            variant: "subtitle1"
+          }}
           title={diretoria.role}
           subheader={diretoria.name}
           avatar={
-            <Avatar>
+            <Avatar
+              sx={{ width: 64, height: 64 }}
+            >
               <Image
                 src={`/${diretoria.photo}`}
                 alt={diretoria.role + " - Avatar"}
@@ -52,20 +57,30 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
             </Avatar>
           }
           sx={{
-            height: "200px",
+            height: "110px",
           }}
         />
-        <CardContent sx={{ height: "180px" }}>
+        <CardContent sx={{ height: "110px" }}>
           <Typography
-          >{diretoria.bio.slice(0, 200).concat("...")}</Typography>
+            sx={{
+              display: '-webkit-box',
+              WebkitLineClamp: 4,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              lineBreak: 'anywhere',
+              whiteSpace: "normal",
+            }}>
+            {diretoria.bio.slice(0, 200).concat("...")}
+          </Typography>
         </CardContent>
         <CardActions>
-          <Box display="flex" flexDirection="column-reverse" p={1}>
+          <Box display="flex" flexDirection="column-reverse" pb={1} px={1}>
             {diretoria.phone && (
               <>
-                <Box display="flex" flexDirection="row" pt={2}>
+                <Box display="flex" flexDirection="row" pt={2} alignItems="center">
                   <Phone />
                   <Typography
+                    variant="body"
                     sx={{
                       ml: 1.5,
                     }}
@@ -77,9 +92,10 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
             )}
             {diretoria.email && (
               <>
-                <Box display="flex" flexDirection="row" pt={2}>
+                <Box display="flex" flexDirection="row" pt={2} alignItems="center">
                   <Email />
                   <Typography
+                    variant="body"
                     sx={{
                       ml: 1.5,
                     }}
@@ -92,7 +108,7 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
           </Box>
         </CardActions>
       </CardActionArea>
-    </Card>
+    </Card >
   );
 };
 
