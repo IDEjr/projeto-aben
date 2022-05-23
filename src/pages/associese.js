@@ -50,7 +50,7 @@ const Associese = ({
   const checkedOn = () => setChecked(true);
   const checkedOff = () => setChecked(false);
 
-  const valores = content.valores;
+  const valores = content.content;
 
   const ModalHandler = () => {
     handleClose();
