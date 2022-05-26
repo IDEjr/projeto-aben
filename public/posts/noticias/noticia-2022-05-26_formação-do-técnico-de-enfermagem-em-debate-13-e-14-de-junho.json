@@ -4,6 +4,6 @@
   "banner": "images/eventoformtecenf.jpg",
   "content": "<p>Formação do Técnico de Enfermagem - Evento online e gratuito 13 e 14 de junho</p>",
   "author": "Denise",
-  "carroussel": true,
+  "carroussel": false,
   "active": true
 }
