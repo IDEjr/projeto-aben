@@ -1,9 +1,11 @@
 {
-  "date": "2022-03-23T23:16:21.685Z",
-  "title": "Boas Práticas em Serviços de Saúde e de Enfermagem: Anais",
-  "banner": "images/capaanaisbprat.jpg",
-  "content": "<p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">O Evento Boas Pr&aacute;ticas em Servi&ccedil;os de Sa&uacute;de e de Enfermagem &eacute; origin&aacute;rio de um Projeto de Extens&atilde;o desenvolvido na Universidade Federal do Pampa, Campus Uruguaiana, que visa identificar e implementar atividades que buscam atingir padr&otilde;es de qualidade nos servi&ccedil;os de sa&uacute;de. Neste &iacute;nterim, este evento teve por objetivo promover e disseminar atividades e a&ccedil;&otilde;es exitosas aos profissionais, despertando melhores pr&aacute;ticas em sa&uacute;de. </span></span></p>  <p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">A explana&ccedil;&atilde;o das palestras sobre Boas Pr&aacute;ticas demonstrou que o embasamento te&oacute;rico com reflex&otilde;es na pr&aacute;tica &eacute; necess&aacute;rio e essencial para promover a qualidade assistencial e gerencial em Servi&ccedil;os de Sa&uacute;de e de forma mais focada na Enfermagem. </span></span></p>  <p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Este evento contou com 116 inscritos e com 54 resumos selecionados por pares de avaliadores.</span></span></p>  <p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Os trabalhos apresentados e aqui divulgados est&atilde;o ordenados a partir da metodologia utilizada na realiza&ccedil;&atilde;o dos estudos. Em 2022, estaremos publicando estes trabalhos na &iacute;ntegra atrav&eacute;s da <span style=\"color:black\">Editora ABEn-RS.</span></span></span></p>",
-  "author": "Denise",
+  "useRedirect": true,
   "active": true,
-  "carroussel": false
+  "author": "Denise",
+  "carroussel": false,
+  "banner": "images/capaanaisbprat.jpg",
+  "date": "2022-03-23T23:16:21.685Z",
+  "url": "https://drive.google.com/file/d/1_j75XsWgeM7iL-pl9TTFStZT6f-SY4RJ/view?usp=sharing",
+  "title": "Boas Práticas em Serviços de Saúde e de Enfermagem: Anais",
+  "content": "<p class=\"ql-align-justify\">O Evento Boas Práticas em Serviços de Saúde e de Enfermagem é originário de um Projeto de Extensão desenvolvido na Universidade Federal do Pampa, Campus Uruguaiana, que visa identificar e implementar atividades que buscam atingir padrões de qualidade nos serviços de saúde. Neste ínterim, este evento teve por objetivo promover e disseminar atividades e ações exitosas aos profissionais, despertando melhores práticas em saúde.</p><p class=\"ql-align-justify\">A explanação das palestras sobre Boas Práticas demonstrou que o embasamento teórico com reflexões na prática é necessário e essencial para promover a qualidade assistencial e gerencial em Serviços de Saúde e de forma mais focada na Enfermagem.</p><p class=\"ql-align-justify\">Este evento contou com 116 inscritos e com 54 resumos selecionados por pares de avaliadores.</p><p class=\"ql-align-justify\">Os trabalhos apresentados e aqui divulgados estão ordenados a partir da metodologia utilizada na realização dos estudos. Em 2022, estaremos publicando estes trabalhos na íntegra através da <span style=\"color: black;\">Editora ABEn-RS.</span></p>"
 }
