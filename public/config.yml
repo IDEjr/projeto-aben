@@ -32,11 +32,6 @@ collections:
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Phone", name: "phone", widget: "string" }
           - {
-              label: "Banner da página da diretoria",
-              name: "banner",
-              widget: "image",
-            }
-          - {
               label: "Título da página da diretoria",
               name: "title",
               widget: "string",
@@ -61,6 +56,7 @@ collections:
       - {
           label: "Banner da notícia (1366x400)",
           name: "banner",
+          required: false,
           widget: "image",
         }
       - { label: "Corpo da Notícia", name: "content", widget: "editorWrapper" }
@@ -85,6 +81,7 @@ collections:
       - {
           label: "Banner do evento (1366x400)",
           name: "banner",
+          required: false,
           widget: "image",
         }
       - {
@@ -137,6 +134,7 @@ collections:
       - {
           label: "Banner da publicação (1366x400)",
           name: "banner",
+          required: false,
           widget: "image",
         }
       - { label: "Corpo da publicação", name: "content", widget: "editorWrapper" }

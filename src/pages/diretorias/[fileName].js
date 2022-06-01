@@ -61,10 +61,6 @@ const Diretoria = ({ chapa }) => {
   return (
     <Container>
       <Card>
-        {
-          !!banner &&
-          <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
-        }
         <CardContent>
           <Typography gutterBottom variant="h4" component="div">
             {title}

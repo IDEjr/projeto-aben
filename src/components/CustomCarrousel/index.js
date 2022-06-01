@@ -56,7 +56,7 @@ const CustomCarrousel = ({
         {
           autoplay:
           {
-            delay: 5000,
+            delay: 8000,
             disableOnInteraction: false
           }
         }

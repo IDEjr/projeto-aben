@@ -9,6 +9,7 @@ import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 import PostsGrid from "components/PostsGrid";
 import Carroussel from "components/Carroussel";
+import { sortCallback } from "../../utils";
 
 const RouteEnum = {
   Events: "/eventos/",
@@ -25,10 +26,6 @@ export function getStaticProps() {
   return {
     props: { newsData, eventsData, bannerAzul, posts },
   };
-}
-
-const sortCallback = (a, b) => {
-  return new Date(b.date) - new Date(a.date);
 }
 
 const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
