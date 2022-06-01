@@ -2,9 +2,11 @@ import { Container } from "@mui/material";
 import PageTitle from "components/PageTitle";
 import NewsGrid from "components/NewsGrid";
 import { handleJSONfiles } from "../../../utils/postHandler";
+import { sortCallback } from "../../../utils";
 
 export function getStaticProps() {
-  const noticias = handleJSONfiles("./public/posts/noticias");
+  const noticias = handleJSONfiles("./public/posts/noticias")
+    .sort(sortCallback);
 
   return {
     props: { noticias },

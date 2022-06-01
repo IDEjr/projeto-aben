@@ -3,10 +3,12 @@ import PageTitle from "components/PageTitle";
 import React from "react";
 import EventsGrid from "components/EventsGrid";
 import { handleJSONfiles } from "../../../utils/postHandler";
+import { sortCallback } from "../../../utils";
 
 export function getStaticProps() {
   const eventos = handleJSONfiles("./public/posts/eventos")
-    .filter(e => e.active);
+    .filter(e => e.active)
+    .sort(sortCallback);
 
   return {
     props: { eventos },
