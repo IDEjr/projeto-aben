@@ -3,7 +3,7 @@
   "title": "Homenagem da ABEn-RS dia 20 de maio",
   "useRedirect": false,
   "url": "",
-  "carroussel": true,
+  "carroussel": false,
   "content": "<p>A vocês Auxiliares e Técnicos de Enfermagem que fazem a diferença no cuidado!</p>",
   "banner": "images/homenagemtecauxenf20maio.jpg"
 }
