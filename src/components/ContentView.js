@@ -18,16 +18,12 @@ const StyledReactQuill = styled(ReactQuill)`
 `;
 
 const ContentView = ({
-  title, banner, date, content, author
+  title, date, content, author
 }) => {
 
   return (
     <Container>
       <Card>
-        {
-          banner &&
-          <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
-        }
         <CardContent>
           <Typography gutterBottom variant="h4" sx={{ mt: 2, px: 5 }} component="div">
             {title}
