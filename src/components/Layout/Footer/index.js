@@ -7,21 +7,7 @@ import mail from "../../../../public/images/icons/mail.svg";
 import { Avatar, Container, Grid, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
 import logoIDE from "../../../../public/images/logoide.png";
-const ContatosItem = ({ text, src }) => (
-  <Box display="flex" flexDirection="row" alignItems="center">
-    <Avatar
-      sx={{
-        height: "35px",
-        width: "35px",
-        backgroundColor: "#ffffff",
-        mr: 2,
-      }}
-    >
-      <Image src={src} alt={text} width="18%" height="18%" />
-    </Avatar>
-    <Typography variant="footer">{text}</Typography>
-  </Box>
-);
+import Contatos from "./Contatos";
 
 export default function Footer() {
   const linkIDE = "https://www.idejr.com.br/";
@@ -66,20 +52,7 @@ export default function Footer() {
             }}
             item
           >
-            <Grid container spacing={3} sx={{ my: 1 }}>
-              <Grid xs={12} md={6} item>
-                <ContatosItem src={instagram} text="abenrs_" />
-              </Grid>
-              <Grid xs={12} md={6} item>
-                <ContatosItem src={mail} text="aben-rs@abennacional.org.br" />
-              </Grid>
-              <Grid xs={12} md={6} item>
-                <ContatosItem src={phone} text="51 3232-3232" />
-              </Grid>
-              <Grid xs={12} md={6} item>
-                <ContatosItem src={facebook} text="facebook/aben" />
-              </Grid>
-            </Grid>
+            <Contatos />
             <Box
               mt={2}
               display="flex"
