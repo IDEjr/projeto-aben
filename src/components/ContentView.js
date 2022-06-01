@@ -24,7 +24,10 @@ const ContentView = ({
   return (
     <Container>
       <Card>
-        <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
+        {
+          banner &&
+          <CardMedia component="img" height="400px" sx={{ objectFit: "contain" }} src={"/" + banner} alt="" />
+        }
         <CardContent>
           <Typography gutterBottom variant="h4" sx={{ mt: 2, px: 5 }} component="div">
             {title}
@@ -46,7 +49,7 @@ const ContentView = ({
                 px: 5
               }}>
                 <Typography gutterBottom variant="body2" component="div">
-                  Por:{author}
+                  Por: {author}
                 </Typography>
                 <Typography gutterBottom variant="body2" component="div">
                   {`${moment.utc(date).local().format("DD/MM/YYYY")}`}

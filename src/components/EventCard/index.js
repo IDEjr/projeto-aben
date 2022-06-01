@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardActionArea,
@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import moment from 'moment-timezone';
+import defaultBanner from '../../../public/images/default/defaultBanner.png';
 
 const EventCard = ({
   imagemEvento,
@@ -21,8 +22,14 @@ const EventCard = ({
   const router = useRouter();
   const handleClick = () => router.push(`eventos/${fileName}`);
 
+  const [imageError, setImageError] = useState(false);
+
+  useEffect(() => {
+    if (!imagemEvento) setImageError(true);
+  }, [imagemEvento]);
+
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" sx={{ height: "100%" }}>
       <CardActionArea
         sx={{
           height: "100%",
@@ -35,9 +42,13 @@ const EventCard = ({
           : { onClick: handleClick })}>
         <CardMedia
           component="img"
-          src={imagemEvento}
+          src={imagemEvento || defaultBanner}
           alt=""
-          sx={{ objectFit: "contain", maxHeight: "200px", flex: 1 }}
+          sx={{ objectFit: imageError ? "cover" : "contain", maxHeight: "160px", flex: 1 }}
+          onError={e => {
+            setImageError(true);
+            e.target.src = "images/default/defaultBanner.png";
+          }}
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div" sx={{
