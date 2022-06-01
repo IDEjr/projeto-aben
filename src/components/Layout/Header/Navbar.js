@@ -7,6 +7,8 @@ import pages from "./pages";
 const darkTheme = true;
 
 const buttonStyle = {
+  fontSize: "18px",
+  fontWeight: 500,
   borderRadius: 0,
   py: 1.5
 }
