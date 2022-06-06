@@ -3,6 +3,6 @@
   "title": "Processo de enfermagem no Brasil: O que esperamos",
   "banner": "images/processo-no-brasil.jpeg",
   "carroussel": true,
-  "content": "<h4><span style=\"color: rgb(32, 33, 36);\">O evento ocorrerá online em 15/06, das 14h às 16h, na Plataforma Google Meet. </span></h4><h4><br></h4><h4><span style=\"color: rgb(32, 33, 36);\">O link será enviado próximo ao evento para o e-mail de inscrição.</span></h4><p><br></p><h4>Link de inscrição gratuita: https://forms.gle/PqeTEUcRjEf23Lfr8 &nbsp; </h4><p><br></p>",
+  "content": "<h4 class=\"ql-align-center\"><span style=\"color: rgb(0, 71, 178);\">O evento ocorrerá online em 15/06, das 14h às 16h, na Plataforma Google Meet. </span></h4><h4 class=\"ql-align-center\"><br></h4><h4 class=\"ql-align-center\"><span style=\"color: rgb(0, 71, 178);\">O link será enviado próximo ao evento para o e-mail de inscrição.</span></h4><p class=\"ql-align-center\"><br></p><h4 class=\"ql-align-center\"><span style=\"color: rgb(0, 71, 178);\">Link de inscrição gratuita: https://forms.gle/PqeTEUcRjEf23Lfr8&nbsp;</span></h4>",
   "url": ""
 }
