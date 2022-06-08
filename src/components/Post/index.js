@@ -58,7 +58,7 @@ const Post = ({ imagemPost, manchetePost, dataPost, fileName, url, useRedirect }
             {manchetePost}
           </Typography>
           <Typography gutterBottom align="center" variant="caption" component="div" sx={{ mt: 2, mb: 0 }}>
-            {`${moment.utc(dataPost).local().format("DD/MM/YYYY")}`}
+            Publicado em: {`${moment.utc(dataPost).local().format("DD/MM/YYYY")}`}
           </Typography>
         </CardContent>
       </CardActionArea>

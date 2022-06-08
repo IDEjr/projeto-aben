@@ -7,7 +7,6 @@ import { sortCallback } from "../../../utils";
 
 export function getStaticProps() {
   const eventos = handleJSONfiles("./public/posts/eventos")
-    .filter(e => e.active)
     .sort(sortCallback);
 
   return {

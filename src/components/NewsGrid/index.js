@@ -3,6 +3,7 @@ import News from "../News/index";
 import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { Box } from "@mui/system";
+import { getDateIsoString } from "../../../utils";
 
 const NewsGrid = ({
   limitItems,
@@ -43,7 +44,7 @@ const NewsGrid = ({
             <News
               imagemNoticia={item.banner}
               mancheteNoticia={item.title}
-              dataNoticia={item.date}
+              dataNoticia={getDateIsoString(item)}
               fileName={item.fileName}
               useRedirect={item.useRedirect}
               url={item.url}

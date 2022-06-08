@@ -3,6 +3,7 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { Box } from "@mui/system";
 import Post from "components/Post";
+import { getDateIsoString } from "../../../utils";
 
 const PostsGrid = ({ limitItems, hasGridHeader, posts = [] }) => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const PostsGrid = ({ limitItems, hasGridHeader, posts = [] }) => {
             <Post
               imagemPost={item.banner}
               manchetePost={item.title}
-              dataPost={item.date}
+              dataPost={getDateIsoString(item)}
               fileName={item.fileName}
               useRedirect={item.useRedirect}
               url={item.url}
