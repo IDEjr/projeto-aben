@@ -29,8 +29,8 @@ collections:
           - { label: "Cargo", name: "role", widget: "string" }
           - { label: "Foto", name: "photo", widget: "image" }
           - { label: "Bio", name: "bio", widget: "text" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", required: false, name: "email", widget: "string" }
+          - { label: "Phone", required: false, name: "phone", widget: "string" }
           - {
               label: "Título da página da diretoria",
               name: "title",
