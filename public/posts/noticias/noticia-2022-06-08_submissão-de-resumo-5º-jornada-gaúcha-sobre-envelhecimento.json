@@ -1,10 +1,11 @@
 {
-  "date": "2022-06-08T17:25:58.890Z",
-  "title": "Submissão de Resumo  - 5º Jornada Gaúcha sobre  Envelhecimento",
-  "banner": "images/submeta-seu-resumo-clique-para-conferir-as-normas.png",
-  "url": "https://drive.google.com/file/d/19yrxx4jLkiyR5QDgK_7OQaqQ3R4ayfTo/view?usp=sharing",
-  "carroussel": true,
+  "useRedirect": true,
+  "active": true,
   "author": "Ayume",
-  "content": "<h4 class=\"ql-align-center\"><span style=\"color: rgb(0, 41, 102);\">A 5ª Jornada Gaúcha sobre o Envelhecimento abre inscrição para submissão de resumo.</span></h4><h4 class=\"ql-align-center\"><span style=\"color: rgb(0, 41, 102);\">Para mais informações sobre o edital clique na imagem.</span></h4>",
-  "active": true
+  "carroussel": true,
+  "banner": "images/submeta-seu-resumo-clique-para-conferir-as-normas.png",
+  "date": "2022-06-08T17:25:58.890Z",
+  "url": "https://drive.google.com/file/d/19yrxx4jLkiyR5QDgK_7OQaqQ3R4ayfTo/view?usp=sharing",
+  "title": "Submissão de Resumo  - 5º Jornada Gaúcha sobre  Envelhecimento",
+  "content": "<h4 class=\"ql-align-center\"><br></h4>"
 }
