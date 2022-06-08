@@ -47,7 +47,7 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
           subheader={diretoria.name}
           avatar={
             <Avatar
-              sx={{ width: 64, height: 64 }}
+              sx={{ width: 80, height: 80 }}
             >
               <Image
                 src={`/${diretoria.photo}`}
@@ -108,7 +108,7 @@ const CustomCard = ({ diretoria, fileName, index, ...rest }) => {
           </Box>
         </CardActions>
       </CardActionArea>
-    </Card >
+    </Card>
   );
 };
 
