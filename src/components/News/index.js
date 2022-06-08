@@ -65,7 +65,7 @@ const News = ({
             {mancheteNoticia}
           </Typography>
           <Typography gutterBottom align="center" variant="caption" component="div" sx={{ mt: 2, mb: 0 }}>
-            {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
+            Publicado em: {`${moment.utc(dataNoticia).local().format("DD/MM/YYYY")}`}
           </Typography>
         </CardContent>
       </CardActionArea>

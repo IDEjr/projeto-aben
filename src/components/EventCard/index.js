@@ -63,8 +63,8 @@ const EventCard = ({
           }}>
             {tituloEvento}
           </Typography>
-          <Typography gutterBottom align="center" variant="caption" component="div" sx={{ mt: 2, mb: 0 }}>
-            {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
+          <Typography gutterBottom align="center" variant="body1" component="div" sx={{ mt: 2, mb: 0 }}>
+            Data do evento: {`${moment.utc(dataEvento).local().format("DD/MM/YYYY")}`}
           </Typography>
         </CardContent>
       </CardActionArea>

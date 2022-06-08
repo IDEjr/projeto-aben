@@ -60,7 +60,6 @@ collections:
           widget: "image",
         }
       - { label: "Corpo da Notícia", name: "content", widget: "editorWrapper" }
-      - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
       - { label: "Visível ao público", name: "active", widget: "boolean", required: false }
       - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean", required: false }
@@ -89,7 +88,7 @@ collections:
           name: "content",
           widget: "editorWrapper",
         }
-      - { label: "Data", name: "date", widget: "date" }
+      - { label: "Data de início do evento:", name: "date", widget: "date" }
       - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean", required: false }
       - { label: "Usar redirecionamento - ATENÇÃO: Ao usar esta opção, o card/ banner irá redirecionar o usuário para a url abaixo!", name: "useRedirect", widget: "boolean", required: false }
       - { label: "Url Externa", name: "url", widget: "string", required: false }
@@ -138,7 +137,6 @@ collections:
           widget: "image",
         }
       - { label: "Corpo da publicação", name: "content", widget: "editorWrapper" }
-      - { label: "Data", name: "date", widget: "date" }
       - { label: "Autor da Postagem", name: "author", widget: "string" }
       - { label: "Visível ao público", name: "active", widget: "boolean", required: false }
       - { label: "Mostrar no carroussel", name: "carroussel", widget: "boolean", required: false }
