@@ -39,7 +39,6 @@ const YoutubeVideo = ({
   const onPlayerReady = useCallback(event => {
     event.target.playVideo();
     event.target.mute();
-    event.target.seekTo(85);
   }, []);
 
   const onPlayerStateChange = useCallback(event => {
