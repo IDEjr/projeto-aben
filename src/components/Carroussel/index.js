@@ -1,5 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import Slide from "./Slide";
 import CustomCarrousel from "../CustomCarrousel";
 
@@ -9,10 +9,9 @@ import "swiper/css/navigation";
 
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Autoplay } from "swiper";
-import { Button, Card, CardActionArea, CardMedia, Container, Grid, Typography } from "@mui/material";
-import { Box, color, darken } from "@mui/system";
+import { Grid } from "@mui/material";
 import { useRouter } from "next/router";
-import YoutubeEmbed from "components/YoutubeEmbed";
+import YoutubeVideo from "components/YoutubeVideo";
 
 
 // install Swiper modules
@@ -23,26 +22,9 @@ const Carroussel = ({
   ...rest
 }) => {
   const router = useRouter();
-  const handleClick = () => router.push("/eventos");
-  const handleAssocieseClick = () => router.push(`/associese`);
 
   return (
     <>
-      {/* <Container>
-        <Box
-          display="flex"
-          direction="row"
-          justifyContent="space-between"
-          mb={2}
-        >
-          <Typography variant="h4">
-            Eventos
-          </Typography>
-          <Button variant="outline" onClick={handleClick}>
-            Mais {"\u2794"}
-          </Button>
-        </Box>
-      </Container> */}
       <Grid container rowSpacing={6} alignItems="center">
         <Grid item xs={12} lg={8}>
           <CustomCarrousel autoplay>
@@ -56,7 +38,7 @@ const Carroussel = ({
           </CustomCarrousel>
         </Grid>
         <Grid item xs={12} lg={4}>
-          <YoutubeEmbed embedId="ecjuRyHdpmM" autoPlay mute />
+          <YoutubeVideo id="ecjuRyHdpmM" />
         </Grid>
       </Grid>
     </>
