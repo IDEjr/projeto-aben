@@ -130,6 +130,13 @@ collections:
       preview: false
     fields:
       - { label: "Título", name: "title", widget: "string" }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Livro", value: "livro" }
+          - { label: "Boletim", value: "boletim" }
+          - { label: "Anais", value: "anais" }
       - {
           label: "Banner da publicação (1366x400)",
           name: "banner",
