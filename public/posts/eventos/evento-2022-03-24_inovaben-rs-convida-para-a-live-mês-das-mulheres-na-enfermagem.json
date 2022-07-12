@@ -4,7 +4,7 @@
   "banner": "images/março-mês-dos-tiagos-da-aben-rs-1-.png",
   "title": "08 e 09 JULHO/22 5a Jornada Gaúcha sobre o Envelhecimento",
   "active": true,
-  "carroussel": true,
+  "carroussel": false,
   "useRedirect": true,
   "url": "https://drive.google.com/file/d/1RZe0xaewbb0D0fl4iCwD-Fm5yfB_25nU/view?usp=sharing"
 }
