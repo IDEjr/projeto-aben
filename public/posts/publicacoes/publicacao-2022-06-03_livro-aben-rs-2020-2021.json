@@ -1,8 +1,8 @@
 {
   "category": "livro",
-  "title": "Livro ABEn-RS 2021",
+  "title": "70 Anos da ABEn-RS",
   "banner": "images/livro-aben-2021-final.png",
-  "content": "<p class=\"ql-align-center\"><strong style=\"color: rgb(255, 153, 0);\"><em>Sobre o ensinar em Enfermagem: metodologias, relatos e reflexões</em></strong></p><p class=\"ql-align-center\"><br></p><p class=\"ql-align-center\"><strong>Apresentar e celebrar os 70 anos de criação da Seção Rio Grande do Sul da </strong></p><p class=\"ql-align-center\"><strong>Associação Brasileira de Enfermagem (ABEn)</strong></p><p class=\"ql-align-justify\">A produção desta obra contou com a participação de docentes de todo o estado do Rio Grande do Sul, que disponibilizaram suas experiências, reflexões, inovações em torno do tema educação e/ou ensino de Enfermagem.</p>",
+  "content": "<h3 class=\"ql-align-center\"><strong style=\"color: rgb(255, 153, 0);\"><em>Sobre o ensinar em Enfermagem: metodologias, relatos e reflexões</em></strong></h3><p class=\"ql-align-center\"><br></p><h5 class=\"ql-align-center\"><strong>Celebração dos 70 anos de fundação da Associação Brasileira de Enfermagem - Seção do Rio Grande do Sul </strong></h5><h5 class=\"ql-align-justify\">A produção desta obra contou com a participação de docentes de todo o estado do Rio Grande do Sul, que disponibilizaram suas experiências, reflexões, inovações em torno do tema educação e/ou ensino de Enfermagem.</h5>",
   "author": "Denise",
   "active": true,
   "useRedirect": true,
