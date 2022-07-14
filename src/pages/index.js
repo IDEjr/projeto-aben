@@ -33,7 +33,7 @@ const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
   const invite_token = router.asPath.split("#invite_token")[1] || "";
 
   if (invite_token) {
-    router.push(`admin/index.html/#invite_token=${invite_token}`);
+    router.push(`admin/#invite_token=${invite_token}`);
   }
 
   const sortedEventsData = useMemo(
@@ -55,7 +55,7 @@ const Home = ({ newsData, eventsData, bannerAzul, posts }) => {
   );
 
   const carrousselData = useMemo(() => [
-    ...sortedEventsData
+    ...sortedEventsData.filter(e => e.carroussel)
       .map(e => ({ ...e, route: RouteEnum.Events })),
     ...sortedNewsData.filter(e => e.carroussel)
       .map(e => ({ ...e, route: RouteEnum.News })),

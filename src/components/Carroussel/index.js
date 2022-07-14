@@ -28,7 +28,7 @@ const Carroussel = ({
       <Grid container rowSpacing={6} alignItems="center">
         <Grid item xs={12} lg={8}>
           <CustomCarrousel autoplay>
-            {data.slice(0, 10).map(e => {
+            {data.slice(0, 20).map(e => {
               return (
                 <SwiperSlide key={e.fileName}>
                   <Slide {...e} />
