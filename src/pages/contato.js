@@ -7,11 +7,10 @@ import { Box } from "@mui/system";
 import MapView from "components/MapView";
 import BasicModal from "components/Modal";
 import { Card } from "@mui/material";
-import { PrecisionManufacturingSharp } from "@mui/icons-material";
 import { handleJSONfile } from "../../utils/postHandler";
 
 export function getStaticProps(context) {
-  const contato = handleJSONfile (`./public/pages/contato.json`);
+  const contato = handleJSONfile(`./public/pages/contato.json`);
 
   return {
     props: { contato },
@@ -26,6 +25,8 @@ const Contato = ({
   const [company, setCompany] = useState("");
   const [number, setNumber] = useState("");
   const [obs, setObs] = useState("");
+
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -45,20 +46,26 @@ const Contato = ({
   };
 
   const sendEmail = (event) => {
+
+    setIsDisabled(true);
+
     event.preventDefault();
 
     emailjs
       .sendForm(
-        "service_bw9yl5o",
-        "template_14wobdh",
+        "service_y2jlui9",
+        "template_85vt8na",
         event.target,
-        "user_XiCwk6MPvAXmJ6KZQ3I7o"
+        "-A33T00xwYoA4qz18"
       ) // colocar aqui as credenciais emailjs do pessoal da aben
       .then(
         (result) => {
+          handleOpen();
           console.log(result.text);
+          setIsDisabled(false);
         },
         (error) => {
+          setIsDisabled(false);
           console.log(error.text);
         }
       );
@@ -209,10 +216,10 @@ const Contato = ({
               </Grid>
               <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
                 <Button
+                  disabled={isDisabled}
                   variant="contained"
                   size="large"
                   type="submit"
-                  onClick={handleOpen}
                 >
                   Enviar
                 </Button>
