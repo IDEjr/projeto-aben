@@ -62,10 +62,10 @@ const Associese = ({
 
     emailjs
       .sendForm(
-        "service_bw9yl5o",
-        "template_wchv4jd",
+        "service_y2jlui9",
+        "template_xcmji2y",
         event.target,
-        "user_XiCwk6MPvAXmJ6KZQ3I7o"
+        "-A33T00xwYoA4qz18"
       ) // colocar aqui as credenciais emailjs do pessoal da aben
       .then(
         (result) => {
