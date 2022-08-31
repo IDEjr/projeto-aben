@@ -19,10 +19,11 @@ const StyledReactQuill = styled(ReactQuill)`
 `;
 
 export function getStaticProps() {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const sobreData = handleJSONfile(`./public/pages/sobre.json`);
 
   return {
-    props: { sobreData },
+    props: { sobreData, contato },
   };
 }
 

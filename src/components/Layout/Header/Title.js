@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 import Contatos from "../Footer/Contatos";
 
-const Title = () => {
+const Title = ({ contato }) => {
   return (
     <Box sx={{
       display: 'flex',
@@ -16,7 +16,7 @@ const Title = () => {
       <Typography variant="h3" >
         Associação Brasileira de Enfermagem - RS
       </Typography>
-      <Contatos header />
+      <Contatos header {...{ contato }} />
     </Box>
   );
 };

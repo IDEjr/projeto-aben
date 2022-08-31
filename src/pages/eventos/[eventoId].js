@@ -24,11 +24,12 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps(context) {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const eventoId = context.params.eventoId;
   const evento = handleJSONfile(`./public/posts/eventos/${eventoId}.json`);
 
   return {
-    props: { evento },
+    props: { evento, contato },
   };
 }
 

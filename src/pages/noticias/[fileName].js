@@ -25,11 +25,12 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps(context) {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const fileName = context.params.fileName;
   const noticia = handleJSONfile(`./public/posts/noticias/${fileName}.json`);
 
   return {
-    props: { noticia },
+    props: { noticia, contato },
   };
 }
 

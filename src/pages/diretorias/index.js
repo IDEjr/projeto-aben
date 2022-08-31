@@ -5,13 +5,15 @@ import {
 } from "components/Diretorias";
 import PageTitle from "components/PageTitle";
 import React, { useMemo } from "react";
-import { handleJSONfiles } from "../../../utils/postHandler";
+import { handleJSONfile, handleJSONfiles }
+ from "../../../utils/postHandler";
 
 export function getStaticProps() {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const diretorias = handleJSONfiles("./public/posts/diretorias");
 
   return {
-    props: { diretorias },
+    props: { diretorias, contato },
   };
 }
 

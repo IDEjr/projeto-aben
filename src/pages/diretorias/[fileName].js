@@ -40,6 +40,7 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps(context) {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const {
     fileName,
   } = context.params;
@@ -48,7 +49,7 @@ export function getStaticProps(context) {
   );
 
   return {
-    props: { chapa },
+    props: { chapa, contato },
   };
 }
 

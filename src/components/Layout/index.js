@@ -4,6 +4,7 @@ import Footer from './Footer';
 import { Box } from '@mui/system';
 
 const Layout = ({
+  contato,
   children,
 }) => {
   return (
@@ -14,7 +15,7 @@ const Layout = ({
         flexDirection: "column",
         justifyContent: "space-between"
       }}>
-      <Header />
+      <Header {...{ contato }} />
       <Box
         sx={{
           minHeight: "100%",
@@ -25,7 +26,7 @@ const Layout = ({
         }}>
         {children}
       </Box>
-      <Footer />
+      <Footer {...{ contato }} />
     </Box>
   )
 }

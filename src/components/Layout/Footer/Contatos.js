@@ -26,6 +26,7 @@ const ContatosItem = ({ text, src, header }) => (
 );
 
 const Contatos = ({
+  contato,
   header,
 }) => {
 
@@ -36,10 +37,10 @@ const Contatos = ({
           <ContatosItem header={header} src={instagram} text="abenrs_" />
         </Grid>
         <Grid xs={12} md={6} item>
-          <ContatosItem header={header} src={mail} text="aben-rs@abennacional.org.br" />
+          <ContatosItem header={header} src={mail} text={contato.email} />
         </Grid>
         <Grid xs={12} md={6} item>
-          <ContatosItem header={header} src={phone} text="51 3232-3232" />
+          <ContatosItem header={header} src={phone} text={contato.tel} />
         </Grid>
         <Grid xs={12} md={6} item>
           <ContatosItem header={header} src={facebook} text="facebook/aben" />

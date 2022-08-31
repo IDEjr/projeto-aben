@@ -9,7 +9,7 @@ import { Box } from "@mui/system";
 import logoIDE from "../../../../public/images/logoide.png";
 import Contatos from "./Contatos";
 
-export default function Footer() {
+export default function Footer({ contato }) {
   const linkIDE = "https://www.idejr.com.br/";
   return (
     <Box backgroundColor="dark.main">
@@ -52,7 +52,7 @@ export default function Footer() {
             }}
             item
           >
-            <Contatos />
+            <Contatos {...{ contato }} />
             <Box
               mt={2}
               display="flex"

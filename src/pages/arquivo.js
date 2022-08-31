@@ -2,15 +2,16 @@ import { Box, Container, Typography, IconButton, Button } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import PageTitle from 'components/PageTitle';
 import React, { useMemo, useState, useCallback, useEffect } from 'react';
-import { handleJSONfiles } from '../../utils/postHandler';
+import { handleJSONfile, handleJSONfiles } from '../../utils/postHandler';
 import DownloadIcon from '@mui/icons-material/Download';
 import { useRouter } from "next/router";
 
 export function getStaticProps() {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const arquivos = handleJSONfiles("./public/files");
 
   return {
-    props: { arquivos },
+    props: { arquivos, contato },
   };
 }
 

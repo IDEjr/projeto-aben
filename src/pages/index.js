@@ -18,13 +18,14 @@ const RouteEnum = {
 };
 
 export function getStaticProps() {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const newsData = handleJSONfiles("./public/posts/noticias");
   const eventsData = handleJSONfiles("./public/posts/eventos");
   const bannerAzul = handleJSONfile(`./public/pages/banner_azul.json`);
   const posts = handleJSONfiles("./public/posts/publicacoes");
 
   return {
-    props: { newsData, eventsData, bannerAzul, posts },
+    props: { newsData, eventsData, bannerAzul, posts, contato },
   };
 }
 

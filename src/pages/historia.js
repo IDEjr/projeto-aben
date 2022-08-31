@@ -21,10 +21,11 @@ const StyledReactQuill = styled(ReactQuill)`
 `;
 
 export function getStaticProps() {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const content = handleJSONfile(`./public/pages/historia.json`);
 
   return {
-    props: { content },
+    props: { content, contato },
   };
 }
 

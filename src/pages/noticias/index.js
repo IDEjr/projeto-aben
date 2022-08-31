@@ -1,15 +1,17 @@
 import { Container } from "@mui/material";
 import PageTitle from "components/PageTitle";
 import NewsGrid from "components/NewsGrid";
-import { handleJSONfiles } from "../../../utils/postHandler";
+import { handleJSONfile, handleJSONfiles }
+ from "../../../utils/postHandler";
 import { sortCallback } from "../../../utils";
 
 export function getStaticProps() {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const noticias = handleJSONfiles("./public/posts/noticias")
     .sort(sortCallback);
 
   return {
-    props: { noticias },
+    props: { noticias, contato },
   };
 }
 

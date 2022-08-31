@@ -4,7 +4,8 @@ import CategorySelect from "components/CategorySelect";
 import PageTitle from "components/PageTitle";
 import PostsGrid from "components/PostsGrid";
 import { sortCallback } from "../../../utils";
-import { handleJSONfiles } from "../../../utils/postHandler";
+import { handleJSONfile, handleJSONfiles }
+ from "../../../utils/postHandler";
 
 const PostTypesEnum = {
   Livro: "livro",
@@ -13,11 +14,12 @@ const PostTypesEnum = {
 }
 
 export function getStaticProps() {
+  const contato = handleJSONfile(`./public/pages/contato.json`);
   const posts = handleJSONfiles("./public/posts/publicacoes")
     .sort(sortCallback);
 
   return {
-    props: { posts },
+    props: { posts, contato },
   };
 }
 

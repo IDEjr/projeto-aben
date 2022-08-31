@@ -7,7 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import { Box } from "@mui/system";
 import MobileNavBar from "./MobileNavBar";
 
-const Header = () => {
+const Header = ({ contato }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -23,7 +23,7 @@ const Header = () => {
           <Box>
             <Box pt={2} px={3}>
               <Container disableGutters>
-                <Title />
+                <Title {...{ contato }} />
               </Container>
             </Box>
             <Navbar />

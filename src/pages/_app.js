@@ -21,7 +21,6 @@ export default function MyApp(props) {
   const LayoutToUse = router.asPath.startsWith('/admin')
     ? React.Fragment
     : Layout
-
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -32,7 +31,7 @@ export default function MyApp(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <GlobalStyles styles={globalCss} />
-        <LayoutToUse>
+        <LayoutToUse contato={props?.pageProps?.contato || {}}>
           <Component {...pageProps} />
         </LayoutToUse>
       </ThemeProvider>
