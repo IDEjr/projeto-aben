@@ -1,8 +1,10 @@
 {
-  "category": "boletim",
-  "title": "EM BREVE: Vacinas para Pessoas Idosas ",
-  "banner": "images/capa-ale-cartilha-apresentadceg.png",
-  "content": "<p class=\"ql-align-justify\">A presente cartilha é resultado do trabalho realizado por enfermeiros do Departamento Científico de Enfermagem Gerontológica, da Associação Brasileira de Enfermagem-RS (DCEG-ABEn-RS), do Grupo de Interesse em Enfermagem da Sociedade Brasileira de Geriatria e Gerontologia, seccional Rio Grande do Sul (SBGG-RS), e por residentes de enfermagem da Universidade Federal do Rio Grande (FURG) e da Universidade Luterana do Brasil (ULBRA), campus Canoas.</p><p class=\"ql-align-justify\">A cartilha aborda 10 doenças que são potencialmente preveníveis por meio de vacinação. Explica brevemente cada uma delas e a forma de transmissão, bem como a vacina indicada, a forma de aplicação, os cuidados antes e depois da vacinação, as possíveis reações e os serviços onde estão disponíveis.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p>",
+  "category": "livro",
+  "title": "Vacinas para Pessoas Idosas ",
+  "banner": "images/capavacinaspessoasidosas.png",
+  "content": "<p class=\"ql-align-justify\">A presente cartilha é resultado do trabalho realizado por enfermeiros do Departamento Científico de Enfermagem Gerontológica, da Associação Brasileira de Enfermagem-RS (DCEG-ABEn-RS), do Grupo de Interesse em Enfermagem da Sociedade Brasileira de Geriatria e Gerontologia, seccional Rio Grande do Sul (SBGG-RS), e por residentes de enfermagem da Universidade Federal do Rio Grande (FURG) e da Universidade Luterana do Brasil (ULBRA), campus Canoas.</p><p class=\"ql-align-justify\">A cartilha aborda 10 doenças que são potencialmente preveníveis por meio de vacinação. Explica brevemente cada uma delas e a forma de transmissão, bem como a vacina indicada, a forma de aplicação, os cuidados antes e depois da vacinação, as possíveis reações e os serviços onde estão disponíveis.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><br></p>",
   "author": "Denise",
-  "active": true
+  "active": true,
+  "useRedirect": true,
+  "url": "https://drive.google.com/file/d/1qZJ2WE1qLm_6y1mvJr3smhErETcTFOe1/view?usp=sharing"
 }

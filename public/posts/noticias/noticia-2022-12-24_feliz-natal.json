@@ -1,0 +1,8 @@
+{
+  "title": "Feliz Natal",
+  "banner": "images/feliz-natal.png",
+  "author": "Ayume",
+  "active": true,
+  "carroussel": false,
+  "content": "<h3 class=\"ql-align-center\"><span style=\"color: rgb(230, 0, 0);\">ABEn Nacional deseja um Feliz Natal!</span></h3>"
+}

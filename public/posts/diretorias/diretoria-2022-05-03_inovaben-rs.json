@@ -1,6 +1,6 @@
 {
   "data": "2022-05-03T11:42:35.715Z",
-  "titulo": " Gestão  INOVABEn-RS  ",
+  "titulo": " Gestão  INOVABEn-RS  - Gestãoo 2022-2025",
   "active": true,
   "integrantes": [
     {
@@ -27,10 +27,10 @@
     },
     {
       "bio": "Não podemos prever o futuro, mas podemos criá-lo. (Peter Drucker)",
-      "name": "Debora Monteiro da Silva",
+      "name": "Letice Dalla Lana",
       "banner": "images/logoabenrs.png",
       "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193 ",
-      "photo": "images/debora.jpg",
+      "photo": "images/letice-secretaria.png",
       "role": "Secretaria Geral",
       "title": " SECRETARIA GERAL",
       "content": "<p class=\"ql-align-center\"><strong style=\"color: rgb(49, 61, 62);\">Estatuto da ABEn - </strong><strong>&nbsp;Art. 51 São atribuições do Secretário-Geral</strong></p><p class=\"ql-align-center\"><strong>﻿</strong></p><p>I — <strong>coordenar</strong> as relações institucionais com as Seções;</p><p>II — <strong>redigir</strong> as atas lavradas nas reuniões de Diretoria Nacional, do CONABEn e da AND;</p><p>III — <strong>assessorar</strong> as Comissões Especiais da ABEn;</p><p>IV — <strong>representar</strong> o Presidente, quando designado, em reuniões e sessões solenes, por delegação;</p><p>V —<strong> promover</strong> e organizar as reuniões ordinárias e extraordinárias necessárias ao funcionamento da ABEn;</p><p>VI — <strong>elaborar</strong> relatório anual de atividades com avaliação de resultados.</p>",
@@ -71,25 +71,25 @@
     },
     {
       "bio": "Um trabalho te dá um propósito e um significado. A vida é vazia sem ambos (Stephen Hawking)",
-      "name": "Miriam Trombetta",
+      "name": "Taline Bavaresco",
       "banner": "images/festival.jpg",
-      "phone": "Av. Venâncio Aires nº 1191 sala 142 – Bom Fim CEP:90040-193 – Porto Alegre – RS",
-      "photo": "images/miriamabenrs.jpeg",
+      "phone": "",
+      "photo": "images/taline-profissional.png",
       "role": "Diretora de Desenvolvimento da Pratica Profissional e do Trabalho de Enfermagem",
       "title": "DIRETORA DE DESENVOLVIMENTO DA PRATICAS PROFISSIONAL E DO TRABALHO  DE ENFERMAGEM",
       "content": "<p class=\"ql-align-center\"><strong>Estatuto da ABEn Art. 55&nbsp;-&nbsp;&nbsp;Competências do Diretor&nbsp;</strong></p><p class=\"ql-align-center\"><br></p><p>I — coordenar, organizar e operacionalizar as atividades do Centro de Desenvolvimento da Prática Profissional e do Trabalho de Enfermagem;</p><p>II — articular as atividades da Comissão Permanente do Trabalho de Enfermagem;</p><p>III — articular o trabalho da Comissão Permanente de Sistematização da Prática de Enfermagem;</p><p>IV - articular o trabalho dos Departamentos Científicos relacionados à prática profissional e ao trabalho de Enfermagem;</p><p>V — presidir o Conselho Consultivo Nacional de Sociedades e Associações de Enfermagem ou de Enfermeiros Especialistas</p><p>VI — representar a ABEn em espaços de formulação de políticas relacionadas à prática profissional e ao trabalho de Enfermagem;</p><p>VII — participar de programas de educação permanente relativos à prática profissional e ao trabalho de Enfermagem;</p><p>VIII — coordenar a organização e a realização dos eventos temáticos da prática profissional e do trabalho de Enfermagem: Seminário Internacional sobre o Trabalho na Enfermagem (SITEn), Jornada Brasileira de Enfermagem Gerontológica, Seminário Nacional de Diretrizes para Enfermagem na Atenção Básica em Saúde (SENABS), Simpósio Nacional de Diagnóstico de Enfermagem (SINADEn) e outros, em articulação com as Comissões Permanentes e os Departamentos Científicos respectivos.</p>",
-      "email": "abenrspraticasprof@gmail.com"
+      "email": "talinebavaresco1@gmail.com"
     },
     {
       "bio": "O mais importante na comunicação é ouvir o que não foi dito. (Peter Drucker)",
-      "name": "Erica Rosalba Mallmann Duarte",
+      "name": "Tiane Muriel",
       "banner": "images/logoeditorapng.png",
-      "phone": "51982697088",
-      "photo": "images/erica.jpg",
+      "phone": "",
+      "photo": "images/tiane-publicação.png",
       "role": "Diretora de Comunicação Social e Publicação",
       "title": "DIRETORA DE COMUNICACAO SOCIAL E PUBLICACAO ",
       "content": "<p class=\"ql-align-center\"><strong>Art. 56 Compete ao Diretor de Comunicação Social e Publicações</strong></p><p class=\"ql-align-center\"><strong>﻿</strong></p><p>I — coordenar a comunicação social da ABEn, nos âmbitos nacional e internacional;</p><p>II — assessorar a elaboração de conteúdos informativos veiculados pelos canais de comunicação da ABEn;</p><p>III — manter atualizado o fluxo de notícias sobre a ABEn e assuntos de interesse para os associados e a sociedade em geral;</p><p>IV — promover o fortalecimento da comunicação com as Seções;</p><p>V — coordenar o processo editorial das publicações periódicas da ABEn;</p><p>VI — coordenar o Fórum de Editores Científicos de Revistas de Enfermagem;</p><p>VII — incentivar a produção editorial nas Seções;</p><p>VIII — realizar assessorias e consultorias editoriais</p>",
-      "email": "ermduarte@gmail.com"
+      "email": "tianevolpato@gmail.com"
     },
     {
       "bio": "Lutar pela igualdade sempre que as diferenças nos discriminem;\nlutar pelas diferenças sempre que a igualdade nos descaracterize.\n                                                           Boaventura de Souza Santos",
@@ -104,7 +104,7 @@
     },
     {
       "bio": "A primeira igualdade é a justiça (Victor Hugo)",
-      "name": "Conselheira Titular -Karen Cardoso e Conselheira Suplente - Sandra Leal ",
+      "name": "Conselheira Titular - Regina Costenaro e Conselheira Suplente - Thamires hilário",
       "banner": "images/sem-título.png",
       "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
       "photo": "images/image_publica.jpeg",
@@ -140,7 +140,7 @@
       "name": "Miriam Maciel",
       "banner": "images/sem-título.png",
       "phone": "Av Venâncio Aires, 1191/142- Bom Fim | CEP 90 040-193",
-      "photo": "images/miriam-2.png",
+      "photo": "images/whatsapp-image-2022-07-26-at-21.32.18.jpeg",
       "role": "Coordenadora do Departamento Cientifico de Gestão de Serviços de Enfermagem",
       "title": "Coordenadora do Departamento Cientifico de Gestão de Serviços de Enfermagem",
       "content": "<p class=\"ql-align-justify\">O Departamento Cientifico de Gestão de Serviços de Enfermagem foi criado em 2009 como grupo de interesse em Gestão.</p><p class=\"ql-align-justify\">Sua principal atividade neste período foi o Simpósio Estadual de Gestão de Serviços de Enfermagem que esta na sua XI Edição.</p><p class=\"ql-align-justify\">Em 2022 com a&nbsp;aprovação de seu Regimento interno constitui-se em Departamento.</p><p class=\"ql-align-justify\">A Coordenação do grupo de interesse durante todo esse período esteve a cargo da Enfermeira Professora Ms Terezinha Valduga e desde 2020 esta sob a Coordenação da Enfermeira Ms Miriam Maciel</p>",
