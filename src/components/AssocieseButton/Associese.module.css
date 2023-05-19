@@ -6,11 +6,13 @@
 }
 
 .button {
+    display: flex;
     color: white;
     width: 25%;
     height: 100%;
-    padding-top: 1.2%;
-    border-radius: 20px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
     background-color: #214683;
     transition: transform .2s; 
     font-size: 16px;
@@ -21,4 +23,17 @@
 
 .button:hover {
     transform: scale(1.2); 
+}
+
+@media (max-width: 600px){
+    .container {
+        flex-direction: column;
+        height: 40vh;
+        align-items: center;
+    }
+    
+    .button {
+        width: 70%;
+        height: 20%;
+    }
 }
