@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.button {
+    color: white;
+    width: 25%;
+    height: 100%;
+    padding-top: 1.2%;
+    border-radius: 20px;
+    background-color: #214683;
+    transition: transform .2s; 
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: scale(1.2); 
+}
