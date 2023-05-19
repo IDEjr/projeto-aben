@@ -103,7 +103,7 @@ const Associese = ({
             associado quite com anuidade.
           </Typography>
         </Box>
-        <Card sx={{ p: 3, my: 6 }}>
+       { /*<Card sx={{ p: 3, my: 6 }}>
           <Box>
             <Typography variant="h3">Ficha de Cadastro</Typography>
           </Box>
@@ -375,7 +375,7 @@ const Associese = ({
               </Box>
             </form>
           </Box>
-        </Card>
+                  </Card>*/}
         <Box my={10}>
           <Typography variant="h3">Valores</Typography>
           <StyledReactQuill
