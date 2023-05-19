@@ -9,7 +9,6 @@ function AssocieseButton(){
             <a className={styles.button} href="https://web.eventogyn.com.br/event/abenrs/attendee"> 
                 Área do Associado
             </a>
- 
         </div>
     )
 };
