@@ -13,6 +13,7 @@ import ReactMarkdown from "react-markdown";
 import PageTitle from "components/PageTitle";
 import React, { useState } from "react";
 import InputMask from "react-input-mask";
+import AssocieseButton from "components/AssocieseButton";
 import * as emailjs from "emailjs-com";
 import BasicModal from "components/Modal";
 import { handleJSONfile } from "../../utils/postHandler";
@@ -50,7 +51,6 @@ const Associese = ({
   const [checked, setChecked] = useState(false);
   const checkedOn = () => setChecked(true);
   const checkedOff = () => setChecked(false);
-
   const valores = content.content;
 
   const ModalHandler = () => {
@@ -386,6 +386,7 @@ const Associese = ({
             }}
           />
         </Box>
+        <AssocieseButton/>
       </Container>
     </>
   );
