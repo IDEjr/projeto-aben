@@ -3,6 +3,7 @@
     height: 60px;
     width: 100%;
     justify-content: space-evenly;
+    margin-bottom: 6rem;
 }
 
 .button {
@@ -22,6 +23,7 @@
     font-weight: bold;
     text-align: center;
     text-decoration: none;
+    margin: 0.5rem;
 }
 
 .button:hover {
