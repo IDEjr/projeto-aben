@@ -1,7 +1,11 @@
 {
+  "useRedirect": true,
+  "active": true,
+  "author": "Denise",
+  "carroussel": false,
+  "banner": "images/capaebookhfmea.png",
+  "url": "https://drive.google.com/file/d/1UTZrdY2uLTSusfbJzOjZ2Abc7UQoCF7Z/view?usp=share_link",
   "title": "ANÁLISE DO MODO E DO EFEITO DE FALHAS NA ASSISTÊNCIA À SAÚDE - VERSÃO BRASILEIRA (HFMEA-B): manual operacional ...",
   "content": "<p class=\"ql-align-justify\">Este livro faz parte da divulgação de conhecimentos que a Editora ABEn-RS vem realizando através dos cursos de Pós-Graduação de Escolas de Enfermagem ou de Saúde do Rio Grande do Sul.</p><p class=\"ql-align-justify\">A Editora ABEn-RS está vinculada à Associação Brasileira de Enfermagem - Seção-RS e ao tomar conhecimento da produção das Dissertações e Teses do Programa de Pós-Graduação em Medicina e Ciências da Saúde da Pontifícia Universidade Católica do Rio Grande do Sul fez um convite aos autores, e neste momento estamos apresentando o método <em>Healthcare Failure Mode and Effect Analysis </em>(HFMEA) adaptado transculturalmente para o português do Brasil.&nbsp;</p>",
-  "banner": "images/embreve.png",
-  "author": "Denise",
   "category": "livro"
 }

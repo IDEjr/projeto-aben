@@ -19,11 +19,25 @@ export default class MyDocument extends Document {
           />
           <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
+          {/* Netlify Widget */}
+          <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <body>
           <Box>
             <Main />
             <NextScript />
+            <script dangerouslySetInnerHTML={{
+            __html: `
+              if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                  if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                      document.location.href = "/admin/";
+                    });
+                  }
+                });
+              }
+          `}}/>
           </Box>
         </body>
       </Html>
