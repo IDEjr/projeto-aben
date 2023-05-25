@@ -83,7 +83,8 @@ const Associese = ({
     <>
       <PageTitle title="Associe-se" />
       <Container>
-        <Box my={6}>
+      <AssocieseButton/>
+        {/*<Box my={6}>
           <Typography my={1} variant="h3">
             Novos Sócios
           </Typography>
@@ -102,7 +103,7 @@ const Associese = ({
             Nós faremos o envio por e-mail do seu recibo e declaração de
             associado quite com anuidade.
           </Typography>
-        </Box>
+        </Box>*/}
        { /*<Card sx={{ p: 3, my: 6 }}>
           <Box>
             <Typography variant="h3">Ficha de Cadastro</Typography>
@@ -386,7 +387,7 @@ const Associese = ({
             }}
           />
         </Box>
-        <AssocieseButton/>
+
       </Container>
     </>
   );
